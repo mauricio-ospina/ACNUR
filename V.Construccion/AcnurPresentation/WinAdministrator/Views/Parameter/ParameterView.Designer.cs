@@ -29,10 +29,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.IdParameterTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.parameterViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.DescriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.StateCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.EditableCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.InsertableCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.RemovableCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.IdParameterFatherTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ParameterDetailXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.ParameterDetailGridControl = new DevExpress.XtraGrid.GridControl();
+            this.ParameterDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ParameterDetailGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdParameterDetail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdParameter = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -145,70 +153,62 @@
             this.colWeekly1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWeekly2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWeekly3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ParameterDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.IdParameterTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForIdParameter = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.DescriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForDescription = new DevExpress.XtraLayout.LayoutControlItem();
-            this.StateCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.ItemForState = new DevExpress.XtraLayout.LayoutControlItem();
-            this.EditableCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.ItemForEditable = new DevExpress.XtraLayout.LayoutControlItem();
-            this.InsertableCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.ItemForInsertable = new DevExpress.XtraLayout.LayoutControlItem();
-            this.RemovableCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.ItemForRemovable = new DevExpress.XtraLayout.LayoutControlItem();
-            this.IdParameterFatherTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForIdParameterFather = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForParameterDetail = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForParameterDetail = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.ParameterDetailBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.ParameterDetailBar = new DevExpress.XtraBars.Bar();
             this.bbiParameterDetailNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiParameterDetailEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiParameterDetailDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiParameterDetailRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.ParameterDetailBar = new DevExpress.XtraBars.Bar();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.ParameterDetailPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdParameterTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parameterViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StateCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditableCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InsertableCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemovableCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdParameterFatherTextEdit.Properties)).BeginInit();
             this.ParameterDetailXtraUserControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdParameterTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdParameter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDescription)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StateCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForState)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditableCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEditable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InsertableCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForInsertable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RemovableCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForRemovable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdParameterFatherTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdParameterFather)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForParameterDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForParameterDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailPopUpMenu)).BeginInit();
@@ -234,20 +234,100 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(979, 678);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // IdParameterTextEdit
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(979, 678);
-            this.layoutControlGroup1.TextVisible = false;
+            this.IdParameterTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "IdParameter", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.IdParameterTextEdit.Location = new System.Drawing.Point(113, 12);
+            this.IdParameterTextEdit.Name = "IdParameterTextEdit";
+            this.IdParameterTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.IdParameterTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.IdParameterTextEdit.Properties.Mask.EditMask = "N0";
+            this.IdParameterTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.IdParameterTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.IdParameterTextEdit.Size = new System.Drawing.Size(854, 20);
+            this.IdParameterTextEdit.StyleController = this.dataLayoutControl1;
+            this.IdParameterTextEdit.TabIndex = 4;
             // 
             // parameterViewBindingSource
             // 
             this.parameterViewBindingSource.DataSource = typeof(Acnur.App.Repository.Data.Parameter);
+            // 
+            // NameTextEdit
+            // 
+            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NameTextEdit.Location = new System.Drawing.Point(113, 36);
+            this.NameTextEdit.Name = "NameTextEdit";
+            this.NameTextEdit.Size = new System.Drawing.Size(854, 20);
+            this.NameTextEdit.StyleController = this.dataLayoutControl1;
+            this.NameTextEdit.TabIndex = 5;
+            // 
+            // DescriptionTextEdit
+            // 
+            this.DescriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DescriptionTextEdit.Location = new System.Drawing.Point(113, 60);
+            this.DescriptionTextEdit.Name = "DescriptionTextEdit";
+            this.DescriptionTextEdit.Size = new System.Drawing.Size(854, 20);
+            this.DescriptionTextEdit.StyleController = this.dataLayoutControl1;
+            this.DescriptionTextEdit.TabIndex = 6;
+            // 
+            // StateCheckEdit
+            // 
+            this.StateCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "State", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.StateCheckEdit.Location = new System.Drawing.Point(113, 84);
+            this.StateCheckEdit.Name = "StateCheckEdit";
+            this.StateCheckEdit.Properties.Caption = "State";
+            this.StateCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.StateCheckEdit.Size = new System.Drawing.Size(854, 19);
+            this.StateCheckEdit.StyleController = this.dataLayoutControl1;
+            this.StateCheckEdit.TabIndex = 7;
+            // 
+            // EditableCheckEdit
+            // 
+            this.EditableCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Editable", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.EditableCheckEdit.Location = new System.Drawing.Point(113, 107);
+            this.EditableCheckEdit.Name = "EditableCheckEdit";
+            this.EditableCheckEdit.Properties.Caption = "Editable";
+            this.EditableCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.EditableCheckEdit.Size = new System.Drawing.Size(854, 19);
+            this.EditableCheckEdit.StyleController = this.dataLayoutControl1;
+            this.EditableCheckEdit.TabIndex = 8;
+            // 
+            // InsertableCheckEdit
+            // 
+            this.InsertableCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Insertable", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.InsertableCheckEdit.Location = new System.Drawing.Point(113, 130);
+            this.InsertableCheckEdit.Name = "InsertableCheckEdit";
+            this.InsertableCheckEdit.Properties.Caption = "Insertable";
+            this.InsertableCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.InsertableCheckEdit.Size = new System.Drawing.Size(854, 19);
+            this.InsertableCheckEdit.StyleController = this.dataLayoutControl1;
+            this.InsertableCheckEdit.TabIndex = 9;
+            // 
+            // RemovableCheckEdit
+            // 
+            this.RemovableCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Removable", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.RemovableCheckEdit.Location = new System.Drawing.Point(113, 153);
+            this.RemovableCheckEdit.Name = "RemovableCheckEdit";
+            this.RemovableCheckEdit.Properties.Caption = "Removable";
+            this.RemovableCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.RemovableCheckEdit.Size = new System.Drawing.Size(854, 19);
+            this.RemovableCheckEdit.StyleController = this.dataLayoutControl1;
+            this.RemovableCheckEdit.TabIndex = 10;
+            // 
+            // IdParameterFatherTextEdit
+            // 
+            this.IdParameterFatherTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "IdParameterFather", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.IdParameterFatherTextEdit.Location = new System.Drawing.Point(113, 176);
+            this.IdParameterFatherTextEdit.Name = "IdParameterFatherTextEdit";
+            this.IdParameterFatherTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.IdParameterFatherTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.IdParameterFatherTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.IdParameterFatherTextEdit.Properties.Mask.EditMask = "N0";
+            this.IdParameterFatherTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.IdParameterFatherTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.IdParameterFatherTextEdit.Size = new System.Drawing.Size(854, 20);
+            this.IdParameterFatherTextEdit.StyleController = this.dataLayoutControl1;
+            this.IdParameterFatherTextEdit.TabIndex = 11;
             // 
             // ParameterDetailXtraUserControl
             // 
@@ -273,6 +353,10 @@
             this.ParameterDetailGridControl.TabIndex = 0;
             this.ParameterDetailGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ParameterDetailGridView});
+            // 
+            // ParameterDetailBindingSource
+            // 
+            this.ParameterDetailBindingSource.DataSource = typeof(Acnur.App.Repository.Data.ParameterDetail);
             // 
             // ParameterDetailGridView
             // 
@@ -963,9 +1047,44 @@
             this.colWeekly3.FieldName = "Weekly3";
             this.colWeekly3.Name = "colWeekly3";
             // 
-            // ParameterDetailBindingSource
+            // barDockControlLeft
             // 
-            this.ParameterDetailBindingSource.DataSource = typeof(Acnur.App.Repository.Data.ParameterDetail);
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 396);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(931, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 396);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 420);
+            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(931, 24);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(979, 678);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
             // 
@@ -985,20 +1104,6 @@
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 658);
             // 
-            // IdParameterTextEdit
-            // 
-            this.IdParameterTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "IdParameter", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IdParameterTextEdit.Location = new System.Drawing.Point(113, 12);
-            this.IdParameterTextEdit.Name = "IdParameterTextEdit";
-            this.IdParameterTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.IdParameterTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.IdParameterTextEdit.Properties.Mask.EditMask = "N0";
-            this.IdParameterTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.IdParameterTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.IdParameterTextEdit.Size = new System.Drawing.Size(854, 20);
-            this.IdParameterTextEdit.StyleController = this.dataLayoutControl1;
-            this.IdParameterTextEdit.TabIndex = 4;
-            // 
             // ItemForIdParameter
             // 
             this.ItemForIdParameter.Control = this.IdParameterTextEdit;
@@ -1009,15 +1114,6 @@
             this.ItemForIdParameter.TextSize = new System.Drawing.Size(98, 13);
             this.ItemForIdParameter.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // NameTextEdit
-            // 
-            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(113, 36);
-            this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(854, 20);
-            this.NameTextEdit.StyleController = this.dataLayoutControl1;
-            this.NameTextEdit.TabIndex = 5;
-            // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
@@ -1026,15 +1122,6 @@
             this.ItemForName.Size = new System.Drawing.Size(959, 24);
             this.ItemForName.Text = "Name";
             this.ItemForName.TextSize = new System.Drawing.Size(98, 13);
-            // 
-            // DescriptionTextEdit
-            // 
-            this.DescriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DescriptionTextEdit.Location = new System.Drawing.Point(113, 60);
-            this.DescriptionTextEdit.Name = "DescriptionTextEdit";
-            this.DescriptionTextEdit.Size = new System.Drawing.Size(854, 20);
-            this.DescriptionTextEdit.StyleController = this.dataLayoutControl1;
-            this.DescriptionTextEdit.TabIndex = 6;
             // 
             // ItemForDescription
             // 
@@ -1045,17 +1132,6 @@
             this.ItemForDescription.Text = "Description";
             this.ItemForDescription.TextSize = new System.Drawing.Size(98, 13);
             // 
-            // StateCheckEdit
-            // 
-            this.StateCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "State", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.StateCheckEdit.Location = new System.Drawing.Point(113, 84);
-            this.StateCheckEdit.Name = "StateCheckEdit";
-            this.StateCheckEdit.Properties.Caption = "State";
-            this.StateCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.StateCheckEdit.Size = new System.Drawing.Size(854, 19);
-            this.StateCheckEdit.StyleController = this.dataLayoutControl1;
-            this.StateCheckEdit.TabIndex = 7;
-            // 
             // ItemForState
             // 
             this.ItemForState.Control = this.StateCheckEdit;
@@ -1064,17 +1140,6 @@
             this.ItemForState.Size = new System.Drawing.Size(959, 23);
             this.ItemForState.Text = "State";
             this.ItemForState.TextSize = new System.Drawing.Size(98, 13);
-            // 
-            // EditableCheckEdit
-            // 
-            this.EditableCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Editable", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.EditableCheckEdit.Location = new System.Drawing.Point(113, 107);
-            this.EditableCheckEdit.Name = "EditableCheckEdit";
-            this.EditableCheckEdit.Properties.Caption = "Editable";
-            this.EditableCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.EditableCheckEdit.Size = new System.Drawing.Size(854, 19);
-            this.EditableCheckEdit.StyleController = this.dataLayoutControl1;
-            this.EditableCheckEdit.TabIndex = 8;
             // 
             // ItemForEditable
             // 
@@ -1085,17 +1150,6 @@
             this.ItemForEditable.Text = "Editable";
             this.ItemForEditable.TextSize = new System.Drawing.Size(98, 13);
             // 
-            // InsertableCheckEdit
-            // 
-            this.InsertableCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Insertable", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.InsertableCheckEdit.Location = new System.Drawing.Point(113, 130);
-            this.InsertableCheckEdit.Name = "InsertableCheckEdit";
-            this.InsertableCheckEdit.Properties.Caption = "Insertable";
-            this.InsertableCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.InsertableCheckEdit.Size = new System.Drawing.Size(854, 19);
-            this.InsertableCheckEdit.StyleController = this.dataLayoutControl1;
-            this.InsertableCheckEdit.TabIndex = 9;
-            // 
             // ItemForInsertable
             // 
             this.ItemForInsertable.Control = this.InsertableCheckEdit;
@@ -1105,17 +1159,6 @@
             this.ItemForInsertable.Text = "Insertable";
             this.ItemForInsertable.TextSize = new System.Drawing.Size(98, 13);
             // 
-            // RemovableCheckEdit
-            // 
-            this.RemovableCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "Removable", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.RemovableCheckEdit.Location = new System.Drawing.Point(113, 153);
-            this.RemovableCheckEdit.Name = "RemovableCheckEdit";
-            this.RemovableCheckEdit.Properties.Caption = "Removable";
-            this.RemovableCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.RemovableCheckEdit.Size = new System.Drawing.Size(854, 19);
-            this.RemovableCheckEdit.StyleController = this.dataLayoutControl1;
-            this.RemovableCheckEdit.TabIndex = 10;
-            // 
             // ItemForRemovable
             // 
             this.ItemForRemovable.Control = this.RemovableCheckEdit;
@@ -1124,21 +1167,6 @@
             this.ItemForRemovable.Size = new System.Drawing.Size(959, 23);
             this.ItemForRemovable.Text = "Removable";
             this.ItemForRemovable.TextSize = new System.Drawing.Size(98, 13);
-            // 
-            // IdParameterFatherTextEdit
-            // 
-            this.IdParameterFatherTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterViewBindingSource, "IdParameterFather", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IdParameterFatherTextEdit.Location = new System.Drawing.Point(113, 176);
-            this.IdParameterFatherTextEdit.Name = "IdParameterFatherTextEdit";
-            this.IdParameterFatherTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.IdParameterFatherTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.IdParameterFatherTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.IdParameterFatherTextEdit.Properties.Mask.EditMask = "N0";
-            this.IdParameterFatherTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.IdParameterFatherTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.IdParameterFatherTextEdit.Size = new System.Drawing.Size(854, 20);
-            this.IdParameterFatherTextEdit.StyleController = this.dataLayoutControl1;
-            this.IdParameterFatherTextEdit.TabIndex = 11;
             // 
             // ItemForIdParameterFather
             // 
@@ -1150,17 +1178,6 @@
             this.ItemForIdParameterFather.TextSize = new System.Drawing.Size(98, 13);
             this.ItemForIdParameterFather.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // ItemForParameterDetail
-            // 
-            this.ItemForParameterDetail.Control = this.ParameterDetailXtraUserControl;
-            this.ItemForParameterDetail.Location = new System.Drawing.Point(0, 0);
-            this.ItemForParameterDetail.Name = "ItemForParameterDetail";
-            this.ItemForParameterDetail.Size = new System.Drawing.Size(935, 424);
-            this.ItemForParameterDetail.StartNewLine = true;
-            this.ItemForParameterDetail.Text = "Parameter Detail";
-            this.ItemForParameterDetail.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForParameterDetail.TextVisible = false;
-            // 
             // tabbedControlGroup1
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 188);
@@ -1171,6 +1188,7 @@
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
+            this.tabbedControlGroup1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlGroup3
             // 
@@ -1180,6 +1198,17 @@
             this.layoutControlGroup3.Name = "autoGroupForParameterDetail";
             this.layoutControlGroup3.Size = new System.Drawing.Size(935, 424);
             this.layoutControlGroup3.Text = "ParameterDetail";
+            // 
+            // ItemForParameterDetail
+            // 
+            this.ItemForParameterDetail.Control = this.ParameterDetailXtraUserControl;
+            this.ItemForParameterDetail.Location = new System.Drawing.Point(0, 0);
+            this.ItemForParameterDetail.Name = "ItemForParameterDetail";
+            this.ItemForParameterDetail.Size = new System.Drawing.Size(935, 424);
+            this.ItemForParameterDetail.StartNewLine = true;
+            this.ItemForParameterDetail.Text = "Parameter Detail";
+            this.ItemForParameterDetail.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForParameterDetail.TextVisible = false;
             // 
             // mvvmContext
             // 
@@ -1273,6 +1302,21 @@
             this.ParameterDetailBarManager.MainMenu = this.ParameterDetailBar;
             this.ParameterDetailBarManager.MaxItemId = 4;
             // 
+            // ParameterDetailBar
+            // 
+            this.ParameterDetailBar.BarName = "ParameterDetail";
+            this.ParameterDetailBar.DockCol = 0;
+            this.ParameterDetailBar.DockRow = 0;
+            this.ParameterDetailBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.ParameterDetailBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailNew),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailDelete),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailRefresh)});
+            this.ParameterDetailBar.OptionsBar.AllowQuickCustomization = false;
+            this.ParameterDetailBar.OptionsBar.DrawDragBorder = false;
+            this.ParameterDetailBar.Text = "ParameterDetail";
+            // 
             // bbiParameterDetailNew
             // 
             this.bbiParameterDetailNew.Caption = "New";
@@ -1305,49 +1349,6 @@
             this.bbiParameterDetailRefresh.Name = "bbiParameterDetailRefresh";
             this.bbiParameterDetailRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // ParameterDetailBar
-            // 
-            this.ParameterDetailBar.BarName = "ParameterDetail";
-            this.ParameterDetailBar.DockCol = 0;
-            this.ParameterDetailBar.DockRow = 0;
-            this.ParameterDetailBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.ParameterDetailBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailEdit),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailDelete),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetailRefresh)});
-            this.ParameterDetailBar.OptionsBar.AllowQuickCustomization = false;
-            this.ParameterDetailBar.OptionsBar.DrawDragBorder = false;
-            this.ParameterDetailBar.Text = "ParameterDetail";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(931, 24);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 420);
-            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 396);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(931, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 396);
-            // 
             // ParameterDetailPopUpMenu
             // 
             this.ParameterDetailPopUpMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -1373,33 +1374,33 @@
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdParameterTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parameterViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StateCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditableCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InsertableCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemovableCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdParameterFatherTextEdit.Properties)).EndInit();
             this.ParameterDetailXtraUserControl.ResumeLayout(false);
             this.ParameterDetailXtraUserControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdParameterTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdParameter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDescription)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StateCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForState)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditableCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEditable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InsertableCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForInsertable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RemovableCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForRemovable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdParameterFatherTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdParameterFather)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForParameterDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForParameterDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterDetailPopUpMenu)).EndInit();

@@ -371,8 +371,14 @@
     <EmbeddedResource Include="Views\StepsFlowModule\StepsFlowModuleCollectionView.resx">
       <DependentUpon>StepsFlowModuleCollectionView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlowModule\StepsFlowModuleView.resx">
+      <DependentUpon>StepsFlowModuleView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\StepsFlow\StepsFlowCollectionView.resx">
       <DependentUpon>StepsFlowCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlow\StepsFlowView.resx">
+      <DependentUpon>StepsFlowView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Users\UsersCollectionView.resx">
       <DependentUpon>UsersCollectionView.cs</DependentUpon>

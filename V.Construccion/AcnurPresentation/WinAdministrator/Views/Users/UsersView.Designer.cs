@@ -61,8 +61,9 @@
             this.colIdOperationModuleUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdOperationModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdUser1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ColOperationsModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUsers1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColOperationsModule = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColOperations = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
@@ -74,8 +75,9 @@
             this.colIdStepFlowModuleUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdStepFlowModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdUser2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ColStepsFlowModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUsers2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColStepsFlowModule = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColStepsFlowName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl6 = new DevExpress.XtraBars.BarDockControl();
@@ -91,10 +93,10 @@
             this.ItemForGeneralInformationActionUsers = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForAudit = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.ItemForOperationsModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForOperationsModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForStepsFlowModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForGeneralInformationEventUsers = new DevExpress.XtraLayout.LayoutControlItem();
@@ -125,8 +127,6 @@
             this.bbiStepsFlowModuleUserDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleUserRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.StepsFlowModuleUserPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.ColOperations = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ColStepsFlowName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdUserTextEdit.Properties)).BeginInit();
@@ -164,10 +164,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGeneralInformationActionUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAudit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModuleUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModuleUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModuleUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModuleUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGeneralInformationEventUsers)).BeginInit();
@@ -474,6 +474,11 @@
             this.colIdUser1.FieldName = "IdUser";
             this.colIdUser1.Name = "colIdUser1";
             // 
+            // colUsers1
+            // 
+            this.colUsers1.FieldName = "Users";
+            this.colUsers1.Name = "colUsers1";
+            // 
             // ColOperationsModule
             // 
             this.ColOperationsModule.Caption = "Module Name";
@@ -482,10 +487,13 @@
             this.ColOperationsModule.Visible = true;
             this.ColOperationsModule.VisibleIndex = 0;
             // 
-            // colUsers1
+            // ColOperations
             // 
-            this.colUsers1.FieldName = "Users";
-            this.colUsers1.Name = "colUsers1";
+            this.ColOperations.Caption = "Operations Name";
+            this.ColOperations.FieldName = "OperationsModule.Operations.Name";
+            this.ColOperations.Name = "ColOperations";
+            this.ColOperations.Visible = true;
+            this.ColOperations.VisibleIndex = 1;
             // 
             // barDockControl3
             // 
@@ -574,6 +582,11 @@
             this.colIdUser2.FieldName = "IdUser";
             this.colIdUser2.Name = "colIdUser2";
             // 
+            // colUsers2
+            // 
+            this.colUsers2.FieldName = "Users";
+            this.colUsers2.Name = "colUsers2";
+            // 
             // ColStepsFlowModule
             // 
             this.ColStepsFlowModule.FieldName = "StepsFlowModule.Modules.ModuleName";
@@ -581,10 +594,13 @@
             this.ColStepsFlowModule.Visible = true;
             this.ColStepsFlowModule.VisibleIndex = 0;
             // 
-            // colUsers2
+            // ColStepsFlowName
             // 
-            this.colUsers2.FieldName = "Users";
-            this.colUsers2.Name = "colUsers2";
+            this.ColStepsFlowName.Caption = "Steps Flow Name";
+            this.ColStepsFlowName.FieldName = "StepsFlowModule.StepsFlow.Name";
+            this.ColStepsFlowName.Name = "ColStepsFlowName";
+            this.ColStepsFlowName.Visible = true;
+            this.ColStepsFlowName.VisibleIndex = 1;
             // 
             // barDockControl7
             // 
@@ -733,26 +749,7 @@
             this.layoutControlGroup4,
             this.layoutControlGroup5});
             this.tabbedControlGroup1.Text = "Tabs";
-            // 
-            // layoutControlGroup4
-            // 
-            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForOperationsModuleUser});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup4.Name = "autoGroupForOperationsModuleUser";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(935, 349);
-            this.layoutControlGroup4.Text = "Operations Module User";
-            // 
-            // ItemForOperationsModuleUser
-            // 
-            this.ItemForOperationsModuleUser.Control = this.OperationsModuleUserXtraUserControl;
-            this.ItemForOperationsModuleUser.Location = new System.Drawing.Point(0, 0);
-            this.ItemForOperationsModuleUser.Name = "ItemForOperationsModuleUser";
-            this.ItemForOperationsModuleUser.Size = new System.Drawing.Size(935, 349);
-            this.ItemForOperationsModuleUser.StartNewLine = true;
-            this.ItemForOperationsModuleUser.Text = "Operations Module User";
-            this.ItemForOperationsModuleUser.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForOperationsModuleUser.TextVisible = false;
+            this.tabbedControlGroup1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlGroup3
             // 
@@ -773,6 +770,26 @@
             this.ItemForModuleUser.Text = "Module User";
             this.ItemForModuleUser.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForModuleUser.TextVisible = false;
+            // 
+            // layoutControlGroup4
+            // 
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForOperationsModuleUser});
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup4.Name = "autoGroupForOperationsModuleUser";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(935, 349);
+            this.layoutControlGroup4.Text = "Operations Module User";
+            // 
+            // ItemForOperationsModuleUser
+            // 
+            this.ItemForOperationsModuleUser.Control = this.OperationsModuleUserXtraUserControl;
+            this.ItemForOperationsModuleUser.Location = new System.Drawing.Point(0, 0);
+            this.ItemForOperationsModuleUser.Name = "ItemForOperationsModuleUser";
+            this.ItemForOperationsModuleUser.Size = new System.Drawing.Size(935, 349);
+            this.ItemForOperationsModuleUser.StartNewLine = true;
+            this.ItemForOperationsModuleUser.Text = "Operations Module User";
+            this.ItemForOperationsModuleUser.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForOperationsModuleUser.TextVisible = false;
             // 
             // layoutControlGroup5
             // 
@@ -1123,22 +1140,6 @@
             this.StepsFlowModuleUserPopUpMenu.Manager = this.StepsFlowModuleUserBarManager;
             this.StepsFlowModuleUserPopUpMenu.Name = "StepsFlowModuleUserPopUpMenu";
             // 
-            // ColOperations
-            // 
-            this.ColOperations.Caption = "Operations Name";
-            this.ColOperations.FieldName = "OperationsModule.Operations.Name";
-            this.ColOperations.Name = "ColOperations";
-            this.ColOperations.Visible = true;
-            this.ColOperations.VisibleIndex = 1;
-            // 
-            // ColStepsFlowName
-            // 
-            this.ColStepsFlowName.Caption = "Steps Flow Name";
-            this.ColStepsFlowName.FieldName = "StepsFlowModule.StepsFlow.Name";
-            this.ColStepsFlowName.Name = "ColStepsFlowName";
-            this.ColStepsFlowName.Visible = true;
-            this.ColStepsFlowName.VisibleIndex = 1;
-            // 
             // UsersView
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -1192,10 +1193,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGeneralInformationActionUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAudit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModuleUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModuleUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModuleUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModuleUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGeneralInformationEventUsers)).EndInit();

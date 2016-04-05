@@ -96,14 +96,14 @@
             this.ItemForModuleName = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForDescription = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForStepsFlowModule = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForComponentsByModule = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForOperationsModule = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.ItemForStepsFlowModule = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
@@ -164,14 +164,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModuleName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForComponentsByModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModuleUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentsByModuleBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentsByModulePopUpMenu)).BeginInit();
@@ -728,6 +728,27 @@
             this.layoutControlGroup5,
             this.layoutControlGroup6});
             this.tabbedControlGroup1.Text = "Tabs";
+            this.tabbedControlGroup1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // layoutControlGroup6
+            // 
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForStepsFlowModule});
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup6.Name = "autoGroupForStepsFlowModule";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(935, 540);
+            this.layoutControlGroup6.Text = "Steps Flow Module";
+            // 
+            // ItemForStepsFlowModule
+            // 
+            this.ItemForStepsFlowModule.Control = this.StepsFlowModuleXtraUserControl;
+            this.ItemForStepsFlowModule.Location = new System.Drawing.Point(0, 0);
+            this.ItemForStepsFlowModule.Name = "ItemForStepsFlowModule";
+            this.ItemForStepsFlowModule.Size = new System.Drawing.Size(935, 540);
+            this.ItemForStepsFlowModule.StartNewLine = true;
+            this.ItemForStepsFlowModule.Text = "Steps Flow Module";
+            this.ItemForStepsFlowModule.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForStepsFlowModule.TextVisible = false;
             // 
             // layoutControlGroup3
             // 
@@ -788,26 +809,6 @@
             this.ItemForOperationsModule.Text = "Operations Module";
             this.ItemForOperationsModule.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForOperationsModule.TextVisible = false;
-            // 
-            // layoutControlGroup6
-            // 
-            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForStepsFlowModule});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup6.Name = "autoGroupForStepsFlowModule";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(935, 540);
-            this.layoutControlGroup6.Text = "Steps Flow Module";
-            // 
-            // ItemForStepsFlowModule
-            // 
-            this.ItemForStepsFlowModule.Control = this.StepsFlowModuleXtraUserControl;
-            this.ItemForStepsFlowModule.Location = new System.Drawing.Point(0, 0);
-            this.ItemForStepsFlowModule.Name = "ItemForStepsFlowModule";
-            this.ItemForStepsFlowModule.Size = new System.Drawing.Size(935, 540);
-            this.ItemForStepsFlowModule.StartNewLine = true;
-            this.ItemForStepsFlowModule.Text = "Steps Flow Module";
-            this.ItemForStepsFlowModule.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForStepsFlowModule.TextVisible = false;
             // 
             // mvvmContext
             // 
@@ -1228,14 +1229,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModuleName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForComponentsByModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModuleUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentsByModuleBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentsByModulePopUpMenu)).EndInit();

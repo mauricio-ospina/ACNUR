@@ -34,7 +34,9 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPre
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.StepsFlowModuleUserCollectionView.StepsFlowModuleUserCollectionView.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.StepsFlowModuleUserView.StepsFlowModuleUserView.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.StepsFlowModuleCollectionView.StepsFlowModuleCollectionView.resources
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.StepsFlowModuleView.StepsFlowModuleView.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.StepsFlowCollectionView.StepsFlowCollectionView.resources
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.StepsFlowView.StepsFlowView.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.UsersCollectionView.UsersCollectionView.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.Views.UsersView.UsersView.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinAdministrator\obj\Debug\WinAdministrator.csproj.GenerateResource.Cache

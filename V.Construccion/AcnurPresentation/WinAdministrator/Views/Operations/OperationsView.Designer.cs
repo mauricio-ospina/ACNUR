@@ -29,10 +29,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.IdOperationTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.operationsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.OperationsModuleXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.OperationsModuleGridControl = new DevExpress.XtraGrid.GridControl();
+            this.OperationsModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OperationsModuleGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdOperationModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdOperation = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -40,46 +42,44 @@
             this.colModules = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOperations = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOperationsModuleUser = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.OperationsModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.IdOperationTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForIdOperation = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForOperationsModule = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForOperationsModule = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.OperationsModuleBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.OperationsModuleBar = new DevExpress.XtraBars.Bar();
             this.bbiOperationsModuleNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOperationsModuleEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOperationsModuleDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOperationsModuleRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.OperationsModuleBar = new DevExpress.XtraBars.Bar();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.OperationsModulePopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdOperationTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operationsViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             this.OperationsModuleXtraUserControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdOperationTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdOperation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModulePopUpMenu)).BeginInit();
@@ -99,20 +99,32 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(979, 678);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // IdOperationTextEdit
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(979, 678);
-            this.layoutControlGroup1.TextVisible = false;
+            this.IdOperationTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.operationsViewBindingSource, "IdOperation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.IdOperationTextEdit.Location = new System.Drawing.Point(76, 12);
+            this.IdOperationTextEdit.Name = "IdOperationTextEdit";
+            this.IdOperationTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.IdOperationTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.IdOperationTextEdit.Properties.Mask.EditMask = "N0";
+            this.IdOperationTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.IdOperationTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.IdOperationTextEdit.Size = new System.Drawing.Size(891, 20);
+            this.IdOperationTextEdit.StyleController = this.dataLayoutControl1;
+            this.IdOperationTextEdit.TabIndex = 4;
             // 
             // operationsViewBindingSource
             // 
             this.operationsViewBindingSource.DataSource = typeof(Acnur.App.Repository.Data.Operations);
+            // 
+            // NameTextEdit
+            // 
+            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.operationsViewBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NameTextEdit.Location = new System.Drawing.Point(76, 36);
+            this.NameTextEdit.Name = "NameTextEdit";
+            this.NameTextEdit.Size = new System.Drawing.Size(891, 20);
+            this.NameTextEdit.StyleController = this.dataLayoutControl1;
+            this.NameTextEdit.TabIndex = 5;
             // 
             // OperationsModuleXtraUserControl
             // 
@@ -138,6 +150,10 @@
             this.OperationsModuleGridControl.TabIndex = 0;
             this.OperationsModuleGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.OperationsModuleGridView});
+            // 
+            // OperationsModuleBindingSource
+            // 
+            this.OperationsModuleBindingSource.DataSource = typeof(Acnur.App.Repository.Data.OperationsModule);
             // 
             // OperationsModuleGridView
             // 
@@ -186,9 +202,44 @@
             this.colOperationsModuleUser.FieldName = "OperationsModuleUser";
             this.colOperationsModuleUser.Name = "colOperationsModuleUser";
             // 
-            // OperationsModuleBindingSource
+            // barDockControlLeft
             // 
-            this.OperationsModuleBindingSource.DataSource = typeof(Acnur.App.Repository.Data.OperationsModule);
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 536);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(931, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 536);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 560);
+            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(931, 24);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(979, 678);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
             // 
@@ -202,20 +253,6 @@
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 658);
             // 
-            // IdOperationTextEdit
-            // 
-            this.IdOperationTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.operationsViewBindingSource, "IdOperation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IdOperationTextEdit.Location = new System.Drawing.Point(76, 12);
-            this.IdOperationTextEdit.Name = "IdOperationTextEdit";
-            this.IdOperationTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.IdOperationTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.IdOperationTextEdit.Properties.Mask.EditMask = "N0";
-            this.IdOperationTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.IdOperationTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.IdOperationTextEdit.Size = new System.Drawing.Size(891, 20);
-            this.IdOperationTextEdit.StyleController = this.dataLayoutControl1;
-            this.IdOperationTextEdit.TabIndex = 4;
-            // 
             // ItemForIdOperation
             // 
             this.ItemForIdOperation.Control = this.IdOperationTextEdit;
@@ -226,15 +263,6 @@
             this.ItemForIdOperation.TextSize = new System.Drawing.Size(61, 13);
             this.ItemForIdOperation.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // NameTextEdit
-            // 
-            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.operationsViewBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(76, 36);
-            this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(891, 20);
-            this.NameTextEdit.StyleController = this.dataLayoutControl1;
-            this.NameTextEdit.TabIndex = 5;
-            // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
@@ -243,17 +271,6 @@
             this.ItemForName.Size = new System.Drawing.Size(959, 24);
             this.ItemForName.Text = "Name";
             this.ItemForName.TextSize = new System.Drawing.Size(61, 13);
-            // 
-            // ItemForOperationsModule
-            // 
-            this.ItemForOperationsModule.Control = this.OperationsModuleXtraUserControl;
-            this.ItemForOperationsModule.Location = new System.Drawing.Point(0, 0);
-            this.ItemForOperationsModule.Name = "ItemForOperationsModule";
-            this.ItemForOperationsModule.Size = new System.Drawing.Size(935, 564);
-            this.ItemForOperationsModule.StartNewLine = true;
-            this.ItemForOperationsModule.Text = "Operations Module";
-            this.ItemForOperationsModule.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForOperationsModule.TextVisible = false;
             // 
             // tabbedControlGroup1
             // 
@@ -265,6 +282,7 @@
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
+            this.tabbedControlGroup1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlGroup3
             // 
@@ -274,6 +292,17 @@
             this.layoutControlGroup3.Name = "autoGroupForOperationsModule";
             this.layoutControlGroup3.Size = new System.Drawing.Size(935, 564);
             this.layoutControlGroup3.Text = "OperationsModule";
+            // 
+            // ItemForOperationsModule
+            // 
+            this.ItemForOperationsModule.Control = this.OperationsModuleXtraUserControl;
+            this.ItemForOperationsModule.Location = new System.Drawing.Point(0, 0);
+            this.ItemForOperationsModule.Name = "ItemForOperationsModule";
+            this.ItemForOperationsModule.Size = new System.Drawing.Size(935, 564);
+            this.ItemForOperationsModule.StartNewLine = true;
+            this.ItemForOperationsModule.Text = "Operations Module";
+            this.ItemForOperationsModule.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForOperationsModule.TextVisible = false;
             // 
             // mvvmContext
             // 
@@ -367,6 +396,21 @@
             this.OperationsModuleBarManager.MainMenu = this.OperationsModuleBar;
             this.OperationsModuleBarManager.MaxItemId = 4;
             // 
+            // OperationsModuleBar
+            // 
+            this.OperationsModuleBar.BarName = "OperationsModule";
+            this.OperationsModuleBar.DockCol = 0;
+            this.OperationsModuleBar.DockRow = 0;
+            this.OperationsModuleBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.OperationsModuleBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleNew),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleDelete),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleRefresh)});
+            this.OperationsModuleBar.OptionsBar.AllowQuickCustomization = false;
+            this.OperationsModuleBar.OptionsBar.DrawDragBorder = false;
+            this.OperationsModuleBar.Text = "OperationsModule";
+            // 
             // bbiOperationsModuleNew
             // 
             this.bbiOperationsModuleNew.Caption = "New";
@@ -399,49 +443,6 @@
             this.bbiOperationsModuleRefresh.Name = "bbiOperationsModuleRefresh";
             this.bbiOperationsModuleRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // OperationsModuleBar
-            // 
-            this.OperationsModuleBar.BarName = "OperationsModule";
-            this.OperationsModuleBar.DockCol = 0;
-            this.OperationsModuleBar.DockRow = 0;
-            this.OperationsModuleBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.OperationsModuleBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleEdit),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleDelete),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiOperationsModuleRefresh)});
-            this.OperationsModuleBar.OptionsBar.AllowQuickCustomization = false;
-            this.OperationsModuleBar.OptionsBar.DrawDragBorder = false;
-            this.OperationsModuleBar.Text = "OperationsModule";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(931, 24);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 560);
-            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 536);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(931, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 536);
-            // 
             // OperationsModulePopUpMenu
             // 
             this.OperationsModulePopUpMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -467,21 +468,21 @@
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdOperationTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.operationsViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             this.OperationsModuleXtraUserControl.ResumeLayout(false);
             this.OperationsModuleXtraUserControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdOperationTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdOperation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForOperationsModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModulePopUpMenu)).EndInit();
