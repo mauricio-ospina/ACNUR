@@ -51,6 +51,7 @@
     <Compile Include="Administrator\CustomerModules.cs" />
     <Compile Include="CustomerGenericFacade.cs" />
     <Compile Include="Emergency\CustomerEmergengy.cs" />
+    <Compile Include="General\CustomerAttachments.cs" />
     <Compile Include="General\CustomerParameterDetail.cs" />
     <Compile Include="General\CustomerParameter.cs" />
     <Compile Include="General\CustomerUsers.cs" />

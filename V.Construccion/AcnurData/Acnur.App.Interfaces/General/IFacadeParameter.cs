@@ -14,9 +14,8 @@
 
 namespace Acnur.App.Interfaces
 {
-    using System.ServiceModel;
-    using System.Collections.Generic;
     using Acnur.App.Entities;
+    using System.ServiceModel;
 
     /// <summary>
     /// Interface IFacadeParameter

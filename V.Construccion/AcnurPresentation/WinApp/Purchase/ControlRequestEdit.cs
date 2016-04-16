@@ -23,6 +23,7 @@ namespace WinApp
     using DevExpress.XtraEditors;
     using DevExpress.XtraEditors.Controls;
     using DevExpress.XtraGrid.Views.Grid;
+    using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
@@ -247,6 +248,6 @@ namespace WinApp
         {
             this.EditEvents(true, e.RowHandle);
             this.LoadEvents();
-        }
+        }        
     }
 }

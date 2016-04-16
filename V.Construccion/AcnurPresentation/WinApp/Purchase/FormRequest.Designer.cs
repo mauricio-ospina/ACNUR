@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule7 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule8 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule10 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
@@ -48,17 +55,10 @@
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule24 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule25 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule26 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule27 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject81 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject82 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject83 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject84 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.TxtRequesterPerson = new DevExpress.XtraEditors.TextEdit();
             this.DteEstimateDeliveryDate = new DevExpress.XtraEditors.DateEdit();
             this.TxtDeliveryLocation = new DevExpress.XtraEditors.TextEdit();
@@ -171,6 +171,7 @@
             this.LblQuantity = new DevExpress.XtraEditors.LabelControl();
             this.TabServices = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.GroupService = new DevExpress.XtraEditors.GroupControl();
+            this.PnlFileUpLoadServices = new DevExpress.XtraEditors.PanelControl();
             this.LblIdServices = new DevExpress.XtraEditors.LabelControl();
             this.BtnPurchaseServices = new DevExpress.XtraEditors.SimpleButton();
             this.BtnRemoveServices = new DevExpress.XtraEditors.SimpleButton();
@@ -198,6 +199,7 @@
             this.LblShortDescription = new DevExpress.XtraEditors.LabelControl();
             this.TabEvents = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.GroupEvent = new DevExpress.XtraEditors.GroupControl();
+            this.PnlFileUpLoadEvents = new DevExpress.XtraEditors.PanelControl();
             this.LblIdEvent = new DevExpress.XtraEditors.LabelControl();
             this.BtnPurchaseEvents = new DevExpress.XtraEditors.SimpleButton();
             this.BtnRemoveEvents = new DevExpress.XtraEditors.SimpleButton();
@@ -240,8 +242,7 @@
             this.ValidationProviderEditEvents = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.ValidationProviderEditServices = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.ValidationProviderEditGoods = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.PnlFileUpLoadServices = new DevExpress.XtraEditors.PanelControl();
-            this.PnlFileUpLoadEvents = new DevExpress.XtraEditors.PanelControl();
+            this.LblDataPurchase = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.TxtRequesterPerson.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDate.Properties)).BeginInit();
@@ -329,6 +330,7 @@
             this.TabServices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupService)).BeginInit();
             this.GroupService.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupDeliveryServices)).BeginInit();
             this.GroupDeliveryServices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupProductsDeliverables)).BeginInit();
@@ -340,6 +342,7 @@
             this.TabEvents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupEvent)).BeginInit();
             this.GroupEvent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupAccommodation)).BeginInit();
             this.GroupAccommodation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChkDinner.Properties)).BeginInit();
@@ -363,8 +366,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderEditEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderEditServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderEditGoods)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadServices)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadEvents)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtRequesterPerson
@@ -378,10 +379,10 @@
             this.TxtRequesterPerson.Properties.MaxLength = 50;
             this.TxtRequesterPerson.Size = new System.Drawing.Size(255, 20);
             this.TxtRequesterPerson.TabIndex = 0;
-            conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule8.ErrorText = "This value is requered";
-            conditionValidationRule8.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtRequesterPerson, conditionValidationRule8);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is requered";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtRequesterPerson, conditionValidationRule1);
             // 
             // DteEstimateDeliveryDate
             // 
@@ -400,10 +401,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DteEstimateDeliveryDate.Size = new System.Drawing.Size(100, 20);
             this.DteEstimateDeliveryDate.TabIndex = 7;
-            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule9.ErrorText = "This value is requered";
-            conditionValidationRule9.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.DteEstimateDeliveryDate, conditionValidationRule9);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This value is requered";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditPurchase.SetValidationRule(this.DteEstimateDeliveryDate, conditionValidationRule2);
             // 
             // TxtDeliveryLocation
             // 
@@ -416,10 +417,10 @@
             this.TxtDeliveryLocation.Properties.MaxLength = 50;
             this.TxtDeliveryLocation.Size = new System.Drawing.Size(255, 20);
             this.TxtDeliveryLocation.TabIndex = 6;
-            conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule10.ErrorText = "This value is requered";
-            conditionValidationRule10.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtDeliveryLocation, conditionValidationRule10);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This value is requered";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtDeliveryLocation, conditionValidationRule3);
             // 
             // MemoBackground
             // 
@@ -432,10 +433,10 @@
             this.MemoBackground.Properties.MaxLength = 500;
             this.MemoBackground.Size = new System.Drawing.Size(889, 57);
             this.MemoBackground.TabIndex = 5;
-            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule11.ErrorText = "This value is requered";
-            conditionValidationRule11.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.MemoBackground, conditionValidationRule11);
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "This value is requered";
+            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditPurchase.SetValidationRule(this.MemoBackground, conditionValidationRule4);
             // 
             // TxtResponsible
             // 
@@ -448,10 +449,10 @@
             this.TxtResponsible.Properties.MaxLength = 50;
             this.TxtResponsible.Size = new System.Drawing.Size(245, 20);
             this.TxtResponsible.TabIndex = 4;
-            conditionValidationRule12.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule12.ErrorText = "This value is requered";
-            conditionValidationRule12.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtResponsible, conditionValidationRule12);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "This value is requered";
+            conditionValidationRule5.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtResponsible, conditionValidationRule5);
             // 
             // TxtDutyStation
             // 
@@ -464,10 +465,10 @@
             this.TxtDutyStation.Properties.MaxLength = 32;
             this.TxtDutyStation.Size = new System.Drawing.Size(211, 20);
             this.TxtDutyStation.TabIndex = 1;
-            conditionValidationRule13.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule13.ErrorText = "This value is requered";
-            conditionValidationRule13.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtDutyStation, conditionValidationRule13);
+            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule6.ErrorText = "This value is requered";
+            conditionValidationRule6.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditPurchase.SetValidationRule(this.TxtDutyStation, conditionValidationRule6);
             // 
             // CmbRequesterUnit
             // 
@@ -481,11 +482,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbRequesterUnit.Size = new System.Drawing.Size(255, 20);
             this.CmbRequesterUnit.TabIndex = 3;
-            conditionValidationRule14.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotContains;
-            conditionValidationRule14.ErrorText = "Please choose a value";
-            conditionValidationRule14.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            conditionValidationRule14.Value1 = "Seleccione por favor...";
-            this.ValidationProviderEditPurchase.SetValidationRule(this.CmbRequesterUnit, conditionValidationRule14);
+            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotContains;
+            conditionValidationRule7.ErrorText = "Please choose a value";
+            conditionValidationRule7.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            conditionValidationRule7.Value1 = "Seleccione por favor...";
+            this.ValidationProviderEditPurchase.SetValidationRule(this.CmbRequesterUnit, conditionValidationRule7);
             // 
             // DtpRequestDate
             // 
@@ -504,10 +505,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtpRequestDate.Size = new System.Drawing.Size(100, 20);
             this.DtpRequestDate.TabIndex = 2;
-            conditionValidationRule15.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule15.ErrorText = "This value is requered";
-            conditionValidationRule15.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.DtpRequestDate, conditionValidationRule15);
+            conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule8.ErrorText = "This value is requered";
+            conditionValidationRule8.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditPurchase.SetValidationRule(this.DtpRequestDate, conditionValidationRule8);
             // 
             // DteExpectedDeliveryGoods
             // 
@@ -524,10 +525,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DteExpectedDeliveryGoods.Size = new System.Drawing.Size(115, 20);
             this.DteExpectedDeliveryGoods.TabIndex = 30;
-            conditionValidationRule16.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule16.ErrorText = "This value is requered";
-            conditionValidationRule16.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditGoods.SetValidationRule(this.DteExpectedDeliveryGoods, conditionValidationRule16);
+            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule9.ErrorText = "This value is requered";
+            conditionValidationRule9.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditGoods.SetValidationRule(this.DteExpectedDeliveryGoods, conditionValidationRule9);
             // 
             // TxtContactPersonGoods
             // 
@@ -539,10 +540,10 @@
             this.TxtContactPersonGoods.Name = "TxtContactPersonGoods";
             this.TxtContactPersonGoods.Size = new System.Drawing.Size(717, 20);
             this.TxtContactPersonGoods.TabIndex = 29;
-            conditionValidationRule17.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule17.ErrorText = "This value is requered";
-            conditionValidationRule17.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditGoods.SetValidationRule(this.TxtContactPersonGoods, conditionValidationRule17);
+            conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule10.ErrorText = "This value is requered";
+            conditionValidationRule10.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditGoods.SetValidationRule(this.TxtContactPersonGoods, conditionValidationRule10);
             // 
             // TxtPlaceDelivery
             // 
@@ -554,10 +555,10 @@
             this.TxtPlaceDelivery.Name = "TxtPlaceDelivery";
             this.TxtPlaceDelivery.Size = new System.Drawing.Size(859, 20);
             this.TxtPlaceDelivery.TabIndex = 28;
-            conditionValidationRule18.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule18.ErrorText = "This value is requered";
-            conditionValidationRule18.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditGoods.SetValidationRule(this.TxtPlaceDelivery, conditionValidationRule18);
+            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule11.ErrorText = "This value is requered";
+            conditionValidationRule11.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditGoods.SetValidationRule(this.TxtPlaceDelivery, conditionValidationRule11);
             // 
             // TxtOther
             // 
@@ -657,10 +658,10 @@
             this.TxtDescription.Name = "TxtDescription";
             this.TxtDescription.Size = new System.Drawing.Size(216, 20);
             this.TxtDescription.TabIndex = 19;
-            conditionValidationRule19.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule19.ErrorText = "This value is requered";
-            conditionValidationRule19.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditGoods.SetValidationRule(this.TxtDescription, conditionValidationRule19);
+            conditionValidationRule12.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule12.ErrorText = "This value is requered";
+            conditionValidationRule12.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditGoods.SetValidationRule(this.TxtDescription, conditionValidationRule12);
             // 
             // CmbUnitMeasure
             // 
@@ -674,11 +675,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbUnitMeasure.Size = new System.Drawing.Size(163, 20);
             this.CmbUnitMeasure.TabIndex = 18;
-            conditionValidationRule20.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotContains;
-            conditionValidationRule20.ErrorText = "Please choose a value";
-            conditionValidationRule20.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            conditionValidationRule20.Value1 = "Seleccione por favor...";
-            this.ValidationProviderEditGoods.SetValidationRule(this.CmbUnitMeasure, conditionValidationRule20);
+            conditionValidationRule13.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotContains;
+            conditionValidationRule13.ErrorText = "Please choose a value";
+            conditionValidationRule13.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            conditionValidationRule13.Value1 = "Seleccione por favor...";
+            this.ValidationProviderEditGoods.SetValidationRule(this.CmbUnitMeasure, conditionValidationRule13);
             // 
             // SpinQuantity
             // 
@@ -698,12 +699,12 @@
             this.SpinQuantity.Properties.MaxLength = 32;
             this.SpinQuantity.Size = new System.Drawing.Size(57, 20);
             this.SpinQuantity.TabIndex = 17;
-            conditionValidationRule21.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Between;
-            conditionValidationRule21.ErrorText = "This value must be between 1 and 1000";
-            conditionValidationRule21.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            conditionValidationRule21.Value1 = 1;
-            conditionValidationRule21.Value2 = 1000;
-            this.ValidationProviderEditGoods.SetValidationRule(this.SpinQuantity, conditionValidationRule21);
+            conditionValidationRule14.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Between;
+            conditionValidationRule14.ErrorText = "This value must be between 1 and 1000";
+            conditionValidationRule14.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            conditionValidationRule14.Value1 = 1;
+            conditionValidationRule14.Value2 = 1000;
+            this.ValidationProviderEditGoods.SetValidationRule(this.SpinQuantity, conditionValidationRule14);
             // 
             // MemoObservationsGoods
             // 
@@ -726,10 +727,10 @@
             this.TxtShortDescription.Name = "TxtShortDescription";
             this.TxtShortDescription.Size = new System.Drawing.Size(843, 20);
             this.TxtShortDescription.TabIndex = 39;
-            conditionValidationRule22.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule22.ErrorText = "This value is requered";
-            conditionValidationRule22.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditServices.SetValidationRule(this.TxtShortDescription, conditionValidationRule22);
+            conditionValidationRule15.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule15.ErrorText = "This value is requered";
+            conditionValidationRule15.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditServices.SetValidationRule(this.TxtShortDescription, conditionValidationRule15);
             // 
             // SpinHoursDays
             // 
@@ -750,12 +751,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.SpinHoursDays.Size = new System.Drawing.Size(55, 20);
             this.SpinHoursDays.TabIndex = 41;
-            conditionValidationRule23.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Between;
-            conditionValidationRule23.ErrorText = "This value must be between 1 and 24";
-            conditionValidationRule23.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            conditionValidationRule23.Value1 = 1;
-            conditionValidationRule23.Value2 = 24;
-            this.ValidationProviderEditServices.SetValidationRule(this.SpinHoursDays, conditionValidationRule23);
+            conditionValidationRule16.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Between;
+            conditionValidationRule16.ErrorText = "This value must be between 1 and 24";
+            conditionValidationRule16.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            conditionValidationRule16.Value1 = 1;
+            conditionValidationRule16.Value2 = 24;
+            this.ValidationProviderEditServices.SetValidationRule(this.SpinHoursDays, conditionValidationRule16);
             // 
             // SpinNumberDays
             // 
@@ -776,12 +777,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.SpinNumberDays.Size = new System.Drawing.Size(55, 20);
             this.SpinNumberDays.TabIndex = 40;
-            conditionValidationRule24.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Between;
-            conditionValidationRule24.ErrorText = "This value must be between 1 and 365";
-            conditionValidationRule24.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            conditionValidationRule24.Value1 = 1;
-            conditionValidationRule24.Value2 = 365;
-            this.ValidationProviderEditServices.SetValidationRule(this.SpinNumberDays, conditionValidationRule24);
+            conditionValidationRule17.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Between;
+            conditionValidationRule17.ErrorText = "This value must be between 1 and 365";
+            conditionValidationRule17.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            conditionValidationRule17.Value1 = 1;
+            conditionValidationRule17.Value2 = 365;
+            this.ValidationProviderEditServices.SetValidationRule(this.SpinNumberDays, conditionValidationRule17);
             // 
             // TxtDescriptionTechnical
             // 
@@ -895,10 +896,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DteExpectedDeliveryDate.Size = new System.Drawing.Size(100, 20);
             this.DteExpectedDeliveryDate.TabIndex = 51;
-            conditionValidationRule25.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule25.ErrorText = "This value is requered";
-            conditionValidationRule25.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditServices.SetValidationRule(this.DteExpectedDeliveryDate, conditionValidationRule25);
+            conditionValidationRule18.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule18.ErrorText = "This value is requered";
+            conditionValidationRule18.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditServices.SetValidationRule(this.DteExpectedDeliveryDate, conditionValidationRule18);
             // 
             // TxtContactPersonServices
             // 
@@ -910,10 +911,10 @@
             this.TxtContactPersonServices.Name = "TxtContactPersonServices";
             this.TxtContactPersonServices.Size = new System.Drawing.Size(349, 20);
             this.TxtContactPersonServices.TabIndex = 50;
-            conditionValidationRule26.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule26.ErrorText = "This value is requered";
-            conditionValidationRule26.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditServices.SetValidationRule(this.TxtContactPersonServices, conditionValidationRule26);
+            conditionValidationRule19.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule19.ErrorText = "This value is requered";
+            conditionValidationRule19.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditServices.SetValidationRule(this.TxtContactPersonServices, conditionValidationRule19);
             // 
             // TxtDeliveryLocationService
             // 
@@ -925,10 +926,10 @@
             this.TxtDeliveryLocationService.Name = "TxtDeliveryLocationService";
             this.TxtDeliveryLocationService.Size = new System.Drawing.Size(351, 20);
             this.TxtDeliveryLocationService.TabIndex = 49;
-            conditionValidationRule27.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule27.ErrorText = "This value is requered";
-            conditionValidationRule27.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditServices.SetValidationRule(this.TxtDeliveryLocationService, conditionValidationRule27);
+            conditionValidationRule20.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule20.ErrorText = "This value is requered";
+            conditionValidationRule20.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditServices.SetValidationRule(this.TxtDeliveryLocationService, conditionValidationRule20);
             // 
             // MemoObservationsServices
             // 
@@ -960,11 +961,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.SpinNumberParticipants.Size = new System.Drawing.Size(57, 20);
             this.SpinNumberParticipants.TabIndex = 63;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Greater;
-            conditionValidationRule1.ErrorText = "This value is requered";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            conditionValidationRule1.Value1 = 0;
-            this.ValidationProviderEditEvents.SetValidationRule(this.SpinNumberParticipants, conditionValidationRule1);
+            conditionValidationRule21.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Greater;
+            conditionValidationRule21.ErrorText = "This value is requered";
+            conditionValidationRule21.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            conditionValidationRule21.Value1 = 0;
+            this.ValidationProviderEditEvents.SetValidationRule(this.SpinNumberParticipants, conditionValidationRule21);
             // 
             // TxtNameEvent
             // 
@@ -977,10 +978,10 @@
             this.TxtNameEvent.Name = "TxtNameEvent";
             this.TxtNameEvent.Size = new System.Drawing.Size(490, 20);
             this.TxtNameEvent.TabIndex = 62;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This value is requered";
-            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditEvents.SetValidationRule(this.TxtNameEvent, conditionValidationRule2);
+            conditionValidationRule22.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule22.ErrorText = "This value is requered";
+            conditionValidationRule22.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditEvents.SetValidationRule(this.TxtNameEvent, conditionValidationRule22);
             // 
             // TimeEndTime
             // 
@@ -997,10 +998,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TimeEndTime.Size = new System.Drawing.Size(100, 20);
             this.TimeEndTime.TabIndex = 67;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "This value is requered";
-            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditEvents.SetValidationRule(this.TimeEndTime, conditionValidationRule3);
+            conditionValidationRule23.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule23.ErrorText = "This value is requered";
+            conditionValidationRule23.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditEvents.SetValidationRule(this.TimeEndTime, conditionValidationRule23);
             // 
             // TimeStartTime
             // 
@@ -1017,10 +1018,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TimeStartTime.Size = new System.Drawing.Size(100, 20);
             this.TimeStartTime.TabIndex = 65;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "This value is requered";
-            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditEvents.SetValidationRule(this.TimeStartTime, conditionValidationRule4);
+            conditionValidationRule24.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule24.ErrorText = "This value is requered";
+            conditionValidationRule24.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditEvents.SetValidationRule(this.TimeStartTime, conditionValidationRule24);
             // 
             // DteStarDate
             // 
@@ -1039,10 +1040,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DteStarDate.Size = new System.Drawing.Size(203, 20);
             this.DteStarDate.TabIndex = 64;
-            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule5.ErrorText = "This value is requered";
-            conditionValidationRule5.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditEvents.SetValidationRule(this.DteStarDate, conditionValidationRule5);
+            conditionValidationRule25.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule25.ErrorText = "This value is requered";
+            conditionValidationRule25.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditEvents.SetValidationRule(this.DteStarDate, conditionValidationRule25);
             // 
             // DteEndDate
             // 
@@ -1061,10 +1062,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DteEndDate.Size = new System.Drawing.Size(203, 20);
             this.DteEndDate.TabIndex = 66;
-            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule6.ErrorText = "This value is requered";
-            conditionValidationRule6.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditEvents.SetValidationRule(this.DteEndDate, conditionValidationRule6);
+            conditionValidationRule26.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule26.ErrorText = "This value is requered";
+            conditionValidationRule26.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.ValidationProviderEditEvents.SetValidationRule(this.DteEndDate, conditionValidationRule26);
             // 
             // TxtDestination
             // 
@@ -1270,6 +1271,7 @@
             // 
             this.TabRequest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.TabRequest.Caption = "Purchase Request";
+            this.TabRequest.Controls.Add(this.LblDataPurchase);
             this.TabRequest.Controls.Add(this.GrcPurchase);
             this.TabRequest.Controls.Add(this.GroupGoodsServicesEvents);
             this.TabRequest.Controls.Add(this.GroupRequest);
@@ -1277,7 +1279,7 @@
             this.TabRequest.Controls.Add(this.BtnCancelRequest);
             this.TabRequest.Controls.Add(this.BtnOkRequest);
             this.TabRequest.Name = "TabRequest";
-            this.TabRequest.Size = new System.Drawing.Size(957, 715);
+            this.TabRequest.Size = new System.Drawing.Size(967, 713);
             // 
             // GrcPurchase
             // 
@@ -1325,8 +1327,8 @@
             // 
             this.RIEditDelete.AutoHeight = false;
             this.RIEditDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject81, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject82, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.RIEditDelete.Name = "RIEditDelete";
             this.RIEditDelete.ReadOnly = true;
             // 
@@ -1361,14 +1363,14 @@
             // 
             this.RIEdit.AutoHeight = false;
             this.RIEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject83, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.RIEdit.Name = "RIEdit";
             // 
             // RIDelete
             // 
             this.RIDelete.AutoHeight = false;
             this.RIDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject84, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.RIDelete.Name = "RIDelete";
             // 
             // GroupGoodsServicesEvents
@@ -1554,7 +1556,7 @@
             this.TabGoods.Caption = "Goods";
             this.TabGoods.Controls.Add(this.GroupGoods);
             this.TabGoods.Name = "TabGoods";
-            this.TabGoods.Size = new System.Drawing.Size(957, 715);
+            this.TabGoods.Size = new System.Drawing.Size(967, 713);
             // 
             // GroupGoods
             // 
@@ -1799,7 +1801,7 @@
             this.TabServices.Caption = "Services";
             this.TabServices.Controls.Add(this.GroupService);
             this.TabServices.Name = "TabServices";
-            this.TabServices.Size = new System.Drawing.Size(957, 715);
+            this.TabServices.Size = new System.Drawing.Size(967, 713);
             // 
             // GroupService
             // 
@@ -1820,6 +1822,13 @@
             this.GroupService.Size = new System.Drawing.Size(941, 692);
             this.GroupService.TabIndex = 61;
             this.GroupService.Text = "Service";
+            // 
+            // PnlFileUpLoadServices
+            // 
+            this.PnlFileUpLoadServices.Location = new System.Drawing.Point(22, 481);
+            this.PnlFileUpLoadServices.Name = "PnlFileUpLoadServices";
+            this.PnlFileUpLoadServices.Size = new System.Drawing.Size(897, 162);
+            this.PnlFileUpLoadServices.TabIndex = 61;
             // 
             // LblIdServices
             // 
@@ -2065,7 +2074,7 @@
             this.TabEvents.Caption = "Events";
             this.TabEvents.Controls.Add(this.GroupEvent);
             this.TabEvents.Name = "TabEvents";
-            this.TabEvents.Size = new System.Drawing.Size(957, 715);
+            this.TabEvents.Size = new System.Drawing.Size(967, 713);
             // 
             // GroupEvent
             // 
@@ -2088,6 +2097,13 @@
             this.GroupEvent.Size = new System.Drawing.Size(941, 684);
             this.GroupEvent.TabIndex = 99;
             this.GroupEvent.Text = "Event";
+            // 
+            // PnlFileUpLoadEvents
+            // 
+            this.PnlFileUpLoadEvents.Location = new System.Drawing.Point(20, 477);
+            this.PnlFileUpLoadEvents.Name = "PnlFileUpLoadEvents";
+            this.PnlFileUpLoadEvents.Size = new System.Drawing.Size(897, 162);
+            this.PnlFileUpLoadEvents.TabIndex = 95;
             // 
             // LblIdEvent
             // 
@@ -2465,19 +2481,13 @@
             // 
             this.ValidationProviderEditGoods.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Manual;
             // 
-            // PnlFileUpLoadServices
+            // LblDataPurchase
             // 
-            this.PnlFileUpLoadServices.Location = new System.Drawing.Point(22, 481);
-            this.PnlFileUpLoadServices.Name = "PnlFileUpLoadServices";
-            this.PnlFileUpLoadServices.Size = new System.Drawing.Size(897, 162);
-            this.PnlFileUpLoadServices.TabIndex = 61;
-            // 
-            // PnlFileUpLoadEvents
-            // 
-            this.PnlFileUpLoadEvents.Location = new System.Drawing.Point(20, 477);
-            this.PnlFileUpLoadEvents.Name = "PnlFileUpLoadEvents";
-            this.PnlFileUpLoadEvents.Size = new System.Drawing.Size(897, 162);
-            this.PnlFileUpLoadEvents.TabIndex = 95;
+            this.LblDataPurchase.Location = new System.Drawing.Point(14, 542);
+            this.LblDataPurchase.Name = "LblDataPurchase";
+            this.LblDataPurchase.Size = new System.Drawing.Size(0, 13);
+            this.LblDataPurchase.TabIndex = 17;
+            this.LblDataPurchase.Visible = false;
             // 
             // FormRequest
             // 
@@ -2557,6 +2567,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TabPrincipal)).EndInit();
             this.TabPrincipal.ResumeLayout(false);
             this.TabRequest.ResumeLayout(false);
+            this.TabRequest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrcPurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrvPurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIEditDelete)).EndInit();
@@ -2583,6 +2594,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupService)).EndInit();
             this.GroupService.ResumeLayout(false);
             this.GroupService.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupDeliveryServices)).EndInit();
             this.GroupDeliveryServices.ResumeLayout(false);
             this.GroupDeliveryServices.PerformLayout();
@@ -2599,6 +2611,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupEvent)).EndInit();
             this.GroupEvent.ResumeLayout(false);
             this.GroupEvent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadEvents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupAccommodation)).EndInit();
             this.GroupAccommodation.ResumeLayout(false);
             this.GroupAccommodation.PerformLayout();
@@ -2626,8 +2639,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderEditEvents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderEditServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderEditGoods)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadServices)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PnlFileUpLoadEvents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2817,5 +2828,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn ColActive;
         private DevExpress.XtraEditors.PanelControl PnlFileUpLoadServices;
         private DevExpress.XtraEditors.PanelControl PnlFileUpLoadEvents;
+        private DevExpress.XtraEditors.LabelControl LblDataPurchase;
     }
 }

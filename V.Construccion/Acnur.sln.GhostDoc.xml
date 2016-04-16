@@ -8,6 +8,7 @@
     </IncludeExtensions>
     <IgnoreExtensions>
       <IgnoreExtension>.cs</IgnoreExtension>
+      <IgnoreExtension>.html</IgnoreExtension>
     </IgnoreExtensions>
     <IgnoreFiles>
     </IgnoreFiles>

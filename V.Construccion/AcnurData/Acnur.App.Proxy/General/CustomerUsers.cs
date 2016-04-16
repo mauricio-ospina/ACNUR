@@ -14,9 +14,8 @@
 
 namespace Acnur.App.Proxy
 {
-    using System.Collections.Generic;
-    using Acnur.App.Interfaces;
     using Acnur.App.Entities;
+    using Acnur.App.Interfaces;
 
     /// <summary>
     /// Class CustomerUsers.

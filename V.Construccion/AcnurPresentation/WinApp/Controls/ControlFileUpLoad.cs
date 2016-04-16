@@ -37,6 +37,12 @@ namespace WinApp
         UploadHelper helper;
 
         /// <summary>
+        /// Gets the grid files.
+        /// </summary>
+        /// <value>The grid files.</value>
+        public DevExpress.XtraGrid.GridControl GrcFilesFileUpload { get { return GrcFiles; } }
+
+        /// <summary>
         /// Gets the current file.
         /// </summary>
         /// <value>The current file.</value>

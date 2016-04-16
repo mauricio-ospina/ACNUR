@@ -36,9 +36,12 @@
             this.ColName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColImageMenu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RiPictureMenu = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.BtnFinalize = new DevExpress.XtraEditors.SimpleButton();
+            this.MemoDataPurchase = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.GrcMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RiPictureMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemoDataPurchase.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // LookAndFeel
@@ -52,7 +55,7 @@
             this.GrcMenu.Name = "GrcMenu";
             this.GrcMenu.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.RiPictureMenu});
-            this.GrcMenu.Size = new System.Drawing.Size(673, 481);
+            this.GrcMenu.Size = new System.Drawing.Size(673, 330);
             this.GrcMenu.TabIndex = 6;
             this.GrcMenu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CrvMenu});
@@ -107,13 +110,34 @@
             this.RiPictureMenu.PictureAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.RiPictureMenu.Click += new System.EventHandler(this.RiPictureMenu_Click);
             // 
+            // BtnFinalize
+            // 
+            this.BtnFinalize.Appearance.Options.UseTextOptions = true;
+            this.BtnFinalize.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.BtnFinalize.Location = new System.Drawing.Point(578, 346);
+            this.BtnFinalize.Name = "BtnFinalize";
+            this.BtnFinalize.Size = new System.Drawing.Size(97, 30);
+            this.BtnFinalize.TabIndex = 7;
+            this.BtnFinalize.Text = "Finalize";
+            this.BtnFinalize.Click += new System.EventHandler(this.BtnFinalize_Click);
+            // 
+            // MemoDataPurchase
+            // 
+            this.MemoDataPurchase.Location = new System.Drawing.Point(2, 338);
+            this.MemoDataPurchase.Name = "MemoDataPurchase";
+            this.MemoDataPurchase.Size = new System.Drawing.Size(592, 159);
+            this.MemoDataPurchase.TabIndex = 8;
+            this.MemoDataPurchase.Visible = false;
+            // 
             // FormWelcome
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(678, 486);
+            this.ClientSize = new System.Drawing.Size(678, 390);
+            this.Controls.Add(this.MemoDataPurchase);
+            this.Controls.Add(this.BtnFinalize);
             this.Controls.Add(this.GrcMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -125,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GrcMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RiPictureMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemoDataPurchase.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,6 +162,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn ColName;
         private DevExpress.XtraGrid.Columns.GridColumn ColImageMenu;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit RiPictureMenu;
+        private DevExpress.XtraEditors.SimpleButton BtnFinalize;
+        private DevExpress.XtraEditors.MemoEdit MemoDataPurchase;
 
 
     }

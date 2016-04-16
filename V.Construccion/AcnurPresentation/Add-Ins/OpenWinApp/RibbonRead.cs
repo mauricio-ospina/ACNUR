@@ -16,6 +16,7 @@ namespace OpenWinApp
 {
     using Microsoft.Office.Tools.Ribbon;
     using System.Diagnostics;
+    using Outlook = Microsoft.Office.Interop.Outlook;
 
     /// <summary>
     /// Class RibbonRead.
@@ -30,9 +31,38 @@ namespace OpenWinApp
         /// <param name="e">The <see cref="RibbonControlEventArgs" /> instance containing the event data.</param>
         private void BtnOpenApp_Click(object sender, RibbonControlEventArgs e)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe";
-            Process.Start(startInfo).WaitForExit();
+            Outlook.ExchangeUser UserAutenticate = this.LoadUserAutheticate();
+
+            if (null != UserAutenticate)
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe";// +string.Empty + "' '" + UserAutenticate.Name + "' '" + UserAutenticate.FirstName + "' '" + UserAutenticate.LastName + "'";
+                startInfo.Arguments = UserAutenticate.Name.Replace(' ', '_') + " " + UserAutenticate.Address;
+                Process.Start(startInfo).WaitForExit();
+            }
+        }
+
+        /// <summary>
+        /// Loads the user autheticate.
+        /// </summary>
+        private Outlook.ExchangeUser LoadUserAutheticate()
+        {
+            var Application = new Outlook.Application();
+            Outlook.AddressEntry addrEntry = Application.Session.CurrentUser.AddressEntry;
+
+            if (addrEntry.Type == "EX")
+            {
+                Outlook.ExchangeUser currentUser = Application.Session.CurrentUser.AddressEntry.GetExchangeUser();
+
+                if (currentUser != null)
+                {
+                    return currentUser;
+                }
+                else
+                    return null;
+            }
+            else
+                return null;
         }
     }
 }

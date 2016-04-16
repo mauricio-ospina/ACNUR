@@ -42,6 +42,7 @@
     <Compile Include="Administrator\FacadeModules.cs" />
     <Compile Include="Emergency\FacadeEmergency.cs" />
     <Compile Include="FacadeGeneric.cs" />
+    <Compile Include="General\FacadeAttachments.cs" />
     <Compile Include="General\FacadeParameterDetail.cs" />
     <Compile Include="General\FacadeParameter.cs" />
     <Compile Include="General\FacadeUsers.cs" />

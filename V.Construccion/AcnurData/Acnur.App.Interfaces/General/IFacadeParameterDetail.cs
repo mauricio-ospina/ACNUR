@@ -14,10 +14,10 @@
 
 namespace Acnur.App.Interfaces
 {
-    using System.Collections.Generic;
-    using System.ServiceModel;
     using Acnur.App.Aplication.Enumerators;
     using Acnur.App.Entities;
+    using System.Collections.Generic;
+    using System.ServiceModel;
 
     [ServiceContract]
     public interface IFacadeParameterDetail : IFacadeGeneric<ParameterDetail>

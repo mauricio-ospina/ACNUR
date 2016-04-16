@@ -34,6 +34,8 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\WINAPP\A
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\WINAPP\ACNUR\AcnurPresentation\WinApp\obj\Debug\WinApp.exe
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\WINAPP\ACNUR\AcnurPresentation\WinApp\obj\Debug\WinApp.pdb
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Debug\WinApp.exe.config
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Debug\WinApp.exe.manifest
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Debug\WinApp.application
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Debug\WinApp.exe
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Debug\WinApp.pdb
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Debug\Acnur.App.Aplication.dll
@@ -70,5 +72,7 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPre
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Debug\WinApp.Properties.Resources.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Debug\WinApp.csproj.GenerateResource.Cache
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Debug\WinApp.exe.licenses
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Debug\WinApp.exe.manifest
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Debug\WinApp.application
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Debug\WinApp.exe
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Debug\WinApp.pdb

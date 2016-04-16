@@ -14,10 +14,10 @@
 
 namespace Acnur.App.Proxy
 {
-    using System.Collections.Generic;
-    using Acnur.App.Interfaces;
-    using Acnur.App.Entities;
     using Acnur.App.Aplication.Enumerators;
+    using Acnur.App.Entities;
+    using Acnur.App.Interfaces;
+    using System.Collections.Generic;
 
     public class CustomerParameterDetail : CustomerGenericFacade<IFacadeParameterDetail, ParameterDetail>, IFacadeParameterDetail
     {

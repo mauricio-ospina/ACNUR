@@ -23,10 +23,9 @@ namespace WinApp
     using Acnur.App.Proxy;
     using DevExpress.XtraBars.Navigation;
     using DevExpress.XtraEditors;
-    using DevExpress.XtraEditors.DXErrorProvider;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
+    using System.Data;
     using System.Linq;
     using System.Web.UI.WebControls;
     using System.Windows.Forms;
@@ -46,12 +45,16 @@ namespace WinApp
             this.InitializeComponent();
             this.LoadComboBox();
             this.HandlerTabs(this.TabRequest);
+
             this.ControlFileGoods = new ControlFileUpLoad();
             this.PnlFileUpLoadGoods.Controls.Add(this.ControlFileGoods);
+
             this.ControlFileServices = new ControlFileUpLoad();
             this.PnlFileUpLoadServices.Controls.Add(this.ControlFileServices);
+
             this.ControlFileEvents = new ControlFileUpLoad();
             this.PnlFileUpLoadEvents.Controls.Add(this.ControlFileEvents);
+
             this.RIEditDelete.ButtonClick += RIEditDelete_ButtonClick;
         }
 
@@ -417,6 +420,16 @@ namespace WinApp
             }
         }
 
+        /// <summary>
+        /// Gets or sets the data purchase.
+        /// </summary>
+        /// <value>The data purchase.</value>
+        public string DataPurchase
+        {
+            get { return this.LblDataPurchase.Text; }
+            set { this.LblDataPurchase.Text = value; }
+        }
+
         #endregion
 
         #region Init Request
@@ -507,6 +520,7 @@ namespace WinApp
 
                 this.RefreshGridAdd(this.LoadGoods(this.ObjGoods));
                 this.HandlerTabs(this.TabRequest);
+                this.SaveFiles(this.ControlFileGoods, TypePurchase.Goods);
             }
 
             this.DialogResult = DialogResult.None;
@@ -556,6 +570,7 @@ namespace WinApp
 
                 this.RefreshGridAdd(this.LoadServices(this.ObjServices));
                 this.HandlerTabs(this.TabRequest);
+                this.SaveFiles(this.ControlFileServices, TypePurchase.Services);
             }
 
             this.DialogResult = DialogResult.None;
@@ -605,6 +620,7 @@ namespace WinApp
 
                 this.RefreshGridAdd(this.LoadEvents(this.ObjEvents));
                 this.HandlerTabs(this.TabRequest);
+                this.SaveFiles(this.ControlFileEvents, TypePurchase.Events);
             }
 
             this.DialogResult = DialogResult.None;
@@ -669,26 +685,67 @@ namespace WinApp
                     }
                 }
 
+                //// Coloca los datos del request
+                this.DataPurchase = @"A continuación se relaciona(n) la(s) siguiente(s) solicitud. <br><br><b>" + req.BackgroundRationale + "</b><br>Delivery Location: " + req.DeliveryLocation + "<br><br>" + req.EstimatedDeliveryDate + "<br><br>";
+
+                List<Events> ListEvents = new List<Events>();
+
                 //// Activa todos los eventos relacionados
                 using (CustomerEvents client = new CustomerEvents())
                 {
-                    client.Search(item => item.IdRequest == req.IdRequest, false, null).ToList().ForEach(item => client.Activate(item.IdEvent));
+                    ListEvents = client.Search(item => item.IdRequest == req.IdRequest, false, null).ToList();
+                    ListEvents.ForEach(item => client.Activate(item.IdEvent));
                 }
+
+                //// Valida si tiene eventos y los relaciona en el correo
+                if (ListEvents.Count > 0)
+                {
+                    this.DataPurchase += @"<b>Events:</b><br><br>";
+                    ListEvents.ForEach(delegate(Events item)
+                    {
+                        this.DataPurchase += @"Event Name: " + item.EventName + "<br>StartDate: " + item.StartDate + "<br>EndDate" + item.EndDate + "<br><br>";
+                    });
+                }
+
+                List<Goods> ListGoods = new List<Goods>();
 
                 //// Activa todos lo bienes relacionados
                 using (CustomerGoods client = new CustomerGoods())
                 {
-                    client.Search(item => item.IdRequest == req.IdRequest, false, null).ToList().ForEach(item => client.Activate(item.IdGoods));
+                    ListGoods = client.Search(item => item.IdRequest == req.IdRequest, false, null).ToList();
+                    ListGoods.ForEach(item => client.Activate(item.IdGoods));
                 }
+
+                //// Valida si tiene bienes y los relaciona en el correo
+                if (ListGoods.Count > 0)
+                {
+                    this.DataPurchase += @"<b>Goods:</b><br><br>";
+                    ListGoods.ForEach(delegate(Goods item)
+                    {
+                        this.DataPurchase += @"Description: " + item.Description + "<br>PlaceDelivery: " + item.PlaceDelivery + "<br>ContactPerson: " + item.ContactPerson + "<br>ExpectedDeliveryDate:" + item.ExpectedDeliveryDate + "<br><br>";
+                    });
+                }
+
+                List<Services> ListServices = new List<Services>();
 
                 //// Activa todos los servicios relacinados
                 using (CustomerServices client = new CustomerServices())
                 {
-                    client.Search(item => item.IdRequest == req.IdRequest, false, null).ToList().ForEach(item => client.Activate(item.IdService));
+                    ListServices = client.Search(item => item.IdRequest == req.IdRequest, false, null).ToList();
+                    ListServices.ForEach(item => client.Activate(item.IdService));
+                }
+
+                //// Valida si tiene servicios y los relaciona en el correo
+                if (ListServices.Count > 0)
+                {
+                    this.DataPurchase += @"<b>Services:</b><br><br>";
+                    ListServices.ForEach(delegate(Services item)
+                    {
+                        this.DataPurchase += @"Description: " + item.Description + "<br>Context: " + item.Context + "<br><br>";
+                    });
                 }
             }
 
-            //// Cierra ventana y refresca los parámetros
             this.DialogResult = ret ? DialogResult.OK : DialogResult.None;
         }
 
@@ -936,6 +993,41 @@ namespace WinApp
             this.GrcPurchase.Refresh();
             this.GrcPurchase.DataSource = listExist;
             this.GrvPurchase.UpdateCurrentRow();
+        }
+
+        /// <summary>
+        /// Loads the body purchase.
+        /// </summary>
+        /// <returns>System.String.</returns>
+        internal string LoadBodyPurchase()
+        {
+            return this.DataPurchase;
+        }
+
+        /// <summary>
+        /// Saves the files.
+        /// </summary>
+        /// <param name="ControlFile">The control file goods.</param>
+        /// <param name="Type">The type.</param>
+        private void SaveFiles(ControlFileUpLoad ControlFile, TypePurchase Type)
+        {
+            DataTable dt = (DataTable)ControlFile.GrcFilesFileUpload.DataSource;
+
+            using (CustomerAttachments customer = new CustomerAttachments())
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    Attachments File = new Attachments()
+                    {
+                        IdInformation = 1,
+                        Description = string.Empty,
+                        IdAttachmentType = 1,
+                        IdAttachmentCondition = 1,
+                        IdComponentByModule = (int)Type,
+                        Attachment = Utilities.Serializar(item.ItemArray[2])
+                    };
+                }
+            }
         }
 
         #endregion

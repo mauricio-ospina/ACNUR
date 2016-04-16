@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Administrator\IFacadeModules.cs" />
     <Compile Include="Emergency\IFacadeEmergency.cs" />
+    <Compile Include="General\IFacadeAttachments.cs" />
     <Compile Include="General\IFacadeParameterDetail.cs" />
     <Compile Include="General\IFacadeParameter.cs" />
     <Compile Include="General\IFacadeUsers.cs" />
