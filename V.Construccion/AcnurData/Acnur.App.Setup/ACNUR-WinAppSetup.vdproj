@@ -333,6 +333,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_343DEF7E54B443C4AC6543046D64C72F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_425646C8377110D62D473EFBE023AA13"
         "OwnerKey" = "8:_602CDA4267564E7E83C3C9BAD13B923C"
         "MsmSig" = "8:_UNDEFINED"
@@ -1533,6 +1539,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_343DEF7E54B443C4AC6543046D64C72F"
+            {
+            "SourcePath" = "8:..\\..\\AcnurPresentation\\WinApp\\Templates\\Correo.html"
+            "TargetName" = "8:Correo.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5DB88314EC924BD4A5D080CD3CA56188"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_425646C8377110D62D473EFBE023AA13"
             {
             "AssemblyRegister" = "3:1"
@@ -2427,7 +2453,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ACNUR - WinApp"
         "ProductCode" = "8:{55501E09-B6C7-47D8-890F-30E591FD8896}"
-        "PackageCode" = "8:{81EB80EB-4F6A-4FE7-9DC3-47014163FEB9}"
+        "PackageCode" = "8:{8FE005CD-0C77-4FF1-A929-0CF6E0A12C12}"
         "UpgradeCode" = "8:{9A5FF4A7-9A14-457A-B696-85C1EDE8323A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

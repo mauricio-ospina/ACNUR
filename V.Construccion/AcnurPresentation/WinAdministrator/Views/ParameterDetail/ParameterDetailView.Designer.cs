@@ -27,15 +27,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.IdParameterDetailTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.parameterDetailViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.parameterDetailViewBindingSource = new System.Windows.Forms.BindingSource();
             this.ParameterLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.ParameterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ParameterBindingSource = new System.Windows.Forms.BindingSource();
             this.ParameterLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ParameterDetail2LookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.ParameterDetail2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ParameterDetail2BindingSource = new System.Windows.Forms.BindingSource();
             this.ParameterDetail2LookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.DefinitionTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -125,7 +124,7 @@
             this.ItineraryInformation1TextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ParameterDetail1XtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.ParameterDetail1GridControl = new DevExpress.XtraGrid.GridControl();
-            this.ParameterDetail1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ParameterDetail1BindingSource = new System.Windows.Forms.BindingSource();
             this.ParameterDetail1GridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdParameterDetail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdParameter = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -374,17 +373,18 @@
             this.ItemForWeekly1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForWeekly2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForWeekly3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.ParameterDetail1BarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.ParameterDetail1BarManager = new DevExpress.XtraBars.BarManager();
             this.ParameterDetail1Bar = new DevExpress.XtraBars.Bar();
             this.bbiParameterDetail1New = new DevExpress.XtraBars.BarButtonItem();
             this.bbiParameterDetail1Edit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiParameterDetail1Delete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiParameterDetail1Refresh = new DevExpress.XtraBars.BarButtonItem();
-            this.ParameterDetail1PopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.ParameterDetail1PopUpMenu = new DevExpress.XtraBars.PopupMenu();
+            this.ColNameParameter = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdParameterDetailTextEdit.Properties)).BeginInit();
@@ -745,7 +745,7 @@
             // IdParameterDetailTextEdit
             // 
             this.IdParameterDetailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "IdParameterDetail", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IdParameterDetailTextEdit.Location = new System.Drawing.Point(178, -1824);
+            this.IdParameterDetailTextEdit.Location = new System.Drawing.Point(178, 12);
             this.IdParameterDetailTextEdit.Name = "IdParameterDetailTextEdit";
             this.IdParameterDetailTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.IdParameterDetailTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -763,7 +763,7 @@
             // ParameterLookUpEdit
             // 
             this.ParameterLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "IdParameter", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ParameterLookUpEdit.Location = new System.Drawing.Point(178, -1800);
+            this.ParameterLookUpEdit.Location = new System.Drawing.Point(178, 36);
             this.ParameterLookUpEdit.Name = "ParameterLookUpEdit";
             this.ParameterLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -781,6 +781,8 @@
             // 
             // ParameterLookUpEditView
             // 
+            this.ParameterLookUpEditView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ColNameParameter});
             this.ParameterLookUpEditView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.ParameterLookUpEditView.Name = "ParameterLookUpEditView";
             this.ParameterLookUpEditView.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -789,7 +791,7 @@
             // ParameterDetail2LookUpEdit
             // 
             this.ParameterDetail2LookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "IdParameterDetailFather", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ParameterDetail2LookUpEdit.Location = new System.Drawing.Point(178, -1776);
+            this.ParameterDetail2LookUpEdit.Location = new System.Drawing.Point(178, 60);
             this.ParameterDetail2LookUpEdit.Name = "ParameterDetail2LookUpEdit";
             this.ParameterDetail2LookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -815,7 +817,7 @@
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(178, -1752);
+            this.NameTextEdit.Location = new System.Drawing.Point(178, 84);
             this.NameTextEdit.Name = "NameTextEdit";
             this.NameTextEdit.Size = new System.Drawing.Size(772, 20);
             this.NameTextEdit.StyleController = this.dataLayoutControl1;
@@ -824,7 +826,7 @@
             // DefinitionTextEdit
             // 
             this.DefinitionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Definition", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DefinitionTextEdit.Location = new System.Drawing.Point(178, -1728);
+            this.DefinitionTextEdit.Location = new System.Drawing.Point(178, 108);
             this.DefinitionTextEdit.Name = "DefinitionTextEdit";
             this.DefinitionTextEdit.Size = new System.Drawing.Size(772, 20);
             this.DefinitionTextEdit.StyleController = this.dataLayoutControl1;
@@ -833,7 +835,7 @@
             // Value1TextEdit
             // 
             this.Value1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Value1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Value1TextEdit.Location = new System.Drawing.Point(178, -1704);
+            this.Value1TextEdit.Location = new System.Drawing.Point(178, 132);
             this.Value1TextEdit.Name = "Value1TextEdit";
             this.Value1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.Value1TextEdit.StyleController = this.dataLayoutControl1;
@@ -842,7 +844,7 @@
             // Value2TextEdit
             // 
             this.Value2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Value2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Value2TextEdit.Location = new System.Drawing.Point(178, -1680);
+            this.Value2TextEdit.Location = new System.Drawing.Point(178, 156);
             this.Value2TextEdit.Name = "Value2TextEdit";
             this.Value2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.Value2TextEdit.StyleController = this.dataLayoutControl1;
@@ -851,7 +853,7 @@
             // OrdinalTextEdit
             // 
             this.OrdinalTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Ordinal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.OrdinalTextEdit.Location = new System.Drawing.Point(178, -1656);
+            this.OrdinalTextEdit.Location = new System.Drawing.Point(178, 180);
             this.OrdinalTextEdit.Name = "OrdinalTextEdit";
             this.OrdinalTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.OrdinalTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -865,7 +867,7 @@
             // ActiveCheckEdit
             // 
             this.ActiveCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Active", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ActiveCheckEdit.Location = new System.Drawing.Point(178, -1632);
+            this.ActiveCheckEdit.Location = new System.Drawing.Point(178, 204);
             this.ActiveCheckEdit.Name = "ActiveCheckEdit";
             this.ActiveCheckEdit.Properties.Caption = "Active";
             this.ActiveCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -876,7 +878,7 @@
             // GeneralInformationActionTextEdit
             // 
             this.GeneralInformationActionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationActionTextEdit.Location = new System.Drawing.Point(178, -1609);
+            this.GeneralInformationActionTextEdit.Location = new System.Drawing.Point(178, 227);
             this.GeneralInformationActionTextEdit.Name = "GeneralInformationActionTextEdit";
             this.GeneralInformationActionTextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationActionTextEdit.StyleController = this.dataLayoutControl1;
@@ -885,7 +887,7 @@
             // GeneralInformationAction1TextEdit
             // 
             this.GeneralInformationAction1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction1TextEdit.Location = new System.Drawing.Point(178, -1585);
+            this.GeneralInformationAction1TextEdit.Location = new System.Drawing.Point(178, 251);
             this.GeneralInformationAction1TextEdit.Name = "GeneralInformationAction1TextEdit";
             this.GeneralInformationAction1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction1TextEdit.StyleController = this.dataLayoutControl1;
@@ -894,7 +896,7 @@
             // GeneralInformationAction2TextEdit
             // 
             this.GeneralInformationAction2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction2TextEdit.Location = new System.Drawing.Point(178, -1561);
+            this.GeneralInformationAction2TextEdit.Location = new System.Drawing.Point(178, 275);
             this.GeneralInformationAction2TextEdit.Name = "GeneralInformationAction2TextEdit";
             this.GeneralInformationAction2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction2TextEdit.StyleController = this.dataLayoutControl1;
@@ -903,7 +905,7 @@
             // GeneralInformationAction3TextEdit
             // 
             this.GeneralInformationAction3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction3TextEdit.Location = new System.Drawing.Point(178, -1537);
+            this.GeneralInformationAction3TextEdit.Location = new System.Drawing.Point(178, 299);
             this.GeneralInformationAction3TextEdit.Name = "GeneralInformationAction3TextEdit";
             this.GeneralInformationAction3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction3TextEdit.StyleController = this.dataLayoutControl1;
@@ -912,7 +914,7 @@
             // GeneralInformationAction4TextEdit
             // 
             this.GeneralInformationAction4TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction4TextEdit.Location = new System.Drawing.Point(178, -1513);
+            this.GeneralInformationAction4TextEdit.Location = new System.Drawing.Point(178, 323);
             this.GeneralInformationAction4TextEdit.Name = "GeneralInformationAction4TextEdit";
             this.GeneralInformationAction4TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction4TextEdit.StyleController = this.dataLayoutControl1;
@@ -921,7 +923,7 @@
             // GeneralInformationAction5TextEdit
             // 
             this.GeneralInformationAction5TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction5TextEdit.Location = new System.Drawing.Point(178, -1489);
+            this.GeneralInformationAction5TextEdit.Location = new System.Drawing.Point(178, 347);
             this.GeneralInformationAction5TextEdit.Name = "GeneralInformationAction5TextEdit";
             this.GeneralInformationAction5TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction5TextEdit.StyleController = this.dataLayoutControl1;
@@ -930,7 +932,7 @@
             // GeneralInformationAction6TextEdit
             // 
             this.GeneralInformationAction6TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction6", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction6TextEdit.Location = new System.Drawing.Point(178, -1465);
+            this.GeneralInformationAction6TextEdit.Location = new System.Drawing.Point(178, 371);
             this.GeneralInformationAction6TextEdit.Name = "GeneralInformationAction6TextEdit";
             this.GeneralInformationAction6TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction6TextEdit.StyleController = this.dataLayoutControl1;
@@ -939,7 +941,7 @@
             // GeneralInformationAction7TextEdit
             // 
             this.GeneralInformationAction7TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction7", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction7TextEdit.Location = new System.Drawing.Point(178, -1441);
+            this.GeneralInformationAction7TextEdit.Location = new System.Drawing.Point(178, 395);
             this.GeneralInformationAction7TextEdit.Name = "GeneralInformationAction7TextEdit";
             this.GeneralInformationAction7TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction7TextEdit.StyleController = this.dataLayoutControl1;
@@ -948,7 +950,7 @@
             // GeneralInformationAction8TextEdit
             // 
             this.GeneralInformationAction8TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction8", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction8TextEdit.Location = new System.Drawing.Point(178, -1417);
+            this.GeneralInformationAction8TextEdit.Location = new System.Drawing.Point(178, 419);
             this.GeneralInformationAction8TextEdit.Name = "GeneralInformationAction8TextEdit";
             this.GeneralInformationAction8TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction8TextEdit.StyleController = this.dataLayoutControl1;
@@ -957,7 +959,7 @@
             // GeneralInformationAction9TextEdit
             // 
             this.GeneralInformationAction9TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction9", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction9TextEdit.Location = new System.Drawing.Point(178, -1393);
+            this.GeneralInformationAction9TextEdit.Location = new System.Drawing.Point(178, 443);
             this.GeneralInformationAction9TextEdit.Name = "GeneralInformationAction9TextEdit";
             this.GeneralInformationAction9TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction9TextEdit.StyleController = this.dataLayoutControl1;
@@ -966,7 +968,7 @@
             // GeneralInformationAction10TextEdit
             // 
             this.GeneralInformationAction10TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationAction10", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationAction10TextEdit.Location = new System.Drawing.Point(178, -1369);
+            this.GeneralInformationAction10TextEdit.Location = new System.Drawing.Point(178, 467);
             this.GeneralInformationAction10TextEdit.Name = "GeneralInformationAction10TextEdit";
             this.GeneralInformationAction10TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationAction10TextEdit.StyleController = this.dataLayoutControl1;
@@ -975,7 +977,7 @@
             // AnnexCTextEdit
             // 
             this.AnnexCTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexCTextEdit.Location = new System.Drawing.Point(178, -1345);
+            this.AnnexCTextEdit.Location = new System.Drawing.Point(178, 491);
             this.AnnexCTextEdit.Name = "AnnexCTextEdit";
             this.AnnexCTextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexCTextEdit.StyleController = this.dataLayoutControl1;
@@ -984,7 +986,7 @@
             // AnnexC1TextEdit
             // 
             this.AnnexC1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC1TextEdit.Location = new System.Drawing.Point(178, -1321);
+            this.AnnexC1TextEdit.Location = new System.Drawing.Point(178, 515);
             this.AnnexC1TextEdit.Name = "AnnexC1TextEdit";
             this.AnnexC1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC1TextEdit.StyleController = this.dataLayoutControl1;
@@ -993,7 +995,7 @@
             // AnnexC2TextEdit
             // 
             this.AnnexC2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC2TextEdit.Location = new System.Drawing.Point(178, -1297);
+            this.AnnexC2TextEdit.Location = new System.Drawing.Point(178, 539);
             this.AnnexC2TextEdit.Name = "AnnexC2TextEdit";
             this.AnnexC2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC2TextEdit.StyleController = this.dataLayoutControl1;
@@ -1002,7 +1004,7 @@
             // AnnexC3TextEdit
             // 
             this.AnnexC3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC3TextEdit.Location = new System.Drawing.Point(178, -1273);
+            this.AnnexC3TextEdit.Location = new System.Drawing.Point(178, 563);
             this.AnnexC3TextEdit.Name = "AnnexC3TextEdit";
             this.AnnexC3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC3TextEdit.StyleController = this.dataLayoutControl1;
@@ -1011,7 +1013,7 @@
             // AnnexC4TextEdit
             // 
             this.AnnexC4TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC4TextEdit.Location = new System.Drawing.Point(178, -1249);
+            this.AnnexC4TextEdit.Location = new System.Drawing.Point(178, 587);
             this.AnnexC4TextEdit.Name = "AnnexC4TextEdit";
             this.AnnexC4TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC4TextEdit.StyleController = this.dataLayoutControl1;
@@ -1020,7 +1022,7 @@
             // AnnexC5TextEdit
             // 
             this.AnnexC5TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC5TextEdit.Location = new System.Drawing.Point(178, -1225);
+            this.AnnexC5TextEdit.Location = new System.Drawing.Point(178, 611);
             this.AnnexC5TextEdit.Name = "AnnexC5TextEdit";
             this.AnnexC5TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC5TextEdit.StyleController = this.dataLayoutControl1;
@@ -1029,7 +1031,7 @@
             // AnnexC6TextEdit
             // 
             this.AnnexC6TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC6", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC6TextEdit.Location = new System.Drawing.Point(178, -1201);
+            this.AnnexC6TextEdit.Location = new System.Drawing.Point(178, 635);
             this.AnnexC6TextEdit.Name = "AnnexC6TextEdit";
             this.AnnexC6TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC6TextEdit.StyleController = this.dataLayoutControl1;
@@ -1038,7 +1040,7 @@
             // AnnexC7TextEdit
             // 
             this.AnnexC7TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC7", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC7TextEdit.Location = new System.Drawing.Point(178, -1177);
+            this.AnnexC7TextEdit.Location = new System.Drawing.Point(178, 659);
             this.AnnexC7TextEdit.Name = "AnnexC7TextEdit";
             this.AnnexC7TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC7TextEdit.StyleController = this.dataLayoutControl1;
@@ -1047,7 +1049,7 @@
             // AnnexC8TextEdit
             // 
             this.AnnexC8TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC8", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC8TextEdit.Location = new System.Drawing.Point(178, -1153);
+            this.AnnexC8TextEdit.Location = new System.Drawing.Point(178, 683);
             this.AnnexC8TextEdit.Name = "AnnexC8TextEdit";
             this.AnnexC8TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC8TextEdit.StyleController = this.dataLayoutControl1;
@@ -1056,7 +1058,7 @@
             // AnnexC9TextEdit
             // 
             this.AnnexC9TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC9", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC9TextEdit.Location = new System.Drawing.Point(178, -1129);
+            this.AnnexC9TextEdit.Location = new System.Drawing.Point(178, 707);
             this.AnnexC9TextEdit.Name = "AnnexC9TextEdit";
             this.AnnexC9TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC9TextEdit.StyleController = this.dataLayoutControl1;
@@ -1065,7 +1067,7 @@
             // AnnexC10TextEdit
             // 
             this.AnnexC10TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC10", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC10TextEdit.Location = new System.Drawing.Point(178, -1105);
+            this.AnnexC10TextEdit.Location = new System.Drawing.Point(178, 731);
             this.AnnexC10TextEdit.Name = "AnnexC10TextEdit";
             this.AnnexC10TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC10TextEdit.StyleController = this.dataLayoutControl1;
@@ -1074,7 +1076,7 @@
             // AnnexC11TextEdit
             // 
             this.AnnexC11TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC11", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC11TextEdit.Location = new System.Drawing.Point(178, -1081);
+            this.AnnexC11TextEdit.Location = new System.Drawing.Point(178, 755);
             this.AnnexC11TextEdit.Name = "AnnexC11TextEdit";
             this.AnnexC11TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC11TextEdit.StyleController = this.dataLayoutControl1;
@@ -1083,7 +1085,7 @@
             // AnnexC12TextEdit
             // 
             this.AnnexC12TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC12", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC12TextEdit.Location = new System.Drawing.Point(178, -1057);
+            this.AnnexC12TextEdit.Location = new System.Drawing.Point(178, 779);
             this.AnnexC12TextEdit.Name = "AnnexC12TextEdit";
             this.AnnexC12TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC12TextEdit.StyleController = this.dataLayoutControl1;
@@ -1092,7 +1094,7 @@
             // AnnexC13TextEdit
             // 
             this.AnnexC13TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC13", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC13TextEdit.Location = new System.Drawing.Point(178, -1033);
+            this.AnnexC13TextEdit.Location = new System.Drawing.Point(178, 803);
             this.AnnexC13TextEdit.Name = "AnnexC13TextEdit";
             this.AnnexC13TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC13TextEdit.StyleController = this.dataLayoutControl1;
@@ -1101,7 +1103,7 @@
             // AnnexC14TextEdit
             // 
             this.AnnexC14TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC14", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC14TextEdit.Location = new System.Drawing.Point(178, -1009);
+            this.AnnexC14TextEdit.Location = new System.Drawing.Point(178, 827);
             this.AnnexC14TextEdit.Name = "AnnexC14TextEdit";
             this.AnnexC14TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC14TextEdit.StyleController = this.dataLayoutControl1;
@@ -1110,7 +1112,7 @@
             // AnnexC15TextEdit
             // 
             this.AnnexC15TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC15", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC15TextEdit.Location = new System.Drawing.Point(178, -985);
+            this.AnnexC15TextEdit.Location = new System.Drawing.Point(178, 851);
             this.AnnexC15TextEdit.Name = "AnnexC15TextEdit";
             this.AnnexC15TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC15TextEdit.StyleController = this.dataLayoutControl1;
@@ -1119,7 +1121,7 @@
             // AnnexC16TextEdit
             // 
             this.AnnexC16TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC16", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC16TextEdit.Location = new System.Drawing.Point(178, -961);
+            this.AnnexC16TextEdit.Location = new System.Drawing.Point(178, 875);
             this.AnnexC16TextEdit.Name = "AnnexC16TextEdit";
             this.AnnexC16TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC16TextEdit.StyleController = this.dataLayoutControl1;
@@ -1128,7 +1130,7 @@
             // AnnexC17TextEdit
             // 
             this.AnnexC17TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "AnnexC17", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AnnexC17TextEdit.Location = new System.Drawing.Point(178, -937);
+            this.AnnexC17TextEdit.Location = new System.Drawing.Point(178, 899);
             this.AnnexC17TextEdit.Name = "AnnexC17TextEdit";
             this.AnnexC17TextEdit.Size = new System.Drawing.Size(772, 20);
             this.AnnexC17TextEdit.StyleController = this.dataLayoutControl1;
@@ -1137,7 +1139,7 @@
             // AttachmentsTextEdit
             // 
             this.AttachmentsTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Attachments", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AttachmentsTextEdit.Location = new System.Drawing.Point(178, -913);
+            this.AttachmentsTextEdit.Location = new System.Drawing.Point(178, 923);
             this.AttachmentsTextEdit.Name = "AttachmentsTextEdit";
             this.AttachmentsTextEdit.Size = new System.Drawing.Size(772, 20);
             this.AttachmentsTextEdit.StyleController = this.dataLayoutControl1;
@@ -1146,7 +1148,7 @@
             // Attachments1TextEdit
             // 
             this.Attachments1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Attachments1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Attachments1TextEdit.Location = new System.Drawing.Point(178, -889);
+            this.Attachments1TextEdit.Location = new System.Drawing.Point(178, 947);
             this.Attachments1TextEdit.Name = "Attachments1TextEdit";
             this.Attachments1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.Attachments1TextEdit.StyleController = this.dataLayoutControl1;
@@ -1155,7 +1157,7 @@
             // CostApprovalTextEdit
             // 
             this.CostApprovalTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "CostApproval", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CostApprovalTextEdit.Location = new System.Drawing.Point(178, -865);
+            this.CostApprovalTextEdit.Location = new System.Drawing.Point(178, 971);
             this.CostApprovalTextEdit.Name = "CostApprovalTextEdit";
             this.CostApprovalTextEdit.Size = new System.Drawing.Size(772, 20);
             this.CostApprovalTextEdit.StyleController = this.dataLayoutControl1;
@@ -1164,7 +1166,7 @@
             // CostApproval1TextEdit
             // 
             this.CostApproval1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "CostApproval1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CostApproval1TextEdit.Location = new System.Drawing.Point(178, -841);
+            this.CostApproval1TextEdit.Location = new System.Drawing.Point(178, 995);
             this.CostApproval1TextEdit.Name = "CostApproval1TextEdit";
             this.CostApproval1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.CostApproval1TextEdit.StyleController = this.dataLayoutControl1;
@@ -1173,7 +1175,7 @@
             // CostApproval2TextEdit
             // 
             this.CostApproval2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "CostApproval2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CostApproval2TextEdit.Location = new System.Drawing.Point(178, -817);
+            this.CostApproval2TextEdit.Location = new System.Drawing.Point(178, 1019);
             this.CostApproval2TextEdit.Name = "CostApproval2TextEdit";
             this.CostApproval2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.CostApproval2TextEdit.StyleController = this.dataLayoutControl1;
@@ -1182,7 +1184,7 @@
             // CostApproval3TextEdit
             // 
             this.CostApproval3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "CostApproval3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CostApproval3TextEdit.Location = new System.Drawing.Point(178, -793);
+            this.CostApproval3TextEdit.Location = new System.Drawing.Point(178, 1043);
             this.CostApproval3TextEdit.Name = "CostApproval3TextEdit";
             this.CostApproval3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.CostApproval3TextEdit.StyleController = this.dataLayoutControl1;
@@ -1191,7 +1193,7 @@
             // DataProjectTextEdit
             // 
             this.DataProjectTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "DataProject", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataProjectTextEdit.Location = new System.Drawing.Point(178, -769);
+            this.DataProjectTextEdit.Location = new System.Drawing.Point(178, 1067);
             this.DataProjectTextEdit.Name = "DataProjectTextEdit";
             this.DataProjectTextEdit.Size = new System.Drawing.Size(772, 20);
             this.DataProjectTextEdit.StyleController = this.dataLayoutControl1;
@@ -1200,7 +1202,7 @@
             // DataProject1TextEdit
             // 
             this.DataProject1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "DataProject1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataProject1TextEdit.Location = new System.Drawing.Point(178, -745);
+            this.DataProject1TextEdit.Location = new System.Drawing.Point(178, 1091);
             this.DataProject1TextEdit.Name = "DataProject1TextEdit";
             this.DataProject1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.DataProject1TextEdit.StyleController = this.dataLayoutControl1;
@@ -1209,7 +1211,7 @@
             // DataProject2TextEdit
             // 
             this.DataProject2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "DataProject2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataProject2TextEdit.Location = new System.Drawing.Point(178, -721);
+            this.DataProject2TextEdit.Location = new System.Drawing.Point(178, 1115);
             this.DataProject2TextEdit.Name = "DataProject2TextEdit";
             this.DataProject2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.DataProject2TextEdit.StyleController = this.dataLayoutControl1;
@@ -1218,7 +1220,7 @@
             // DataProject3TextEdit
             // 
             this.DataProject3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "DataProject3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataProject3TextEdit.Location = new System.Drawing.Point(178, -697);
+            this.DataProject3TextEdit.Location = new System.Drawing.Point(178, 1139);
             this.DataProject3TextEdit.Name = "DataProject3TextEdit";
             this.DataProject3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.DataProject3TextEdit.StyleController = this.dataLayoutControl1;
@@ -1227,7 +1229,7 @@
             // DataProject4TextEdit
             // 
             this.DataProject4TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "DataProject4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataProject4TextEdit.Location = new System.Drawing.Point(178, -673);
+            this.DataProject4TextEdit.Location = new System.Drawing.Point(178, 1163);
             this.DataProject4TextEdit.Name = "DataProject4TextEdit";
             this.DataProject4TextEdit.Size = new System.Drawing.Size(772, 20);
             this.DataProject4TextEdit.StyleController = this.dataLayoutControl1;
@@ -1236,7 +1238,7 @@
             // DataProject5TextEdit
             // 
             this.DataProject5TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "DataProject5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataProject5TextEdit.Location = new System.Drawing.Point(178, -649);
+            this.DataProject5TextEdit.Location = new System.Drawing.Point(178, 1187);
             this.DataProject5TextEdit.Name = "DataProject5TextEdit";
             this.DataProject5TextEdit.Size = new System.Drawing.Size(772, 20);
             this.DataProject5TextEdit.StyleController = this.dataLayoutControl1;
@@ -1245,7 +1247,7 @@
             // EventsTextEdit
             // 
             this.EventsTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Events", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.EventsTextEdit.Location = new System.Drawing.Point(178, -625);
+            this.EventsTextEdit.Location = new System.Drawing.Point(178, 1211);
             this.EventsTextEdit.Name = "EventsTextEdit";
             this.EventsTextEdit.Size = new System.Drawing.Size(772, 20);
             this.EventsTextEdit.StyleController = this.dataLayoutControl1;
@@ -1254,7 +1256,7 @@
             // GeneralInformationRiskProfileTextEdit
             // 
             this.GeneralInformationRiskProfileTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfileTextEdit.Location = new System.Drawing.Point(178, -601);
+            this.GeneralInformationRiskProfileTextEdit.Location = new System.Drawing.Point(178, 1235);
             this.GeneralInformationRiskProfileTextEdit.Name = "GeneralInformationRiskProfileTextEdit";
             this.GeneralInformationRiskProfileTextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfileTextEdit.StyleController = this.dataLayoutControl1;
@@ -1263,7 +1265,7 @@
             // GeneralInformationRiskProfile1TextEdit
             // 
             this.GeneralInformationRiskProfile1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile1TextEdit.Location = new System.Drawing.Point(178, -577);
+            this.GeneralInformationRiskProfile1TextEdit.Location = new System.Drawing.Point(178, 1259);
             this.GeneralInformationRiskProfile1TextEdit.Name = "GeneralInformationRiskProfile1TextEdit";
             this.GeneralInformationRiskProfile1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile1TextEdit.StyleController = this.dataLayoutControl1;
@@ -1272,7 +1274,7 @@
             // GeneralInformationRiskProfile2TextEdit
             // 
             this.GeneralInformationRiskProfile2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile2TextEdit.Location = new System.Drawing.Point(178, -553);
+            this.GeneralInformationRiskProfile2TextEdit.Location = new System.Drawing.Point(178, 1283);
             this.GeneralInformationRiskProfile2TextEdit.Name = "GeneralInformationRiskProfile2TextEdit";
             this.GeneralInformationRiskProfile2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile2TextEdit.StyleController = this.dataLayoutControl1;
@@ -1281,7 +1283,7 @@
             // GeneralInformationRiskProfile3TextEdit
             // 
             this.GeneralInformationRiskProfile3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile3TextEdit.Location = new System.Drawing.Point(178, -529);
+            this.GeneralInformationRiskProfile3TextEdit.Location = new System.Drawing.Point(178, 1307);
             this.GeneralInformationRiskProfile3TextEdit.Name = "GeneralInformationRiskProfile3TextEdit";
             this.GeneralInformationRiskProfile3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile3TextEdit.StyleController = this.dataLayoutControl1;
@@ -1290,7 +1292,7 @@
             // GeneralInformationRiskProfile4TextEdit
             // 
             this.GeneralInformationRiskProfile4TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile4TextEdit.Location = new System.Drawing.Point(178, -505);
+            this.GeneralInformationRiskProfile4TextEdit.Location = new System.Drawing.Point(178, 1331);
             this.GeneralInformationRiskProfile4TextEdit.Name = "GeneralInformationRiskProfile4TextEdit";
             this.GeneralInformationRiskProfile4TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile4TextEdit.StyleController = this.dataLayoutControl1;
@@ -1299,7 +1301,7 @@
             // GeneralInformationRiskProfile5TextEdit
             // 
             this.GeneralInformationRiskProfile5TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile5TextEdit.Location = new System.Drawing.Point(178, -481);
+            this.GeneralInformationRiskProfile5TextEdit.Location = new System.Drawing.Point(178, 1355);
             this.GeneralInformationRiskProfile5TextEdit.Name = "GeneralInformationRiskProfile5TextEdit";
             this.GeneralInformationRiskProfile5TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile5TextEdit.StyleController = this.dataLayoutControl1;
@@ -1308,7 +1310,7 @@
             // GeneralInformationRiskProfile6TextEdit
             // 
             this.GeneralInformationRiskProfile6TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile6", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile6TextEdit.Location = new System.Drawing.Point(178, -457);
+            this.GeneralInformationRiskProfile6TextEdit.Location = new System.Drawing.Point(178, 1379);
             this.GeneralInformationRiskProfile6TextEdit.Name = "GeneralInformationRiskProfile6TextEdit";
             this.GeneralInformationRiskProfile6TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile6TextEdit.StyleController = this.dataLayoutControl1;
@@ -1317,7 +1319,7 @@
             // GeneralInformationRiskProfile7TextEdit
             // 
             this.GeneralInformationRiskProfile7TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile7", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile7TextEdit.Location = new System.Drawing.Point(178, -433);
+            this.GeneralInformationRiskProfile7TextEdit.Location = new System.Drawing.Point(178, 1403);
             this.GeneralInformationRiskProfile7TextEdit.Name = "GeneralInformationRiskProfile7TextEdit";
             this.GeneralInformationRiskProfile7TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile7TextEdit.StyleController = this.dataLayoutControl1;
@@ -1326,7 +1328,7 @@
             // GeneralInformationRiskProfile8TextEdit
             // 
             this.GeneralInformationRiskProfile8TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile8", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile8TextEdit.Location = new System.Drawing.Point(178, -409);
+            this.GeneralInformationRiskProfile8TextEdit.Location = new System.Drawing.Point(178, 1427);
             this.GeneralInformationRiskProfile8TextEdit.Name = "GeneralInformationRiskProfile8TextEdit";
             this.GeneralInformationRiskProfile8TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile8TextEdit.StyleController = this.dataLayoutControl1;
@@ -1335,7 +1337,7 @@
             // GeneralInformationRiskProfile9TextEdit
             // 
             this.GeneralInformationRiskProfile9TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile9", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile9TextEdit.Location = new System.Drawing.Point(178, -385);
+            this.GeneralInformationRiskProfile9TextEdit.Location = new System.Drawing.Point(178, 1451);
             this.GeneralInformationRiskProfile9TextEdit.Name = "GeneralInformationRiskProfile9TextEdit";
             this.GeneralInformationRiskProfile9TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile9TextEdit.StyleController = this.dataLayoutControl1;
@@ -1344,7 +1346,7 @@
             // GeneralInformationRiskProfile10TextEdit
             // 
             this.GeneralInformationRiskProfile10TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile10", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile10TextEdit.Location = new System.Drawing.Point(178, -361);
+            this.GeneralInformationRiskProfile10TextEdit.Location = new System.Drawing.Point(178, 1475);
             this.GeneralInformationRiskProfile10TextEdit.Name = "GeneralInformationRiskProfile10TextEdit";
             this.GeneralInformationRiskProfile10TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile10TextEdit.StyleController = this.dataLayoutControl1;
@@ -1353,7 +1355,7 @@
             // GeneralInformationRiskProfile11TextEdit
             // 
             this.GeneralInformationRiskProfile11TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile11", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile11TextEdit.Location = new System.Drawing.Point(178, -337);
+            this.GeneralInformationRiskProfile11TextEdit.Location = new System.Drawing.Point(178, 1499);
             this.GeneralInformationRiskProfile11TextEdit.Name = "GeneralInformationRiskProfile11TextEdit";
             this.GeneralInformationRiskProfile11TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile11TextEdit.StyleController = this.dataLayoutControl1;
@@ -1362,7 +1364,7 @@
             // GeneralInformationRiskProfile12TextEdit
             // 
             this.GeneralInformationRiskProfile12TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile12", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile12TextEdit.Location = new System.Drawing.Point(178, -313);
+            this.GeneralInformationRiskProfile12TextEdit.Location = new System.Drawing.Point(178, 1523);
             this.GeneralInformationRiskProfile12TextEdit.Name = "GeneralInformationRiskProfile12TextEdit";
             this.GeneralInformationRiskProfile12TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile12TextEdit.StyleController = this.dataLayoutControl1;
@@ -1371,7 +1373,7 @@
             // GeneralInformationRiskProfile13TextEdit
             // 
             this.GeneralInformationRiskProfile13TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile13", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile13TextEdit.Location = new System.Drawing.Point(178, -289);
+            this.GeneralInformationRiskProfile13TextEdit.Location = new System.Drawing.Point(178, 1547);
             this.GeneralInformationRiskProfile13TextEdit.Name = "GeneralInformationRiskProfile13TextEdit";
             this.GeneralInformationRiskProfile13TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile13TextEdit.StyleController = this.dataLayoutControl1;
@@ -1380,7 +1382,7 @@
             // GeneralInformationRiskProfile14TextEdit
             // 
             this.GeneralInformationRiskProfile14TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile14", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile14TextEdit.Location = new System.Drawing.Point(178, -265);
+            this.GeneralInformationRiskProfile14TextEdit.Location = new System.Drawing.Point(178, 1571);
             this.GeneralInformationRiskProfile14TextEdit.Name = "GeneralInformationRiskProfile14TextEdit";
             this.GeneralInformationRiskProfile14TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile14TextEdit.StyleController = this.dataLayoutControl1;
@@ -1389,7 +1391,7 @@
             // GeneralInformationRiskProfile15TextEdit
             // 
             this.GeneralInformationRiskProfile15TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile15", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile15TextEdit.Location = new System.Drawing.Point(178, -241);
+            this.GeneralInformationRiskProfile15TextEdit.Location = new System.Drawing.Point(178, 1595);
             this.GeneralInformationRiskProfile15TextEdit.Name = "GeneralInformationRiskProfile15TextEdit";
             this.GeneralInformationRiskProfile15TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile15TextEdit.StyleController = this.dataLayoutControl1;
@@ -1398,7 +1400,7 @@
             // GeneralInformationRiskProfile16TextEdit
             // 
             this.GeneralInformationRiskProfile16TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile16", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile16TextEdit.Location = new System.Drawing.Point(178, -217);
+            this.GeneralInformationRiskProfile16TextEdit.Location = new System.Drawing.Point(178, 1619);
             this.GeneralInformationRiskProfile16TextEdit.Name = "GeneralInformationRiskProfile16TextEdit";
             this.GeneralInformationRiskProfile16TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile16TextEdit.StyleController = this.dataLayoutControl1;
@@ -1407,7 +1409,7 @@
             // GeneralInformationRiskProfile17TextEdit
             // 
             this.GeneralInformationRiskProfile17TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationRiskProfile17", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationRiskProfile17TextEdit.Location = new System.Drawing.Point(178, -193);
+            this.GeneralInformationRiskProfile17TextEdit.Location = new System.Drawing.Point(178, 1643);
             this.GeneralInformationRiskProfile17TextEdit.Name = "GeneralInformationRiskProfile17TextEdit";
             this.GeneralInformationRiskProfile17TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationRiskProfile17TextEdit.StyleController = this.dataLayoutControl1;
@@ -1416,7 +1418,7 @@
             // GeneralInformationEmergencyTextEdit
             // 
             this.GeneralInformationEmergencyTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergencyTextEdit.Location = new System.Drawing.Point(178, -169);
+            this.GeneralInformationEmergencyTextEdit.Location = new System.Drawing.Point(178, 1667);
             this.GeneralInformationEmergencyTextEdit.Name = "GeneralInformationEmergencyTextEdit";
             this.GeneralInformationEmergencyTextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergencyTextEdit.StyleController = this.dataLayoutControl1;
@@ -1425,7 +1427,7 @@
             // GeneralInformationEmergency1TextEdit
             // 
             this.GeneralInformationEmergency1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency1TextEdit.Location = new System.Drawing.Point(178, -145);
+            this.GeneralInformationEmergency1TextEdit.Location = new System.Drawing.Point(178, 1691);
             this.GeneralInformationEmergency1TextEdit.Name = "GeneralInformationEmergency1TextEdit";
             this.GeneralInformationEmergency1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency1TextEdit.StyleController = this.dataLayoutControl1;
@@ -1434,7 +1436,7 @@
             // GeneralInformationEmergency2TextEdit
             // 
             this.GeneralInformationEmergency2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency2TextEdit.Location = new System.Drawing.Point(178, -121);
+            this.GeneralInformationEmergency2TextEdit.Location = new System.Drawing.Point(178, 1715);
             this.GeneralInformationEmergency2TextEdit.Name = "GeneralInformationEmergency2TextEdit";
             this.GeneralInformationEmergency2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency2TextEdit.StyleController = this.dataLayoutControl1;
@@ -1443,7 +1445,7 @@
             // GeneralInformationEmergency3TextEdit
             // 
             this.GeneralInformationEmergency3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency3TextEdit.Location = new System.Drawing.Point(178, -97);
+            this.GeneralInformationEmergency3TextEdit.Location = new System.Drawing.Point(178, 1739);
             this.GeneralInformationEmergency3TextEdit.Name = "GeneralInformationEmergency3TextEdit";
             this.GeneralInformationEmergency3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency3TextEdit.StyleController = this.dataLayoutControl1;
@@ -1452,7 +1454,7 @@
             // GeneralInformationEmergency4TextEdit
             // 
             this.GeneralInformationEmergency4TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency4TextEdit.Location = new System.Drawing.Point(178, -73);
+            this.GeneralInformationEmergency4TextEdit.Location = new System.Drawing.Point(178, 1763);
             this.GeneralInformationEmergency4TextEdit.Name = "GeneralInformationEmergency4TextEdit";
             this.GeneralInformationEmergency4TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency4TextEdit.StyleController = this.dataLayoutControl1;
@@ -1461,7 +1463,7 @@
             // GeneralInformationEmergency5TextEdit
             // 
             this.GeneralInformationEmergency5TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency5TextEdit.Location = new System.Drawing.Point(178, -49);
+            this.GeneralInformationEmergency5TextEdit.Location = new System.Drawing.Point(178, 1787);
             this.GeneralInformationEmergency5TextEdit.Name = "GeneralInformationEmergency5TextEdit";
             this.GeneralInformationEmergency5TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency5TextEdit.StyleController = this.dataLayoutControl1;
@@ -1470,7 +1472,7 @@
             // GeneralInformationEmergency6TextEdit
             // 
             this.GeneralInformationEmergency6TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency6", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency6TextEdit.Location = new System.Drawing.Point(178, -25);
+            this.GeneralInformationEmergency6TextEdit.Location = new System.Drawing.Point(178, 1811);
             this.GeneralInformationEmergency6TextEdit.Name = "GeneralInformationEmergency6TextEdit";
             this.GeneralInformationEmergency6TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency6TextEdit.StyleController = this.dataLayoutControl1;
@@ -1479,7 +1481,7 @@
             // GeneralInformationEmergency7TextEdit
             // 
             this.GeneralInformationEmergency7TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency7", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency7TextEdit.Location = new System.Drawing.Point(178, -1);
+            this.GeneralInformationEmergency7TextEdit.Location = new System.Drawing.Point(178, 1835);
             this.GeneralInformationEmergency7TextEdit.Name = "GeneralInformationEmergency7TextEdit";
             this.GeneralInformationEmergency7TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency7TextEdit.StyleController = this.dataLayoutControl1;
@@ -1488,7 +1490,7 @@
             // GeneralInformationEmergency8TextEdit
             // 
             this.GeneralInformationEmergency8TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency8", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency8TextEdit.Location = new System.Drawing.Point(178, 23);
+            this.GeneralInformationEmergency8TextEdit.Location = new System.Drawing.Point(178, 1859);
             this.GeneralInformationEmergency8TextEdit.Name = "GeneralInformationEmergency8TextEdit";
             this.GeneralInformationEmergency8TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency8TextEdit.StyleController = this.dataLayoutControl1;
@@ -1497,7 +1499,7 @@
             // GeneralInformationEmergency9TextEdit
             // 
             this.GeneralInformationEmergency9TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEmergency9", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEmergency9TextEdit.Location = new System.Drawing.Point(178, 47);
+            this.GeneralInformationEmergency9TextEdit.Location = new System.Drawing.Point(178, 1883);
             this.GeneralInformationEmergency9TextEdit.Name = "GeneralInformationEmergency9TextEdit";
             this.GeneralInformationEmergency9TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEmergency9TextEdit.StyleController = this.dataLayoutControl1;
@@ -1506,7 +1508,7 @@
             // GeneralInformationEventTextEdit
             // 
             this.GeneralInformationEventTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEvent", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEventTextEdit.Location = new System.Drawing.Point(178, 71);
+            this.GeneralInformationEventTextEdit.Location = new System.Drawing.Point(178, 1907);
             this.GeneralInformationEventTextEdit.Name = "GeneralInformationEventTextEdit";
             this.GeneralInformationEventTextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEventTextEdit.StyleController = this.dataLayoutControl1;
@@ -1515,7 +1517,7 @@
             // GeneralInformationEvent1TextEdit
             // 
             this.GeneralInformationEvent1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEvent1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEvent1TextEdit.Location = new System.Drawing.Point(178, 95);
+            this.GeneralInformationEvent1TextEdit.Location = new System.Drawing.Point(178, 1931);
             this.GeneralInformationEvent1TextEdit.Name = "GeneralInformationEvent1TextEdit";
             this.GeneralInformationEvent1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEvent1TextEdit.StyleController = this.dataLayoutControl1;
@@ -1524,7 +1526,7 @@
             // GeneralInformationEvent2TextEdit
             // 
             this.GeneralInformationEvent2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEvent2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEvent2TextEdit.Location = new System.Drawing.Point(178, 119);
+            this.GeneralInformationEvent2TextEdit.Location = new System.Drawing.Point(178, 1955);
             this.GeneralInformationEvent2TextEdit.Name = "GeneralInformationEvent2TextEdit";
             this.GeneralInformationEvent2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEvent2TextEdit.StyleController = this.dataLayoutControl1;
@@ -1533,7 +1535,7 @@
             // GeneralInformationEvent3TextEdit
             // 
             this.GeneralInformationEvent3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEvent3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEvent3TextEdit.Location = new System.Drawing.Point(178, 143);
+            this.GeneralInformationEvent3TextEdit.Location = new System.Drawing.Point(178, 1979);
             this.GeneralInformationEvent3TextEdit.Name = "GeneralInformationEvent3TextEdit";
             this.GeneralInformationEvent3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEvent3TextEdit.StyleController = this.dataLayoutControl1;
@@ -1542,7 +1544,7 @@
             // GeneralInformationEvent4TextEdit
             // 
             this.GeneralInformationEvent4TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEvent4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEvent4TextEdit.Location = new System.Drawing.Point(178, 167);
+            this.GeneralInformationEvent4TextEdit.Location = new System.Drawing.Point(178, 2003);
             this.GeneralInformationEvent4TextEdit.Name = "GeneralInformationEvent4TextEdit";
             this.GeneralInformationEvent4TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEvent4TextEdit.StyleController = this.dataLayoutControl1;
@@ -1551,7 +1553,7 @@
             // GeneralInformationEvent5TextEdit
             // 
             this.GeneralInformationEvent5TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEvent5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEvent5TextEdit.Location = new System.Drawing.Point(178, 191);
+            this.GeneralInformationEvent5TextEdit.Location = new System.Drawing.Point(178, 2027);
             this.GeneralInformationEvent5TextEdit.Name = "GeneralInformationEvent5TextEdit";
             this.GeneralInformationEvent5TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEvent5TextEdit.StyleController = this.dataLayoutControl1;
@@ -1560,7 +1562,7 @@
             // GeneralInformationEvent6TextEdit
             // 
             this.GeneralInformationEvent6TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "GeneralInformationEvent6", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GeneralInformationEvent6TextEdit.Location = new System.Drawing.Point(178, 215);
+            this.GeneralInformationEvent6TextEdit.Location = new System.Drawing.Point(178, 2051);
             this.GeneralInformationEvent6TextEdit.Name = "GeneralInformationEvent6TextEdit";
             this.GeneralInformationEvent6TextEdit.Size = new System.Drawing.Size(772, 20);
             this.GeneralInformationEvent6TextEdit.StyleController = this.dataLayoutControl1;
@@ -1569,7 +1571,7 @@
             // GoodsTextEdit
             // 
             this.GoodsTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Goods", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GoodsTextEdit.Location = new System.Drawing.Point(178, 239);
+            this.GoodsTextEdit.Location = new System.Drawing.Point(178, 2075);
             this.GoodsTextEdit.Name = "GoodsTextEdit";
             this.GoodsTextEdit.Size = new System.Drawing.Size(772, 20);
             this.GoodsTextEdit.StyleController = this.dataLayoutControl1;
@@ -1578,7 +1580,7 @@
             // ItineraryInformationTextEdit
             // 
             this.ItineraryInformationTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "ItineraryInformation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ItineraryInformationTextEdit.Location = new System.Drawing.Point(178, 263);
+            this.ItineraryInformationTextEdit.Location = new System.Drawing.Point(178, 2099);
             this.ItineraryInformationTextEdit.Name = "ItineraryInformationTextEdit";
             this.ItineraryInformationTextEdit.Size = new System.Drawing.Size(772, 20);
             this.ItineraryInformationTextEdit.StyleController = this.dataLayoutControl1;
@@ -1587,7 +1589,7 @@
             // ItineraryInformation1TextEdit
             // 
             this.ItineraryInformation1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "ItineraryInformation1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ItineraryInformation1TextEdit.Location = new System.Drawing.Point(178, 287);
+            this.ItineraryInformation1TextEdit.Location = new System.Drawing.Point(178, 2123);
             this.ItineraryInformation1TextEdit.Name = "ItineraryInformation1TextEdit";
             this.ItineraryInformation1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.ItineraryInformation1TextEdit.StyleController = this.dataLayoutControl1;
@@ -1600,20 +1602,20 @@
             this.ParameterDetail1XtraUserControl.Controls.Add(this.barDockControlRight);
             this.ParameterDetail1XtraUserControl.Controls.Add(this.barDockControlBottom);
             this.ParameterDetail1XtraUserControl.Controls.Add(this.barDockControlTop);
-            this.ParameterDetail1XtraUserControl.Location = new System.Drawing.Point(24, 345);
+            this.ParameterDetail1XtraUserControl.Location = new System.Drawing.Point(24, 2182);
             this.ParameterDetail1XtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.ParameterDetail1XtraUserControl.Name = "ParameterDetail1XtraUserControl";
-            this.ParameterDetail1XtraUserControl.Size = new System.Drawing.Size(914, 100);
+            this.ParameterDetail1XtraUserControl.Size = new System.Drawing.Size(911, 100);
             this.ParameterDetail1XtraUserControl.TabIndex = 93;
             // 
             // ParameterDetail1GridControl
             // 
             this.ParameterDetail1GridControl.DataSource = this.ParameterDetail1BindingSource;
             this.ParameterDetail1GridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ParameterDetail1GridControl.Location = new System.Drawing.Point(0, 24);
+            this.ParameterDetail1GridControl.Location = new System.Drawing.Point(0, 26);
             this.ParameterDetail1GridControl.MainView = this.ParameterDetail1GridView;
             this.ParameterDetail1GridControl.Name = "ParameterDetail1GridControl";
-            this.ParameterDetail1GridControl.Size = new System.Drawing.Size(914, 76);
+            this.ParameterDetail1GridControl.Size = new System.Drawing.Size(911, 74);
             this.ParameterDetail1GridControl.TabIndex = 0;
             this.ParameterDetail1GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ParameterDetail1GridView});
@@ -2317,34 +2319,34 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 76);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 74);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(914, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 76);
+            this.barDockControlRight.Location = new System.Drawing.Point(911, 26);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 74);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 100);
-            this.barDockControlBottom.Size = new System.Drawing.Size(914, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(911, 0);
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(914, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(911, 26);
             // 
             // PressDataTextEdit
             // 
             this.PressDataTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PressData", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PressDataTextEdit.Location = new System.Drawing.Point(178, 461);
+            this.PressDataTextEdit.Location = new System.Drawing.Point(178, 2301);
             this.PressDataTextEdit.Name = "PressDataTextEdit";
             this.PressDataTextEdit.Size = new System.Drawing.Size(772, 20);
             this.PressDataTextEdit.StyleController = this.dataLayoutControl1;
@@ -2353,7 +2355,7 @@
             // PressData1TextEdit
             // 
             this.PressData1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PressData1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PressData1TextEdit.Location = new System.Drawing.Point(178, 485);
+            this.PressData1TextEdit.Location = new System.Drawing.Point(178, 2325);
             this.PressData1TextEdit.Name = "PressData1TextEdit";
             this.PressData1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PressData1TextEdit.StyleController = this.dataLayoutControl1;
@@ -2362,7 +2364,7 @@
             // PressData2TextEdit
             // 
             this.PressData2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PressData2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PressData2TextEdit.Location = new System.Drawing.Point(178, 509);
+            this.PressData2TextEdit.Location = new System.Drawing.Point(178, 2349);
             this.PressData2TextEdit.Name = "PressData2TextEdit";
             this.PressData2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PressData2TextEdit.StyleController = this.dataLayoutControl1;
@@ -2371,7 +2373,7 @@
             // PressData3TextEdit
             // 
             this.PressData3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PressData3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PressData3TextEdit.Location = new System.Drawing.Point(178, 533);
+            this.PressData3TextEdit.Location = new System.Drawing.Point(178, 2373);
             this.PressData3TextEdit.Name = "PressData3TextEdit";
             this.PressData3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PressData3TextEdit.StyleController = this.dataLayoutControl1;
@@ -2380,7 +2382,7 @@
             // PressData4TextEdit
             // 
             this.PressData4TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PressData4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PressData4TextEdit.Location = new System.Drawing.Point(178, 557);
+            this.PressData4TextEdit.Location = new System.Drawing.Point(178, 2397);
             this.PressData4TextEdit.Name = "PressData4TextEdit";
             this.PressData4TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PressData4TextEdit.StyleController = this.dataLayoutControl1;
@@ -2389,7 +2391,7 @@
             // PressData5TextEdit
             // 
             this.PressData5TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PressData5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PressData5TextEdit.Location = new System.Drawing.Point(178, 581);
+            this.PressData5TextEdit.Location = new System.Drawing.Point(178, 2421);
             this.PressData5TextEdit.Name = "PressData5TextEdit";
             this.PressData5TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PressData5TextEdit.StyleController = this.dataLayoutControl1;
@@ -2398,7 +2400,7 @@
             // PressData6TextEdit
             // 
             this.PressData6TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PressData6", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PressData6TextEdit.Location = new System.Drawing.Point(178, 605);
+            this.PressData6TextEdit.Location = new System.Drawing.Point(178, 2445);
             this.PressData6TextEdit.Name = "PressData6TextEdit";
             this.PressData6TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PressData6TextEdit.StyleController = this.dataLayoutControl1;
@@ -2407,7 +2409,7 @@
             // PT8TextEdit
             // 
             this.PT8TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PT8", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PT8TextEdit.Location = new System.Drawing.Point(178, 629);
+            this.PT8TextEdit.Location = new System.Drawing.Point(178, 2469);
             this.PT8TextEdit.Name = "PT8TextEdit";
             this.PT8TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PT8TextEdit.StyleController = this.dataLayoutControl1;
@@ -2416,7 +2418,7 @@
             // PT81TextEdit
             // 
             this.PT81TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PT81", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PT81TextEdit.Location = new System.Drawing.Point(178, 653);
+            this.PT81TextEdit.Location = new System.Drawing.Point(178, 2493);
             this.PT81TextEdit.Name = "PT81TextEdit";
             this.PT81TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PT81TextEdit.StyleController = this.dataLayoutControl1;
@@ -2425,7 +2427,7 @@
             // PT82TextEdit
             // 
             this.PT82TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "PT82", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PT82TextEdit.Location = new System.Drawing.Point(178, 677);
+            this.PT82TextEdit.Location = new System.Drawing.Point(178, 2517);
             this.PT82TextEdit.Name = "PT82TextEdit";
             this.PT82TextEdit.Size = new System.Drawing.Size(772, 20);
             this.PT82TextEdit.StyleController = this.dataLayoutControl1;
@@ -2434,7 +2436,7 @@
             // RequestTextEdit
             // 
             this.RequestTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Request", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.RequestTextEdit.Location = new System.Drawing.Point(178, 701);
+            this.RequestTextEdit.Location = new System.Drawing.Point(178, 2541);
             this.RequestTextEdit.Name = "RequestTextEdit";
             this.RequestTextEdit.Size = new System.Drawing.Size(772, 20);
             this.RequestTextEdit.StyleController = this.dataLayoutControl1;
@@ -2443,7 +2445,7 @@
             // SatffInformationTextEdit
             // 
             this.SatffInformationTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "SatffInformation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.SatffInformationTextEdit.Location = new System.Drawing.Point(178, 725);
+            this.SatffInformationTextEdit.Location = new System.Drawing.Point(178, 2565);
             this.SatffInformationTextEdit.Name = "SatffInformationTextEdit";
             this.SatffInformationTextEdit.Size = new System.Drawing.Size(772, 20);
             this.SatffInformationTextEdit.StyleController = this.dataLayoutControl1;
@@ -2452,7 +2454,7 @@
             // SatffInformation1TextEdit
             // 
             this.SatffInformation1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "SatffInformation1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.SatffInformation1TextEdit.Location = new System.Drawing.Point(178, 749);
+            this.SatffInformation1TextEdit.Location = new System.Drawing.Point(178, 2589);
             this.SatffInformation1TextEdit.Name = "SatffInformation1TextEdit";
             this.SatffInformation1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.SatffInformation1TextEdit.StyleController = this.dataLayoutControl1;
@@ -2461,7 +2463,7 @@
             // ServicesTextEdit
             // 
             this.ServicesTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Services", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ServicesTextEdit.Location = new System.Drawing.Point(178, 773);
+            this.ServicesTextEdit.Location = new System.Drawing.Point(178, 2613);
             this.ServicesTextEdit.Name = "ServicesTextEdit";
             this.ServicesTextEdit.Size = new System.Drawing.Size(772, 20);
             this.ServicesTextEdit.StyleController = this.dataLayoutControl1;
@@ -2470,7 +2472,7 @@
             // SessionsTextEdit
             // 
             this.SessionsTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Sessions", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.SessionsTextEdit.Location = new System.Drawing.Point(178, 797);
+            this.SessionsTextEdit.Location = new System.Drawing.Point(178, 2637);
             this.SessionsTextEdit.Name = "SessionsTextEdit";
             this.SessionsTextEdit.Size = new System.Drawing.Size(772, 20);
             this.SessionsTextEdit.StyleController = this.dataLayoutControl1;
@@ -2479,7 +2481,7 @@
             // WeeklyTextEdit
             // 
             this.WeeklyTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Weekly", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.WeeklyTextEdit.Location = new System.Drawing.Point(178, 821);
+            this.WeeklyTextEdit.Location = new System.Drawing.Point(178, 2661);
             this.WeeklyTextEdit.Name = "WeeklyTextEdit";
             this.WeeklyTextEdit.Size = new System.Drawing.Size(772, 20);
             this.WeeklyTextEdit.StyleController = this.dataLayoutControl1;
@@ -2488,7 +2490,7 @@
             // Weekly1TextEdit
             // 
             this.Weekly1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Weekly1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Weekly1TextEdit.Location = new System.Drawing.Point(178, 845);
+            this.Weekly1TextEdit.Location = new System.Drawing.Point(178, 2685);
             this.Weekly1TextEdit.Name = "Weekly1TextEdit";
             this.Weekly1TextEdit.Size = new System.Drawing.Size(772, 20);
             this.Weekly1TextEdit.StyleController = this.dataLayoutControl1;
@@ -2497,7 +2499,7 @@
             // Weekly2TextEdit
             // 
             this.Weekly2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Weekly2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Weekly2TextEdit.Location = new System.Drawing.Point(178, 869);
+            this.Weekly2TextEdit.Location = new System.Drawing.Point(178, 2709);
             this.Weekly2TextEdit.Name = "Weekly2TextEdit";
             this.Weekly2TextEdit.Size = new System.Drawing.Size(772, 20);
             this.Weekly2TextEdit.StyleController = this.dataLayoutControl1;
@@ -2506,7 +2508,7 @@
             // Weekly3TextEdit
             // 
             this.Weekly3TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.parameterDetailViewBindingSource, "Weekly3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Weekly3TextEdit.Location = new System.Drawing.Point(178, 893);
+            this.Weekly3TextEdit.Location = new System.Drawing.Point(178, 2733);
             this.Weekly3TextEdit.Name = "Weekly3TextEdit";
             this.Weekly3TextEdit.Size = new System.Drawing.Size(772, 20);
             this.Weekly3TextEdit.StyleController = this.dataLayoutControl1;
@@ -2518,9 +2520,9 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, -1836);
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(962, 2761);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(962, 2765);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -2639,7 +2641,7 @@
             this.ItemForWeekly3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(942, 2741);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(942, 2745);
             // 
             // ItemForIdParameterDetail
             // 
@@ -3533,7 +3535,7 @@
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
             this.tabbedControlGroup1.SelectedTabPageIndex = 0;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(942, 150);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(942, 154);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -3545,7 +3547,7 @@
             this.ItemForParameterDetail1});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForParameterDetail1";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(918, 104);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(915, 104);
             this.layoutControlGroup3.Text = "ParameterDetail1";
             // 
             // ItemForParameterDetail1
@@ -3553,7 +3555,7 @@
             this.ItemForParameterDetail1.Control = this.ParameterDetail1XtraUserControl;
             this.ItemForParameterDetail1.Location = new System.Drawing.Point(0, 0);
             this.ItemForParameterDetail1.Name = "ItemForParameterDetail1";
-            this.ItemForParameterDetail1.Size = new System.Drawing.Size(918, 104);
+            this.ItemForParameterDetail1.Size = new System.Drawing.Size(915, 104);
             this.ItemForParameterDetail1.StartNewLine = true;
             this.ItemForParameterDetail1.Text = "Parameter Detail1";
             this.ItemForParameterDetail1.TextSize = new System.Drawing.Size(0, 0);
@@ -3562,7 +3564,7 @@
             // ItemForPressData
             // 
             this.ItemForPressData.Control = this.PressDataTextEdit;
-            this.ItemForPressData.Location = new System.Drawing.Point(0, 2285);
+            this.ItemForPressData.Location = new System.Drawing.Point(0, 2289);
             this.ItemForPressData.Name = "ItemForPressData";
             this.ItemForPressData.Size = new System.Drawing.Size(942, 24);
             this.ItemForPressData.Text = "Press Data";
@@ -3572,7 +3574,7 @@
             // ItemForPressData1
             // 
             this.ItemForPressData1.Control = this.PressData1TextEdit;
-            this.ItemForPressData1.Location = new System.Drawing.Point(0, 2309);
+            this.ItemForPressData1.Location = new System.Drawing.Point(0, 2313);
             this.ItemForPressData1.Name = "ItemForPressData1";
             this.ItemForPressData1.Size = new System.Drawing.Size(942, 24);
             this.ItemForPressData1.Text = "Press Data1";
@@ -3582,7 +3584,7 @@
             // ItemForPressData2
             // 
             this.ItemForPressData2.Control = this.PressData2TextEdit;
-            this.ItemForPressData2.Location = new System.Drawing.Point(0, 2333);
+            this.ItemForPressData2.Location = new System.Drawing.Point(0, 2337);
             this.ItemForPressData2.Name = "ItemForPressData2";
             this.ItemForPressData2.Size = new System.Drawing.Size(942, 24);
             this.ItemForPressData2.Text = "Press Data2";
@@ -3592,7 +3594,7 @@
             // ItemForPressData3
             // 
             this.ItemForPressData3.Control = this.PressData3TextEdit;
-            this.ItemForPressData3.Location = new System.Drawing.Point(0, 2357);
+            this.ItemForPressData3.Location = new System.Drawing.Point(0, 2361);
             this.ItemForPressData3.Name = "ItemForPressData3";
             this.ItemForPressData3.Size = new System.Drawing.Size(942, 24);
             this.ItemForPressData3.Text = "Press Data3";
@@ -3602,7 +3604,7 @@
             // ItemForPressData4
             // 
             this.ItemForPressData4.Control = this.PressData4TextEdit;
-            this.ItemForPressData4.Location = new System.Drawing.Point(0, 2381);
+            this.ItemForPressData4.Location = new System.Drawing.Point(0, 2385);
             this.ItemForPressData4.Name = "ItemForPressData4";
             this.ItemForPressData4.Size = new System.Drawing.Size(942, 24);
             this.ItemForPressData4.Text = "Press Data4";
@@ -3612,7 +3614,7 @@
             // ItemForPressData5
             // 
             this.ItemForPressData5.Control = this.PressData5TextEdit;
-            this.ItemForPressData5.Location = new System.Drawing.Point(0, 2405);
+            this.ItemForPressData5.Location = new System.Drawing.Point(0, 2409);
             this.ItemForPressData5.Name = "ItemForPressData5";
             this.ItemForPressData5.Size = new System.Drawing.Size(942, 24);
             this.ItemForPressData5.Text = "Press Data5";
@@ -3622,7 +3624,7 @@
             // ItemForPressData6
             // 
             this.ItemForPressData6.Control = this.PressData6TextEdit;
-            this.ItemForPressData6.Location = new System.Drawing.Point(0, 2429);
+            this.ItemForPressData6.Location = new System.Drawing.Point(0, 2433);
             this.ItemForPressData6.Name = "ItemForPressData6";
             this.ItemForPressData6.Size = new System.Drawing.Size(942, 24);
             this.ItemForPressData6.Text = "Press Data6";
@@ -3632,7 +3634,7 @@
             // ItemForPT8
             // 
             this.ItemForPT8.Control = this.PT8TextEdit;
-            this.ItemForPT8.Location = new System.Drawing.Point(0, 2453);
+            this.ItemForPT8.Location = new System.Drawing.Point(0, 2457);
             this.ItemForPT8.Name = "ItemForPT8";
             this.ItemForPT8.Size = new System.Drawing.Size(942, 24);
             this.ItemForPT8.Text = "PT8";
@@ -3642,7 +3644,7 @@
             // ItemForPT81
             // 
             this.ItemForPT81.Control = this.PT81TextEdit;
-            this.ItemForPT81.Location = new System.Drawing.Point(0, 2477);
+            this.ItemForPT81.Location = new System.Drawing.Point(0, 2481);
             this.ItemForPT81.Name = "ItemForPT81";
             this.ItemForPT81.Size = new System.Drawing.Size(942, 24);
             this.ItemForPT81.Text = "PT81";
@@ -3652,7 +3654,7 @@
             // ItemForPT82
             // 
             this.ItemForPT82.Control = this.PT82TextEdit;
-            this.ItemForPT82.Location = new System.Drawing.Point(0, 2501);
+            this.ItemForPT82.Location = new System.Drawing.Point(0, 2505);
             this.ItemForPT82.Name = "ItemForPT82";
             this.ItemForPT82.Size = new System.Drawing.Size(942, 24);
             this.ItemForPT82.Text = "PT82";
@@ -3662,7 +3664,7 @@
             // ItemForRequest
             // 
             this.ItemForRequest.Control = this.RequestTextEdit;
-            this.ItemForRequest.Location = new System.Drawing.Point(0, 2525);
+            this.ItemForRequest.Location = new System.Drawing.Point(0, 2529);
             this.ItemForRequest.Name = "ItemForRequest";
             this.ItemForRequest.Size = new System.Drawing.Size(942, 24);
             this.ItemForRequest.Text = "Request";
@@ -3672,7 +3674,7 @@
             // ItemForSatffInformation
             // 
             this.ItemForSatffInformation.Control = this.SatffInformationTextEdit;
-            this.ItemForSatffInformation.Location = new System.Drawing.Point(0, 2549);
+            this.ItemForSatffInformation.Location = new System.Drawing.Point(0, 2553);
             this.ItemForSatffInformation.Name = "ItemForSatffInformation";
             this.ItemForSatffInformation.Size = new System.Drawing.Size(942, 24);
             this.ItemForSatffInformation.Text = "Satff Information";
@@ -3682,7 +3684,7 @@
             // ItemForSatffInformation1
             // 
             this.ItemForSatffInformation1.Control = this.SatffInformation1TextEdit;
-            this.ItemForSatffInformation1.Location = new System.Drawing.Point(0, 2573);
+            this.ItemForSatffInformation1.Location = new System.Drawing.Point(0, 2577);
             this.ItemForSatffInformation1.Name = "ItemForSatffInformation1";
             this.ItemForSatffInformation1.Size = new System.Drawing.Size(942, 24);
             this.ItemForSatffInformation1.Text = "Satff Information1";
@@ -3692,7 +3694,7 @@
             // ItemForServices
             // 
             this.ItemForServices.Control = this.ServicesTextEdit;
-            this.ItemForServices.Location = new System.Drawing.Point(0, 2597);
+            this.ItemForServices.Location = new System.Drawing.Point(0, 2601);
             this.ItemForServices.Name = "ItemForServices";
             this.ItemForServices.Size = new System.Drawing.Size(942, 24);
             this.ItemForServices.Text = "Services";
@@ -3702,7 +3704,7 @@
             // ItemForSessions
             // 
             this.ItemForSessions.Control = this.SessionsTextEdit;
-            this.ItemForSessions.Location = new System.Drawing.Point(0, 2621);
+            this.ItemForSessions.Location = new System.Drawing.Point(0, 2625);
             this.ItemForSessions.Name = "ItemForSessions";
             this.ItemForSessions.Size = new System.Drawing.Size(942, 24);
             this.ItemForSessions.Text = "Sessions";
@@ -3712,7 +3714,7 @@
             // ItemForWeekly
             // 
             this.ItemForWeekly.Control = this.WeeklyTextEdit;
-            this.ItemForWeekly.Location = new System.Drawing.Point(0, 2645);
+            this.ItemForWeekly.Location = new System.Drawing.Point(0, 2649);
             this.ItemForWeekly.Name = "ItemForWeekly";
             this.ItemForWeekly.Size = new System.Drawing.Size(942, 24);
             this.ItemForWeekly.Text = "Weekly";
@@ -3722,7 +3724,7 @@
             // ItemForWeekly1
             // 
             this.ItemForWeekly1.Control = this.Weekly1TextEdit;
-            this.ItemForWeekly1.Location = new System.Drawing.Point(0, 2669);
+            this.ItemForWeekly1.Location = new System.Drawing.Point(0, 2673);
             this.ItemForWeekly1.Name = "ItemForWeekly1";
             this.ItemForWeekly1.Size = new System.Drawing.Size(942, 24);
             this.ItemForWeekly1.Text = "Weekly1";
@@ -3732,7 +3734,7 @@
             // ItemForWeekly2
             // 
             this.ItemForWeekly2.Control = this.Weekly2TextEdit;
-            this.ItemForWeekly2.Location = new System.Drawing.Point(0, 2693);
+            this.ItemForWeekly2.Location = new System.Drawing.Point(0, 2697);
             this.ItemForWeekly2.Name = "ItemForWeekly2";
             this.ItemForWeekly2.Size = new System.Drawing.Size(942, 24);
             this.ItemForWeekly2.Text = "Weekly2";
@@ -3742,7 +3744,7 @@
             // ItemForWeekly3
             // 
             this.ItemForWeekly3.Control = this.Weekly3TextEdit;
-            this.ItemForWeekly3.Location = new System.Drawing.Point(0, 2717);
+            this.ItemForWeekly3.Location = new System.Drawing.Point(0, 2721);
             this.ItemForWeekly3.Name = "ItemForWeekly3";
             this.ItemForWeekly3.Size = new System.Drawing.Size(942, 24);
             this.ItemForWeekly3.Text = "Weekly3";
@@ -3897,6 +3899,13 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiParameterDetail1Refresh)});
             this.ParameterDetail1PopUpMenu.Manager = this.ParameterDetail1BarManager;
             this.ParameterDetail1PopUpMenu.Name = "ParameterDetail1PopUpMenu";
+            // 
+            // ColNameParameter
+            // 
+            this.ColNameParameter.FieldName = "Name";
+            this.ColNameParameter.Name = "ColNameParameter";
+            this.ColNameParameter.Visible = true;
+            this.ColNameParameter.VisibleIndex = 0;
             // 
             // ParameterDetailView
             // 
@@ -4510,6 +4519,7 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForWeekly1;
         private DevExpress.XtraLayout.LayoutControlItem ItemForWeekly2;
         private DevExpress.XtraLayout.LayoutControlItem ItemForWeekly3;
+        private DevExpress.XtraGrid.Columns.GridColumn ColNameParameter;
 
     }
 }

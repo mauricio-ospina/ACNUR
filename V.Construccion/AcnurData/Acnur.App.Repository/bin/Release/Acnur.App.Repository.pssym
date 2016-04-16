@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Symbols LinesOfCode="256" PostSharpLinesOfCode="0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Class Class="#1=T:[Acnur.App.Aplication]Acnur.App.Aplication.Error.ExceptionHandlingAttribute">
-    <Instance Declaration="#2=T:[Acnur.App.Repository]Acnur.App.Repository.RepositoryData" Id="3401752ee767d14">
+    <Instance Declaration="#2=T:[Acnur.App.Repository]Acnur.App.Repository.RepositoryData" Id="3401752fe7c6934">
       <Target Target="#3=M:[Acnur.App.Repository]Acnur.App.Repository.RepositoryData::#ctor(System.Boolean)">
         <JoinPoint Advising="#1" Description="#4=Wrapped by advice(s) OnException" Ordinal="0" />
       </Target>

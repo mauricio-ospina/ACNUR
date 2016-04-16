@@ -1,4 +1,6 @@
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\WinApp.exe.config
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\WinApp.exe.manifest
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\WinApp.application
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\WinApp.exe
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\WinApp.pdb
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\Acnur.App.Aplication.dll
@@ -8,6 +10,7 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPre
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\Acnur.App.Proxy.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\Acnur.App.Repository.Data.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\Acnur.App.Repository.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\DevExpress.Images.v15.2.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\EntityFramework.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\Acnur.App.Aplication.pdb
@@ -22,12 +25,6 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPre
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.csprojResolveAssemblyReference.cache
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.ControlParameterEdit.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.FormParameters.resources
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.Properties.Resources.resources
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.csproj.GenerateResource.Cache
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.exe.licenses
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.exe
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.pdb
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\bin\Release\DevExpress.Images.v15.2.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.ControlFileUpLoad.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.FormMain.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.ControlRequestEdit.resources
@@ -36,3 +33,10 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPre
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.FormRequest.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.FormServices.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.FormWelcome.resources
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.Properties.Resources.resources
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.csproj.GenerateResource.Cache
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.exe.licenses
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.exe.manifest
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.application
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.exe
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\WinApp\obj\Release\WinApp.pdb

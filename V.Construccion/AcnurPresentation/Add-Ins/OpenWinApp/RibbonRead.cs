@@ -37,7 +37,18 @@ namespace OpenWinApp
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe";// +string.Empty + "' '" + UserAutenticate.Name + "' '" + UserAutenticate.FirstName + "' '" + UserAutenticate.LastName + "'";
-                startInfo.Arguments = UserAutenticate.Name.Replace(' ', '_') + " " + UserAutenticate.Address;
+                startInfo.Arguments =   UserAutenticate.Alias.Replace(" ", "_") + " " +
+                                        UserAutenticate.Application.ToString().Replace(" ", "_") + " " +
+                                        UserAutenticate.CompanyName.Replace(" ", "_") + " " +
+                                        UserAutenticate.Department.Replace(" ", "_") + " " +
+                                        UserAutenticate.FirstName.Replace(" ", "_") + " " +
+                                        UserAutenticate.ID.Replace(" ", "_") + " " +
+                                        UserAutenticate.JobTitle.Replace(" ", "_") + " " +
+                                        UserAutenticate.LastName.Replace(" ", "_") + " " +
+                                        UserAutenticate.Name.Replace(" ", "_") + " " +
+                                        UserAutenticate.PrimarySmtpAddress.Replace(" ", "_") + " " +
+                                        UserAutenticate.StateOrProvince.Replace(" ", "_") + " ";
+
                 Process.Start(startInfo).WaitForExit();
             }
         }

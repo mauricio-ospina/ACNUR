@@ -121,16 +121,14 @@ namespace WinApp
 
                 try
                 {
-                    //List<string> lstAllRecipients = new List<string>();
-
                     ////A continuación se muestra codificada - pueden ser reemplazados con los datos db
+                    //List<string> lstAllRecipients = new List<string>();
                     //lstAllRecipients.Add("ambrosio.mauro@gmail.com");
                     //lstAllRecipients.Add("chospina@defensoria.gov.co");
 
                     Outlook.Application outlookApp = new Outlook.Application();
                     Outlook._MailItem oMailItem = (Outlook._MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
                     Outlook.Inspector oInspector = oMailItem.GetInspector;
-                    //// Thread.Sleep(10000);
 
                     //// Recipient
                     //Outlook.Recipients oRecips = (Outlook.Recipients)oMailItem.Recipients;
@@ -152,26 +150,26 @@ namespace WinApp
                     oMailItem.BillingInformation = "BILLING INFORMATION - estos son los ID´s que se pueden enviar por aca";
                     oMailItem.Subject = "Test Mail";
 
-                    string estiloCorreo = File.ReadAllText("C:\\Users\\MAURO-DEFENSORIA\\Documents\\Chospina\\Acnur\\trunk\\V.Construccion\\AcnurPresentation\\WinApp\\Templates\\Correo.html");
+                    //// Utilizado para las pruebas locales
+                    ////string estiloCorreo = File.ReadAllText("C:\\Users\\MAURO-DEFENSORIA\\Documents\\Chospina\\Acnur\\trunk\\V.Construccion\\AcnurPresentation\\WinApp\\Templates\\Correo.html");
 
                     //// En el instalador debe ir la carpeta TEMPLATES y finalemente la plantilla de HTML.
-                    //string estiloCorreo = File.ReadAllText("C:\\Program Files (x86)\\ACNURWinApp\\Templates\\Correo.html");
+                    string estiloCorreo = File.ReadAllText("C:\\Program Files (x86)\\ACNURWinApp\\Correo.html");
 
                     //// Para que se ejecute el javascript toca que sea desde un browser. El inconveniente es que 
                     //// es una violación de seguridad ejecutar un .exe desde un browser. Desde IExplore funciona
                     //// desde chrome no. Debe ser configuración en la seguridad del navegador. Se recomienda buscar
                     //// una solución diferente.
-
                     //// string strBody = "<a href='javascript:runProgram()'>Run program</a>";
 
-                    estiloCorreo = estiloCorreo.Replace("TITULO", "PURCHASE");
+                    //// Reemplace el titulo y el contenido en la plantilla
+                    estiloCorreo = estiloCorreo.Replace("{TITULO}", "PURCHASE");
                     estiloCorreo = estiloCorreo.Replace("{CONTENIDO}", this.DataPurchase);
 
-                    //// Reemplace el titulo y el contenido en la plantilla
-
+                    //// Coloca el string en el cuerpo del correo
                     oMailItem.HTMLBody = estiloCorreo;
 
-                    //Display the mailbox
+                    //// Display mailbox
                     oMailItem.Display(true);
                 }
                 catch (Exception objEx)

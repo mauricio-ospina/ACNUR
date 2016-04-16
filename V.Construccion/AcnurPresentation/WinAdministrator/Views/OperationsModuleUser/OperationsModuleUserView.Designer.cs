@@ -27,17 +27,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.IdOperationModuleUserTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.operationsModuleUserViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OperationsModuleLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.OperationsModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OperationsModuleLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ColOperationName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ColModuleName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.UsersLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.UsersLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ColUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -48,22 +42,27 @@
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.operationsModuleUserViewBindingSource = new System.Windows.Forms.BindingSource();
+            this.OperationsModuleBindingSource = new System.Windows.Forms.BindingSource();
+            this.UsersBindingSource = new System.Windows.Forms.BindingSource();
+            this.ColOperationName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColModuleName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdOperationModuleUserTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.operationsModuleUserViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleLookUpEditView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersLookUpEditView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdOperationModuleUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdOperationModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operationsModuleUserViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,10 +94,6 @@
             this.IdOperationModuleUserTextEdit.StyleController = this.dataLayoutControl1;
             this.IdOperationModuleUserTextEdit.TabIndex = 4;
             // 
-            // operationsModuleUserViewBindingSource
-            // 
-            this.operationsModuleUserViewBindingSource.DataSource = typeof(Acnur.App.Repository.Data.OperationsModuleUser);
-            // 
             // OperationsModuleLookUpEdit
             // 
             this.OperationsModuleLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.operationsModuleUserViewBindingSource, "IdOperationModule", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -107,16 +102,12 @@
             this.OperationsModuleLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.OperationsModuleLookUpEdit.Properties.DataSource = this.OperationsModuleBindingSource;
-            this.OperationsModuleLookUpEdit.Properties.DisplayMember = "IdOperationModule";
+            this.OperationsModuleLookUpEdit.Properties.DisplayMember = "Modules.ModuleName";
             this.OperationsModuleLookUpEdit.Properties.ValueMember = "IdOperationModule";
             this.OperationsModuleLookUpEdit.Properties.View = this.OperationsModuleLookUpEditView;
             this.OperationsModuleLookUpEdit.Size = new System.Drawing.Size(829, 20);
             this.OperationsModuleLookUpEdit.StyleController = this.dataLayoutControl1;
             this.OperationsModuleLookUpEdit.TabIndex = 5;
-            // 
-            // OperationsModuleBindingSource
-            // 
-            this.OperationsModuleBindingSource.DataSource = typeof(Acnur.App.Repository.Data.OperationsModule);
             // 
             // OperationsModuleLookUpEditView
             // 
@@ -127,22 +118,6 @@
             this.OperationsModuleLookUpEditView.Name = "OperationsModuleLookUpEditView";
             this.OperationsModuleLookUpEditView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.OperationsModuleLookUpEditView.OptionsView.ShowGroupPanel = false;
-            // 
-            // ColOperationName
-            // 
-            this.ColOperationName.Caption = "Operation Name";
-            this.ColOperationName.FieldName = "Operations.Name";
-            this.ColOperationName.Name = "ColOperationName";
-            this.ColOperationName.Visible = true;
-            this.ColOperationName.VisibleIndex = 0;
-            // 
-            // ColModuleName
-            // 
-            this.ColModuleName.Caption = "Module Name";
-            this.ColModuleName.FieldName = "Modules.ModuleName";
-            this.ColModuleName.Name = "ColModuleName";
-            this.ColModuleName.Visible = true;
-            this.ColModuleName.VisibleIndex = 1;
             // 
             // UsersLookUpEdit
             // 
@@ -158,10 +133,6 @@
             this.UsersLookUpEdit.Size = new System.Drawing.Size(829, 20);
             this.UsersLookUpEdit.StyleController = this.dataLayoutControl1;
             this.UsersLookUpEdit.TabIndex = 6;
-            // 
-            // UsersBindingSource
-            // 
-            this.UsersBindingSource.DataSource = typeof(Acnur.App.Repository.Data.Users);
             // 
             // UsersLookUpEditView
             // 
@@ -300,6 +271,34 @@
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Operations Module User";
             // 
+            // operationsModuleUserViewBindingSource
+            // 
+            this.operationsModuleUserViewBindingSource.DataSource = typeof(Acnur.App.Repository.Data.OperationsModuleUser);
+            // 
+            // OperationsModuleBindingSource
+            // 
+            this.OperationsModuleBindingSource.DataSource = typeof(Acnur.App.Repository.Data.OperationsModule);
+            // 
+            // UsersBindingSource
+            // 
+            this.UsersBindingSource.DataSource = typeof(Acnur.App.Repository.Data.Users);
+            // 
+            // ColOperationName
+            // 
+            this.ColOperationName.Caption = "Operation Name";
+            this.ColOperationName.FieldName = "Operations.Name";
+            this.ColOperationName.Name = "ColOperationName";
+            this.ColOperationName.Visible = true;
+            this.ColOperationName.VisibleIndex = 0;
+            // 
+            // ColModuleName
+            // 
+            this.ColModuleName.Caption = "Module Name";
+            this.ColModuleName.FieldName = "Modules.ModuleName";
+            this.ColModuleName.Name = "ColModuleName";
+            this.ColModuleName.Visible = true;
+            this.ColModuleName.VisibleIndex = 1;
+            // 
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
@@ -321,18 +320,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.IdOperationModuleUserTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.operationsModuleUserViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleLookUpEditView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersLookUpEditView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdOperationModuleUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdOperationModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operationsModuleUserViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OperationsModuleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             this.ResumeLayout(false);
 

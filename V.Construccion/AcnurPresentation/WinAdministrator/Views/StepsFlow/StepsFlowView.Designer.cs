@@ -27,12 +27,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.stepsFlowViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.IdStepFlowTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.stepsFlowViewBindingSource = new System.Windows.Forms.BindingSource();
+            this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.StepsFlowModuleXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.StepsFlowModuleGridControl = new DevExpress.XtraGrid.GridControl();
+            this.StepsFlowModuleBindingSource = new System.Windows.Forms.BindingSource();
             this.StepsFlowModuleGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdStepFlowModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdStepFlow = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -41,46 +42,44 @@
             this.colModules = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStepsFlow = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStepsFlowModuleUser = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.StepsFlowModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.IdStepFlowTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForIdStepFlow = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForStepsFlowModule = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.ItemForStepsFlowModule = new DevExpress.XtraLayout.LayoutControlItem();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.StepsFlowModuleBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.StepsFlowModuleBarManager = new DevExpress.XtraBars.BarManager();
+            this.StepsFlowModuleBar = new DevExpress.XtraBars.Bar();
             this.bbiStepsFlowModuleNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.StepsFlowModuleBar = new DevExpress.XtraBars.Bar();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.StepsFlowModulePopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.StepsFlowModulePopUpMenu = new DevExpress.XtraBars.PopupMenu();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdStepFlowTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stepsFlowViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             this.StepsFlowModuleXtraUserControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdStepFlowTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdStepFlow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModulePopUpMenu)).BeginInit();
@@ -100,20 +99,32 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(979, 678);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // IdStepFlowTextEdit
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(979, 678);
-            this.layoutControlGroup1.TextVisible = false;
+            this.IdStepFlowTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.stepsFlowViewBindingSource, "IdStepFlow", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.IdStepFlowTextEdit.Location = new System.Drawing.Point(75, 12);
+            this.IdStepFlowTextEdit.Name = "IdStepFlowTextEdit";
+            this.IdStepFlowTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.IdStepFlowTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.IdStepFlowTextEdit.Properties.Mask.EditMask = "N0";
+            this.IdStepFlowTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.IdStepFlowTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.IdStepFlowTextEdit.Size = new System.Drawing.Size(892, 20);
+            this.IdStepFlowTextEdit.StyleController = this.dataLayoutControl1;
+            this.IdStepFlowTextEdit.TabIndex = 4;
             // 
             // stepsFlowViewBindingSource
             // 
             this.stepsFlowViewBindingSource.DataSource = typeof(Acnur.App.Repository.Data.StepsFlow);
+            // 
+            // NameTextEdit
+            // 
+            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.stepsFlowViewBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NameTextEdit.Location = new System.Drawing.Point(75, 36);
+            this.NameTextEdit.Name = "NameTextEdit";
+            this.NameTextEdit.Size = new System.Drawing.Size(892, 20);
+            this.NameTextEdit.StyleController = this.dataLayoutControl1;
+            this.NameTextEdit.TabIndex = 5;
             // 
             // StepsFlowModuleXtraUserControl
             // 
@@ -122,23 +133,27 @@
             this.StepsFlowModuleXtraUserControl.Controls.Add(this.barDockControlRight);
             this.StepsFlowModuleXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.StepsFlowModuleXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.StepsFlowModuleXtraUserControl.Location = new System.Drawing.Point(24, 94);
+            this.StepsFlowModuleXtraUserControl.Location = new System.Drawing.Point(24, 95);
             this.StepsFlowModuleXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.StepsFlowModuleXtraUserControl.Name = "StepsFlowModuleXtraUserControl";
-            this.StepsFlowModuleXtraUserControl.Size = new System.Drawing.Size(931, 560);
+            this.StepsFlowModuleXtraUserControl.Size = new System.Drawing.Size(928, 556);
             this.StepsFlowModuleXtraUserControl.TabIndex = 6;
             // 
             // StepsFlowModuleGridControl
             // 
             this.StepsFlowModuleGridControl.DataSource = this.StepsFlowModuleBindingSource;
             this.StepsFlowModuleGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StepsFlowModuleGridControl.Location = new System.Drawing.Point(0, 24);
+            this.StepsFlowModuleGridControl.Location = new System.Drawing.Point(0, 26);
             this.StepsFlowModuleGridControl.MainView = this.StepsFlowModuleGridView;
             this.StepsFlowModuleGridControl.Name = "StepsFlowModuleGridControl";
-            this.StepsFlowModuleGridControl.Size = new System.Drawing.Size(931, 536);
+            this.StepsFlowModuleGridControl.Size = new System.Drawing.Size(928, 530);
             this.StepsFlowModuleGridControl.TabIndex = 0;
             this.StepsFlowModuleGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.StepsFlowModuleGridView});
+            // 
+            // StepsFlowModuleBindingSource
+            // 
+            this.StepsFlowModuleBindingSource.DataSource = typeof(Acnur.App.Repository.Data.StepsFlowModule);
             // 
             // StepsFlowModuleGridView
             // 
@@ -197,9 +212,44 @@
             this.colStepsFlowModuleUser.FieldName = "StepsFlowModuleUser";
             this.colStepsFlowModuleUser.Name = "colStepsFlowModuleUser";
             // 
-            // StepsFlowModuleBindingSource
+            // barDockControlLeft
             // 
-            this.StepsFlowModuleBindingSource.DataSource = typeof(Acnur.App.Repository.Data.StepsFlowModule);
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 530);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(928, 26);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 530);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 556);
+            this.barDockControlBottom.Size = new System.Drawing.Size(928, 0);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(928, 26);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(979, 678);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
             // 
@@ -213,20 +263,6 @@
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 658);
             // 
-            // IdStepFlowTextEdit
-            // 
-            this.IdStepFlowTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.stepsFlowViewBindingSource, "IdStepFlow", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IdStepFlowTextEdit.Location = new System.Drawing.Point(75, 12);
-            this.IdStepFlowTextEdit.Name = "IdStepFlowTextEdit";
-            this.IdStepFlowTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.IdStepFlowTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.IdStepFlowTextEdit.Properties.Mask.EditMask = "N0";
-            this.IdStepFlowTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.IdStepFlowTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.IdStepFlowTextEdit.Size = new System.Drawing.Size(892, 20);
-            this.IdStepFlowTextEdit.StyleController = this.dataLayoutControl1;
-            this.IdStepFlowTextEdit.TabIndex = 4;
-            // 
             // ItemForIdStepFlow
             // 
             this.ItemForIdStepFlow.Control = this.IdStepFlowTextEdit;
@@ -235,15 +271,7 @@
             this.ItemForIdStepFlow.Size = new System.Drawing.Size(959, 24);
             this.ItemForIdStepFlow.Text = "Id Step Flow";
             this.ItemForIdStepFlow.TextSize = new System.Drawing.Size(60, 13);
-            // 
-            // NameTextEdit
-            // 
-            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.stepsFlowViewBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(75, 36);
-            this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(892, 20);
-            this.NameTextEdit.StyleController = this.dataLayoutControl1;
-            this.NameTextEdit.TabIndex = 5;
+            this.ItemForIdStepFlow.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // ItemForName
             // 
@@ -253,17 +281,6 @@
             this.ItemForName.Size = new System.Drawing.Size(959, 24);
             this.ItemForName.Text = "Name";
             this.ItemForName.TextSize = new System.Drawing.Size(60, 13);
-            // 
-            // ItemForStepsFlowModule
-            // 
-            this.ItemForStepsFlowModule.Control = this.StepsFlowModuleXtraUserControl;
-            this.ItemForStepsFlowModule.Location = new System.Drawing.Point(0, 0);
-            this.ItemForStepsFlowModule.Name = "ItemForStepsFlowModule";
-            this.ItemForStepsFlowModule.Size = new System.Drawing.Size(935, 564);
-            this.ItemForStepsFlowModule.StartNewLine = true;
-            this.ItemForStepsFlowModule.Text = "Steps Flow Module";
-            this.ItemForStepsFlowModule.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForStepsFlowModule.TextVisible = false;
             // 
             // tabbedControlGroup1
             // 
@@ -283,8 +300,19 @@
             this.ItemForStepsFlowModule});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForStepsFlowModule";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(935, 564);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(932, 560);
             this.layoutControlGroup3.Text = "StepsFlowModule";
+            // 
+            // ItemForStepsFlowModule
+            // 
+            this.ItemForStepsFlowModule.Control = this.StepsFlowModuleXtraUserControl;
+            this.ItemForStepsFlowModule.Location = new System.Drawing.Point(0, 0);
+            this.ItemForStepsFlowModule.Name = "ItemForStepsFlowModule";
+            this.ItemForStepsFlowModule.Size = new System.Drawing.Size(932, 560);
+            this.ItemForStepsFlowModule.StartNewLine = true;
+            this.ItemForStepsFlowModule.Text = "Steps Flow Module";
+            this.ItemForStepsFlowModule.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForStepsFlowModule.TextVisible = false;
             // 
             // mvvmContext
             // 
@@ -358,7 +386,7 @@
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
             this.labelControl.Size = new System.Drawing.Size(979, 30);
             this.labelControl.TabIndex = 1;
-            this.labelControl.Text = "StepsFlow - Element View";
+            this.labelControl.Text = "Steps Flow";
             // 
             // StepsFlowModuleBarManager
             // 
@@ -377,6 +405,21 @@
             this.bbiStepsFlowModuleRefresh});
             this.StepsFlowModuleBarManager.MainMenu = this.StepsFlowModuleBar;
             this.StepsFlowModuleBarManager.MaxItemId = 4;
+            // 
+            // StepsFlowModuleBar
+            // 
+            this.StepsFlowModuleBar.BarName = "StepsFlowModule";
+            this.StepsFlowModuleBar.DockCol = 0;
+            this.StepsFlowModuleBar.DockRow = 0;
+            this.StepsFlowModuleBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.StepsFlowModuleBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleNew),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleDelete),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleRefresh)});
+            this.StepsFlowModuleBar.OptionsBar.AllowQuickCustomization = false;
+            this.StepsFlowModuleBar.OptionsBar.DrawDragBorder = false;
+            this.StepsFlowModuleBar.Text = "StepsFlowModule";
             // 
             // bbiStepsFlowModuleNew
             // 
@@ -410,49 +453,6 @@
             this.bbiStepsFlowModuleRefresh.Name = "bbiStepsFlowModuleRefresh";
             this.bbiStepsFlowModuleRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // StepsFlowModuleBar
-            // 
-            this.StepsFlowModuleBar.BarName = "StepsFlowModule";
-            this.StepsFlowModuleBar.DockCol = 0;
-            this.StepsFlowModuleBar.DockRow = 0;
-            this.StepsFlowModuleBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.StepsFlowModuleBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleEdit),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleDelete),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiStepsFlowModuleRefresh)});
-            this.StepsFlowModuleBar.OptionsBar.AllowQuickCustomization = false;
-            this.StepsFlowModuleBar.OptionsBar.DrawDragBorder = false;
-            this.StepsFlowModuleBar.Text = "StepsFlowModule";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(931, 24);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 560);
-            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 536);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(931, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 536);
-            // 
             // StepsFlowModulePopUpMenu
             // 
             this.StepsFlowModulePopUpMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -478,21 +478,21 @@
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdStepFlowTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stepsFlowViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             this.StepsFlowModuleXtraUserControl.ResumeLayout(false);
             this.StepsFlowModuleXtraUserControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdStepFlowTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIdStepFlow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStepsFlowModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModuleBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsFlowModulePopUpMenu)).EndInit();

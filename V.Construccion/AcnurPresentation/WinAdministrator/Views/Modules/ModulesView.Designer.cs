@@ -27,15 +27,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.IdModuleTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.modulesViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modulesViewBindingSource = new System.Windows.Forms.BindingSource();
             this.ModuleNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.DescriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ComponentsByModuleXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.ComponentsByModuleGridControl = new DevExpress.XtraGrid.GridControl();
-            this.ComponentsByModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ComponentsByModuleBindingSource = new System.Windows.Forms.BindingSource();
             this.ComponentsByModuleGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdComponentByModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,7 +49,7 @@
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.ModuleUserXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.ModuleUserGridControl = new DevExpress.XtraGrid.GridControl();
-            this.ModuleUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ModuleUserBindingSource = new System.Windows.Forms.BindingSource();
             this.ModuleUserGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdModuleUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdModule1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,7 +62,7 @@
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.OperationsModuleXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.OperationsModuleGridControl = new DevExpress.XtraGrid.GridControl();
-            this.OperationsModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.OperationsModuleBindingSource = new System.Windows.Forms.BindingSource();
             this.OperationsModuleGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdOperationModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdOperation = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -77,7 +76,7 @@
             this.barDockControl5 = new DevExpress.XtraBars.BarDockControl();
             this.StepsFlowModuleXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.StepsFlowModuleGridControl = new DevExpress.XtraGrid.GridControl();
-            this.StepsFlowModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.StepsFlowModuleBindingSource = new System.Windows.Forms.BindingSource();
             this.StepsFlowModuleGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdStepFlowModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdStepFlow = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,38 +103,38 @@
             this.ItemForModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForOperationsModule = new DevExpress.XtraLayout.LayoutControlItem();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.ComponentsByModuleBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.ComponentsByModuleBarManager = new DevExpress.XtraBars.BarManager();
             this.ComponentsByModuleBar = new DevExpress.XtraBars.Bar();
             this.bbiComponentsByModuleNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiComponentsByModuleEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiComponentsByModuleDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiComponentsByModuleRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.ComponentsByModulePopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.ModuleUserBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.ComponentsByModulePopUpMenu = new DevExpress.XtraBars.PopupMenu();
+            this.ModuleUserBarManager = new DevExpress.XtraBars.BarManager();
             this.ModuleUserBar = new DevExpress.XtraBars.Bar();
             this.bbiModuleUserNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiModuleUserEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiModuleUserDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiModuleUserRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.ModuleUserPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.OperationsModuleBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.ModuleUserPopUpMenu = new DevExpress.XtraBars.PopupMenu();
+            this.OperationsModuleBarManager = new DevExpress.XtraBars.BarManager();
             this.OperationsModuleBar = new DevExpress.XtraBars.Bar();
             this.bbiOperationsModuleNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOperationsModuleEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOperationsModuleDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOperationsModuleRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.OperationsModulePopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.StepsFlowModuleBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.OperationsModulePopUpMenu = new DevExpress.XtraBars.PopupMenu();
+            this.StepsFlowModuleBarManager = new DevExpress.XtraBars.BarManager();
             this.StepsFlowModuleBar = new DevExpress.XtraBars.Bar();
             this.bbiStepsFlowModuleNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.StepsFlowModulePopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.StepsFlowModulePopUpMenu = new DevExpress.XtraBars.PopupMenu();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdModuleTextEdit.Properties)).BeginInit();
@@ -244,20 +243,20 @@
             this.ComponentsByModuleXtraUserControl.Controls.Add(this.barDockControlRight);
             this.ComponentsByModuleXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.ComponentsByModuleXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.ComponentsByModuleXtraUserControl.Location = new System.Drawing.Point(24, 118);
+            this.ComponentsByModuleXtraUserControl.Location = new System.Drawing.Point(24, 119);
             this.ComponentsByModuleXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.ComponentsByModuleXtraUserControl.Name = "ComponentsByModuleXtraUserControl";
-            this.ComponentsByModuleXtraUserControl.Size = new System.Drawing.Size(931, 536);
+            this.ComponentsByModuleXtraUserControl.Size = new System.Drawing.Size(928, 532);
             this.ComponentsByModuleXtraUserControl.TabIndex = 7;
             // 
             // ComponentsByModuleGridControl
             // 
             this.ComponentsByModuleGridControl.DataSource = this.ComponentsByModuleBindingSource;
             this.ComponentsByModuleGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ComponentsByModuleGridControl.Location = new System.Drawing.Point(0, 24);
+            this.ComponentsByModuleGridControl.Location = new System.Drawing.Point(0, 26);
             this.ComponentsByModuleGridControl.MainView = this.ComponentsByModuleGridView;
             this.ComponentsByModuleGridControl.Name = "ComponentsByModuleGridControl";
-            this.ComponentsByModuleGridControl.Size = new System.Drawing.Size(931, 512);
+            this.ComponentsByModuleGridControl.Size = new System.Drawing.Size(928, 506);
             this.ComponentsByModuleGridControl.TabIndex = 0;
             this.ComponentsByModuleGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ComponentsByModuleGridView});
@@ -325,29 +324,29 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 512);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(931, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 512);
+            this.barDockControlRight.Location = new System.Drawing.Point(928, 26);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 536);
-            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 532);
+            this.barDockControlBottom.Size = new System.Drawing.Size(928, 0);
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(931, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(928, 26);
             // 
             // ModuleUserXtraUserControl
             // 
@@ -356,20 +355,20 @@
             this.ModuleUserXtraUserControl.Controls.Add(this.barDockControl4);
             this.ModuleUserXtraUserControl.Controls.Add(this.barDockControl2);
             this.ModuleUserXtraUserControl.Controls.Add(this.barDockControl1);
-            this.ModuleUserXtraUserControl.Location = new System.Drawing.Point(24, 118);
+            this.ModuleUserXtraUserControl.Location = new System.Drawing.Point(24, 119);
             this.ModuleUserXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.ModuleUserXtraUserControl.Name = "ModuleUserXtraUserControl";
-            this.ModuleUserXtraUserControl.Size = new System.Drawing.Size(931, 536);
+            this.ModuleUserXtraUserControl.Size = new System.Drawing.Size(928, 532);
             this.ModuleUserXtraUserControl.TabIndex = 8;
             // 
             // ModuleUserGridControl
             // 
             this.ModuleUserGridControl.DataSource = this.ModuleUserBindingSource;
             this.ModuleUserGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ModuleUserGridControl.Location = new System.Drawing.Point(0, 24);
+            this.ModuleUserGridControl.Location = new System.Drawing.Point(0, 26);
             this.ModuleUserGridControl.MainView = this.ModuleUserGridView;
             this.ModuleUserGridControl.Name = "ModuleUserGridControl";
-            this.ModuleUserGridControl.Size = new System.Drawing.Size(931, 512);
+            this.ModuleUserGridControl.Size = new System.Drawing.Size(928, 506);
             this.ModuleUserGridControl.TabIndex = 0;
             this.ModuleUserGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ModuleUserGridView});
@@ -423,29 +422,29 @@
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 24);
-            this.barDockControl3.Size = new System.Drawing.Size(0, 512);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 26);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(931, 24);
-            this.barDockControl4.Size = new System.Drawing.Size(0, 512);
+            this.barDockControl4.Location = new System.Drawing.Point(928, 26);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 536);
-            this.barDockControl2.Size = new System.Drawing.Size(931, 0);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 532);
+            this.barDockControl2.Size = new System.Drawing.Size(928, 0);
             // 
             // barDockControl1
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl1.Size = new System.Drawing.Size(931, 24);
+            this.barDockControl1.Size = new System.Drawing.Size(928, 26);
             // 
             // OperationsModuleXtraUserControl
             // 
@@ -454,20 +453,20 @@
             this.OperationsModuleXtraUserControl.Controls.Add(this.barDockControl8);
             this.OperationsModuleXtraUserControl.Controls.Add(this.barDockControl6);
             this.OperationsModuleXtraUserControl.Controls.Add(this.barDockControl5);
-            this.OperationsModuleXtraUserControl.Location = new System.Drawing.Point(24, 118);
+            this.OperationsModuleXtraUserControl.Location = new System.Drawing.Point(24, 119);
             this.OperationsModuleXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.OperationsModuleXtraUserControl.Name = "OperationsModuleXtraUserControl";
-            this.OperationsModuleXtraUserControl.Size = new System.Drawing.Size(931, 536);
+            this.OperationsModuleXtraUserControl.Size = new System.Drawing.Size(928, 532);
             this.OperationsModuleXtraUserControl.TabIndex = 9;
             // 
             // OperationsModuleGridControl
             // 
             this.OperationsModuleGridControl.DataSource = this.OperationsModuleBindingSource;
             this.OperationsModuleGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OperationsModuleGridControl.Location = new System.Drawing.Point(0, 24);
+            this.OperationsModuleGridControl.Location = new System.Drawing.Point(0, 26);
             this.OperationsModuleGridControl.MainView = this.OperationsModuleGridView;
             this.OperationsModuleGridControl.Name = "OperationsModuleGridControl";
-            this.OperationsModuleGridControl.Size = new System.Drawing.Size(931, 512);
+            this.OperationsModuleGridControl.Size = new System.Drawing.Size(928, 506);
             this.OperationsModuleGridControl.TabIndex = 0;
             this.OperationsModuleGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.OperationsModuleGridView});
@@ -527,29 +526,29 @@
             // 
             this.barDockControl7.CausesValidation = false;
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl7.Location = new System.Drawing.Point(0, 24);
-            this.barDockControl7.Size = new System.Drawing.Size(0, 512);
+            this.barDockControl7.Location = new System.Drawing.Point(0, 26);
+            this.barDockControl7.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControl8
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(931, 24);
-            this.barDockControl8.Size = new System.Drawing.Size(0, 512);
+            this.barDockControl8.Location = new System.Drawing.Point(928, 26);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControl6
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 536);
-            this.barDockControl6.Size = new System.Drawing.Size(931, 0);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 532);
+            this.barDockControl6.Size = new System.Drawing.Size(928, 0);
             // 
             // barDockControl5
             // 
             this.barDockControl5.CausesValidation = false;
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl5.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl5.Size = new System.Drawing.Size(931, 24);
+            this.barDockControl5.Size = new System.Drawing.Size(928, 26);
             // 
             // StepsFlowModuleXtraUserControl
             // 
@@ -558,20 +557,20 @@
             this.StepsFlowModuleXtraUserControl.Controls.Add(this.barDockControl12);
             this.StepsFlowModuleXtraUserControl.Controls.Add(this.barDockControl10);
             this.StepsFlowModuleXtraUserControl.Controls.Add(this.barDockControl9);
-            this.StepsFlowModuleXtraUserControl.Location = new System.Drawing.Point(24, 118);
+            this.StepsFlowModuleXtraUserControl.Location = new System.Drawing.Point(24, 119);
             this.StepsFlowModuleXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.StepsFlowModuleXtraUserControl.Name = "StepsFlowModuleXtraUserControl";
-            this.StepsFlowModuleXtraUserControl.Size = new System.Drawing.Size(931, 536);
+            this.StepsFlowModuleXtraUserControl.Size = new System.Drawing.Size(928, 532);
             this.StepsFlowModuleXtraUserControl.TabIndex = 10;
             // 
             // StepsFlowModuleGridControl
             // 
             this.StepsFlowModuleGridControl.DataSource = this.StepsFlowModuleBindingSource;
             this.StepsFlowModuleGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StepsFlowModuleGridControl.Location = new System.Drawing.Point(0, 24);
+            this.StepsFlowModuleGridControl.Location = new System.Drawing.Point(0, 26);
             this.StepsFlowModuleGridControl.MainView = this.StepsFlowModuleGridView;
             this.StepsFlowModuleGridControl.Name = "StepsFlowModuleGridControl";
-            this.StepsFlowModuleGridControl.Size = new System.Drawing.Size(931, 512);
+            this.StepsFlowModuleGridControl.Size = new System.Drawing.Size(928, 506);
             this.StepsFlowModuleGridControl.TabIndex = 0;
             this.StepsFlowModuleGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.StepsFlowModuleGridView});
@@ -639,29 +638,29 @@
             // 
             this.barDockControl11.CausesValidation = false;
             this.barDockControl11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl11.Location = new System.Drawing.Point(0, 24);
-            this.barDockControl11.Size = new System.Drawing.Size(0, 512);
+            this.barDockControl11.Location = new System.Drawing.Point(0, 26);
+            this.barDockControl11.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControl12
             // 
             this.barDockControl12.CausesValidation = false;
             this.barDockControl12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl12.Location = new System.Drawing.Point(931, 24);
-            this.barDockControl12.Size = new System.Drawing.Size(0, 512);
+            this.barDockControl12.Location = new System.Drawing.Point(928, 26);
+            this.barDockControl12.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControl10
             // 
             this.barDockControl10.CausesValidation = false;
             this.barDockControl10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl10.Location = new System.Drawing.Point(0, 536);
-            this.barDockControl10.Size = new System.Drawing.Size(931, 0);
+            this.barDockControl10.Location = new System.Drawing.Point(0, 532);
+            this.barDockControl10.Size = new System.Drawing.Size(928, 0);
             // 
             // barDockControl9
             // 
             this.barDockControl9.CausesValidation = false;
             this.barDockControl9.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl9.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl9.Size = new System.Drawing.Size(931, 24);
+            this.barDockControl9.Size = new System.Drawing.Size(928, 26);
             // 
             // layoutControlGroup1
             // 
@@ -736,7 +735,7 @@
             this.ItemForStepsFlowModule});
             this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup6.Name = "autoGroupForStepsFlowModule";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(935, 540);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(932, 536);
             this.layoutControlGroup6.Text = "Steps Flow Module";
             // 
             // ItemForStepsFlowModule
@@ -744,7 +743,7 @@
             this.ItemForStepsFlowModule.Control = this.StepsFlowModuleXtraUserControl;
             this.ItemForStepsFlowModule.Location = new System.Drawing.Point(0, 0);
             this.ItemForStepsFlowModule.Name = "ItemForStepsFlowModule";
-            this.ItemForStepsFlowModule.Size = new System.Drawing.Size(935, 540);
+            this.ItemForStepsFlowModule.Size = new System.Drawing.Size(932, 536);
             this.ItemForStepsFlowModule.StartNewLine = true;
             this.ItemForStepsFlowModule.Text = "Steps Flow Module";
             this.ItemForStepsFlowModule.TextSize = new System.Drawing.Size(0, 0);
@@ -756,7 +755,7 @@
             this.ItemForComponentsByModule});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForComponentsByModule";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(935, 540);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(932, 536);
             this.layoutControlGroup3.Text = "Components By Module";
             // 
             // ItemForComponentsByModule
@@ -764,7 +763,7 @@
             this.ItemForComponentsByModule.Control = this.ComponentsByModuleXtraUserControl;
             this.ItemForComponentsByModule.Location = new System.Drawing.Point(0, 0);
             this.ItemForComponentsByModule.Name = "ItemForComponentsByModule";
-            this.ItemForComponentsByModule.Size = new System.Drawing.Size(935, 540);
+            this.ItemForComponentsByModule.Size = new System.Drawing.Size(932, 536);
             this.ItemForComponentsByModule.StartNewLine = true;
             this.ItemForComponentsByModule.Text = "Components By Module";
             this.ItemForComponentsByModule.TextSize = new System.Drawing.Size(0, 0);
@@ -776,7 +775,7 @@
             this.ItemForModuleUser});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "autoGroupForModuleUser";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(935, 540);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(932, 536);
             this.layoutControlGroup4.Text = "Module User";
             // 
             // ItemForModuleUser
@@ -784,7 +783,7 @@
             this.ItemForModuleUser.Control = this.ModuleUserXtraUserControl;
             this.ItemForModuleUser.Location = new System.Drawing.Point(0, 0);
             this.ItemForModuleUser.Name = "ItemForModuleUser";
-            this.ItemForModuleUser.Size = new System.Drawing.Size(935, 540);
+            this.ItemForModuleUser.Size = new System.Drawing.Size(932, 536);
             this.ItemForModuleUser.StartNewLine = true;
             this.ItemForModuleUser.Text = "Module User";
             this.ItemForModuleUser.TextSize = new System.Drawing.Size(0, 0);
@@ -796,7 +795,7 @@
             this.ItemForOperationsModule});
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "autoGroupForOperationsModule";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(935, 540);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(932, 536);
             this.layoutControlGroup5.Text = "Operations Module";
             // 
             // ItemForOperationsModule
@@ -804,7 +803,7 @@
             this.ItemForOperationsModule.Control = this.OperationsModuleXtraUserControl;
             this.ItemForOperationsModule.Location = new System.Drawing.Point(0, 0);
             this.ItemForOperationsModule.Name = "ItemForOperationsModule";
-            this.ItemForOperationsModule.Size = new System.Drawing.Size(935, 540);
+            this.ItemForOperationsModule.Size = new System.Drawing.Size(932, 536);
             this.ItemForOperationsModule.StartNewLine = true;
             this.ItemForOperationsModule.Text = "Operations Module";
             this.ItemForOperationsModule.TextSize = new System.Drawing.Size(0, 0);
@@ -882,7 +881,7 @@
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
             this.labelControl.Size = new System.Drawing.Size(979, 30);
             this.labelControl.TabIndex = 1;
-            this.labelControl.Text = "Modules - Element View";
+            this.labelControl.Text = "Modules";
             // 
             // ComponentsByModuleBarManager
             // 

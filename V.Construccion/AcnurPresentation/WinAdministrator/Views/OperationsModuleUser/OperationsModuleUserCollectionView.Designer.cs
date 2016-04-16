@@ -27,9 +27,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.operationsModuleUserCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.operationsModuleUserCollectionViewBindingSource = new System.Windows.Forms.BindingSource();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdOperationModuleUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdOperationModule = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -37,7 +36,7 @@
             this.ColOperationsName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColModuleName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColUsers = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -148,7 +147,7 @@
             this.labelControl.Size = new System.Drawing.Size(944, 34);
             this.labelControl.StyleController = this.layoutControl;
             this.labelControl.TabIndex = 4;
-            this.labelControl.Text = "OperationsModuleUser";
+            this.labelControl.Text = "Operations Module User";
             // 
             // layoutControl
             // 
