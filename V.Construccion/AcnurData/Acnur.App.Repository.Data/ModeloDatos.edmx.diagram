@@ -46,7 +46,6 @@
         <EntityTypeShape EntityType="ACNURModel.Sessions" Width="1.5" PointX="5.25" PointY="82.75" />
         <EntityTypeShape EntityType="ACNURModel.SessionTargetMailProcessed" Width="1.5" PointX="9.75" PointY="86.125" />
         <EntityTypeShape EntityType="ACNURModel.SessionTargetMails" Width="1.5" PointX="7.5" PointY="86.125" />
-        <EntityTypeShape EntityType="ACNURModel.Attachments" Width="1.5" PointX="10.25" PointY="63" />
         <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_ActionFrame" />
         <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_ActionType" />
         <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_AssociatedAction" />
@@ -61,7 +60,6 @@
         <AssociationConnector Association="ACNURModel.FK_GeneralInformationActionUsers_GeneralInformationAction" />
         <AssociationConnector Association="ACNURModel.FK_GeneralInformationActionUsers_Users" />
         <AssociationConnector Association="ACNURModel.FK_Audit_User" />
-        <AssociationConnector Association="ACNURModel.FK_Attachments_ComponentsByModule" />
         <AssociationConnector Association="ACNURModel.FK_ComponentsByModule_Modules" />
         <AssociationConnector Association="ACNURModel.FK_SessionComponentesByModule_ComponentesByModule" />
         <AssociationConnector Association="ACNURModel.FK_ModuleUser_Module" />
@@ -90,8 +88,6 @@
         <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_ProjectLocationMunicipality" />
         <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_Site" />
         <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_Strategy" />
-        <AssociationConnector Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition" />
-        <AssociationConnector Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType" />
         <AssociationConnector Association="ACNURModel.FK_CostApproval_ParameterDetail_Canceled" />
         <AssociationConnector Association="ACNURModel.FK_CostApproval_ParameterDetail_CertifyingOffice" />
         <AssociationConnector Association="ACNURModel.FK_CostApproval_ParameterDetail_Legalization" />
@@ -181,6 +177,10 @@
         <AssociationConnector Association="ACNURModel.FK_SessionComponentesByModule_Session" />
         <AssociationConnector Association="ACNURModel.FK_SessionTargetMails_Session" />
         <AssociationConnector Association="ACNURModel.FK_SessionTargetMailProcessed_SessionTargetMail" />
+        <EntityTypeShape EntityType="ACNURModel.Attachments" Width="1.5" PointX="11.25" PointY="59.875" />
+        <AssociationConnector Association="ACNURModel.FK_Attachments_ComponentsByModule" />
+        <AssociationConnector Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition" />
+        <AssociationConnector Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -16,8 +16,8 @@ namespace Acnur.App.Repository.Data
     {
         public ComponentsByModule()
         {
-            this.Attachments = new HashSet<Attachments>();
             this.SessionComponentsByModule = new HashSet<SessionComponentsByModule>();
+            this.Attachments = new HashSet<Attachments>();
         }
     
         public int IdComponentByModule { get; set; }
@@ -25,8 +25,8 @@ namespace Acnur.App.Repository.Data
         public int IdModule { get; set; }
         public string Description { get; set; }
     
-        public virtual ICollection<Attachments> Attachments { get; set; }
         public virtual Modules Modules { get; set; }
         public virtual ICollection<SessionComponentsByModule> SessionComponentsByModule { get; set; }
+        public virtual ICollection<Attachments> Attachments { get; set; }
     }
 }

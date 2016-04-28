@@ -56,8 +56,6 @@ namespace Acnur.App.Entities
             this.AnnexC15 = new HashSet<AnnexC>();
             this.AnnexC16 = new HashSet<AnnexC>();
             this.AnnexC17 = new HashSet<AnnexC>();
-            this.Attachments = new HashSet<Attachments>();
-            this.Attachments1 = new HashSet<Attachments>();
             this.CostApproval = new HashSet<CostApproval>();
             this.CostApproval1 = new HashSet<CostApproval>();
             this.CostApproval2 = new HashSet<CostApproval>();
@@ -127,6 +125,8 @@ namespace Acnur.App.Entities
             this.Weekly1 = new HashSet<Weekly>();
             this.Weekly2 = new HashSet<Weekly>();
             this.Weekly3 = new HashSet<Weekly>();
+            this.Attachments = new HashSet<Attachments>();
+            this.Attachments1 = new HashSet<Attachments>();
         }
     
     
@@ -364,18 +364,6 @@ namespace Acnur.App.Entities
         /// </summary>
     	[System.Runtime.Serialization.DataMember]
         public virtual ICollection<AnnexC> AnnexC17 { get; set; }
-    
-    	/// <summary>
-        /// Atributo de agregacion Attachments
-        /// </summary>
-    	[System.Runtime.Serialization.DataMember]
-        public virtual ICollection<Attachments> Attachments { get; set; }
-    
-    	/// <summary>
-        /// Atributo de agregacion Attachments1
-        /// </summary>
-    	[System.Runtime.Serialization.DataMember]
-        public virtual ICollection<Attachments> Attachments1 { get; set; }
     
     	/// <summary>
         /// Atributo de agregacion CostApproval
@@ -796,5 +784,17 @@ namespace Acnur.App.Entities
         /// </summary>
     	[System.Runtime.Serialization.DataMember]
         public virtual ICollection<Weekly> Weekly3 { get; set; }
+    
+    	/// <summary>
+        /// Atributo de agregacion Attachments
+        /// </summary>
+    	[System.Runtime.Serialization.DataMember]
+        public virtual ICollection<Attachments> Attachments { get; set; }
+    
+    	/// <summary>
+        /// Atributo de agregacion Attachments1
+        /// </summary>
+    	[System.Runtime.Serialization.DataMember]
+        public virtual ICollection<Attachments> Attachments1 { get; set; }
     }
 }

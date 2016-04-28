@@ -100,7 +100,7 @@
             Enum TipoParametro
             </summary>
         </member>
-        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.All">
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Default">
             <summary>
             All
             </summary>

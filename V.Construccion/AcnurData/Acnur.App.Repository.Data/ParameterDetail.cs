@@ -45,8 +45,6 @@ namespace Acnur.App.Repository.Data
             this.AnnexC15 = new HashSet<AnnexC>();
             this.AnnexC16 = new HashSet<AnnexC>();
             this.AnnexC17 = new HashSet<AnnexC>();
-            this.Attachments = new HashSet<Attachments>();
-            this.Attachments1 = new HashSet<Attachments>();
             this.CostApproval = new HashSet<CostApproval>();
             this.CostApproval1 = new HashSet<CostApproval>();
             this.CostApproval2 = new HashSet<CostApproval>();
@@ -116,6 +114,8 @@ namespace Acnur.App.Repository.Data
             this.Weekly1 = new HashSet<Weekly>();
             this.Weekly2 = new HashSet<Weekly>();
             this.Weekly3 = new HashSet<Weekly>();
+            this.Attachments = new HashSet<Attachments>();
+            this.Attachments1 = new HashSet<Attachments>();
         }
     
         public int IdParameterDetail { get; set; }
@@ -158,8 +158,6 @@ namespace Acnur.App.Repository.Data
         public virtual ICollection<AnnexC> AnnexC15 { get; set; }
         public virtual ICollection<AnnexC> AnnexC16 { get; set; }
         public virtual ICollection<AnnexC> AnnexC17 { get; set; }
-        public virtual ICollection<Attachments> Attachments { get; set; }
-        public virtual ICollection<Attachments> Attachments1 { get; set; }
         public virtual ICollection<CostApproval> CostApproval { get; set; }
         public virtual ICollection<CostApproval> CostApproval1 { get; set; }
         public virtual ICollection<CostApproval> CostApproval2 { get; set; }
@@ -230,5 +228,7 @@ namespace Acnur.App.Repository.Data
         public virtual ICollection<Weekly> Weekly1 { get; set; }
         public virtual ICollection<Weekly> Weekly2 { get; set; }
         public virtual ICollection<Weekly> Weekly3 { get; set; }
+        public virtual ICollection<Attachments> Attachments { get; set; }
+        public virtual ICollection<Attachments> Attachments1 { get; set; }
     }
 }

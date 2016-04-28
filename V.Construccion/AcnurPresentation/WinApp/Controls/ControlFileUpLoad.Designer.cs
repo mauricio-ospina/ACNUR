@@ -41,6 +41,8 @@
             this.ColFileName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RIButtonFiles = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.ColSize = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TxtDescription = new DevExpress.XtraEditors.TextEdit();
+            this.LblDescription = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.FileWatcher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PnlChooseFile)).BeginInit();
             this.PnlChooseFile.SuspendLayout();
@@ -48,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GrcFiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrvFiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIButtonFiles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDescription.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // FileWatcher
@@ -57,6 +60,8 @@
             // 
             // PnlChooseFile
             // 
+            this.PnlChooseFile.Controls.Add(this.LblDescription);
+            this.PnlChooseFile.Controls.Add(this.TxtDescription);
             this.PnlChooseFile.Controls.Add(this.BtnOpenFile);
             this.PnlChooseFile.Controls.Add(this.BtnUploadFile);
             this.PnlChooseFile.Controls.Add(this.HplFileTemp);
@@ -153,6 +158,21 @@
             this.ColSize.VisibleIndex = 1;
             this.ColSize.Width = 127;
             // 
+            // TxtDescription
+            // 
+            this.TxtDescription.Location = new System.Drawing.Point(313, 9);
+            this.TxtDescription.Name = "TxtDescription";
+            this.TxtDescription.Size = new System.Drawing.Size(574, 20);
+            this.TxtDescription.TabIndex = 3;
+            // 
+            // LblDescription
+            // 
+            this.LblDescription.Location = new System.Drawing.Point(252, 12);
+            this.LblDescription.Name = "LblDescription";
+            this.LblDescription.Size = new System.Drawing.Size(60, 13);
+            this.LblDescription.TabIndex = 4;
+            this.LblDescription.Text = "Description: ";
+            // 
             // ControlFileUpLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,10 +184,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.FileWatcher)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PnlChooseFile)).EndInit();
             this.PnlChooseFile.ResumeLayout(false);
+            this.PnlChooseFile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HplFileTemp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrcFiles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrvFiles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIButtonFiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDescription.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +206,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn ColFileName;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit RIButtonFiles;
         private DevExpress.XtraGrid.Columns.GridColumn ColSize;
+        private DevExpress.XtraEditors.LabelControl LblDescription;
+        private DevExpress.XtraEditors.TextEdit TxtDescription;
     }
 }

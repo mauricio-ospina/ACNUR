@@ -1,10 +1,10 @@
 ﻿// ***********************************************************************
 // Assembly         : Acnur.App.Proxy
-// Author           : MAURO-DEFENSORIA
+// Author           : Mauricio Ospina - Cel: 3204958448 - ambrosio.mauro@gmail.com
 // Created          : 04-16-2016
 //
-// Last Modified By : MAURO-DEFENSORIA
-// Last Modified On : 04-16-2016
+// Last Modified By : Mauricio Ospina
+// Last Modified On : 04-23-2016
 // ***********************************************************************
 // <copyright file="CustomerAttachments.cs" company="Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR">
 //     Copyright © Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR 2015
@@ -16,6 +16,7 @@ namespace Acnur.App.Proxy
 {
     using Acnur.App.Entities;
     using Acnur.App.Interfaces;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Class CustomerAttachments.
@@ -24,5 +25,15 @@ namespace Acnur.App.Proxy
     /// <seealso cref="Acnur.App.Interfaces.IFacadeAttachments" />
     public class CustomerAttachments : CustomerGenericFacade<IFacadeAttachments, Attachments>, IFacadeAttachments
     {
+        /// <summary>
+        /// Gets the attachments by identifier module.
+        /// </summary>
+        /// <param name="idModule">The identifier module.</param>
+        /// <param name="idRegister">The identifier register.</param>
+        /// <returns>System.Collections.Generic.List&lt;Attachments&gt;.</returns>
+        public List<Attachments> GetAttachmentsByIdModule(int idModule, int idRegister)
+        {
+            return this.Channel.GetAttachmentsByIdModule(idModule, idRegister);
+        }
     }
 }

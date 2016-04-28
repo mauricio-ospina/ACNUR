@@ -42,6 +42,12 @@ namespace Acnur.App.Entities
         public int IdInformation { get; set; }
     
     	/// <summary>
+        /// Atributo AttachmentName
+        /// </summary>
+    	[System.Runtime.Serialization.DataMember]
+        public string AttachmentName { get; set; }
+    
+    	/// <summary>
         /// Atributo Description
         /// </summary>
     	[System.Runtime.Serialization.DataMember]

@@ -27,19 +27,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.IdStepFlowModuleTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.stepsFlowModuleViewBindingSource = new System.Windows.Forms.BindingSource();
+            this.stepsFlowModuleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StepsFlowLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.StepsFlowBindingSource = new System.Windows.Forms.BindingSource();
+            this.StepsFlowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StepsFlowLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ModulesLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.ModulesBindingSource = new System.Windows.Forms.BindingSource();
+            this.ModulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ModulesLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.SequenceTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.StepsFlowModuleUserXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.StepsFlowModuleUserGridControl = new DevExpress.XtraGrid.GridControl();
-            this.StepsFlowModuleUserBindingSource = new System.Windows.Forms.BindingSource();
+            this.StepsFlowModuleUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StepsFlowModuleUserGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdStepFlowModuleUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdStepFlowModule = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,17 +60,19 @@
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForStepsFlowModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.StepsFlowModuleUserBarManager = new DevExpress.XtraBars.BarManager();
+            this.StepsFlowModuleUserBarManager = new DevExpress.XtraBars.BarManager(this.components);
             this.StepsFlowModuleUserBar = new DevExpress.XtraBars.Bar();
             this.bbiStepsFlowModuleUserNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleUserEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleUserDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStepsFlowModuleUserRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.StepsFlowModuleUserPopUpMenu = new DevExpress.XtraBars.PopupMenu();
+            this.StepsFlowModuleUserPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.ColStepFlowName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColModuleName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdStepFlowModuleTextEdit.Properties)).BeginInit();
@@ -154,6 +157,8 @@
             // 
             // StepsFlowLookUpEditView
             // 
+            this.StepsFlowLookUpEditView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ColStepFlowName});
             this.StepsFlowLookUpEditView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.StepsFlowLookUpEditView.Name = "StepsFlowLookUpEditView";
             this.StepsFlowLookUpEditView.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -180,6 +185,8 @@
             // 
             // ModulesLookUpEditView
             // 
+            this.ModulesLookUpEditView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ColModuleName});
             this.ModulesLookUpEditView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.ModulesLookUpEditView.Name = "ModulesLookUpEditView";
             this.ModulesLookUpEditView.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -206,20 +213,20 @@
             this.StepsFlowModuleUserXtraUserControl.Controls.Add(this.barDockControlRight);
             this.StepsFlowModuleUserXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.StepsFlowModuleUserXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.StepsFlowModuleUserXtraUserControl.Location = new System.Drawing.Point(24, 143);
+            this.StepsFlowModuleUserXtraUserControl.Location = new System.Drawing.Point(24, 142);
             this.StepsFlowModuleUserXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.StepsFlowModuleUserXtraUserControl.Name = "StepsFlowModuleUserXtraUserControl";
-            this.StepsFlowModuleUserXtraUserControl.Size = new System.Drawing.Size(928, 508);
+            this.StepsFlowModuleUserXtraUserControl.Size = new System.Drawing.Size(931, 512);
             this.StepsFlowModuleUserXtraUserControl.TabIndex = 8;
             // 
             // StepsFlowModuleUserGridControl
             // 
             this.StepsFlowModuleUserGridControl.DataSource = this.StepsFlowModuleUserBindingSource;
             this.StepsFlowModuleUserGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StepsFlowModuleUserGridControl.Location = new System.Drawing.Point(0, 26);
+            this.StepsFlowModuleUserGridControl.Location = new System.Drawing.Point(0, 24);
             this.StepsFlowModuleUserGridControl.MainView = this.StepsFlowModuleUserGridView;
             this.StepsFlowModuleUserGridControl.Name = "StepsFlowModuleUserGridControl";
-            this.StepsFlowModuleUserGridControl.Size = new System.Drawing.Size(928, 482);
+            this.StepsFlowModuleUserGridControl.Size = new System.Drawing.Size(931, 488);
             this.StepsFlowModuleUserGridControl.TabIndex = 0;
             this.StepsFlowModuleUserGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.StepsFlowModuleUserGridView});
@@ -275,29 +282,29 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 482);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 488);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(928, 26);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 482);
+            this.barDockControlRight.Location = new System.Drawing.Point(931, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 488);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 508);
-            this.barDockControlBottom.Size = new System.Drawing.Size(928, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 512);
+            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(928, 26);
+            this.barDockControlTop.Size = new System.Drawing.Size(931, 24);
             // 
             // layoutControlGroup1
             // 
@@ -332,6 +339,7 @@
             this.ItemForIdStepFlowModule.Size = new System.Drawing.Size(959, 24);
             this.ItemForIdStepFlowModule.Text = "Id Step Flow Module";
             this.ItemForIdStepFlowModule.TextSize = new System.Drawing.Size(97, 13);
+            this.ItemForIdStepFlowModule.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // ItemForIdStepFlow
             // 
@@ -339,7 +347,7 @@
             this.ItemForIdStepFlow.Location = new System.Drawing.Point(0, 24);
             this.ItemForIdStepFlow.Name = "ItemForIdStepFlow";
             this.ItemForIdStepFlow.Size = new System.Drawing.Size(959, 24);
-            this.ItemForIdStepFlow.Text = "Id Step Flow";
+            this.ItemForIdStepFlow.Text = "Step Flow";
             this.ItemForIdStepFlow.TextSize = new System.Drawing.Size(97, 13);
             // 
             // ItemForIdModule
@@ -348,7 +356,7 @@
             this.ItemForIdModule.Location = new System.Drawing.Point(0, 48);
             this.ItemForIdModule.Name = "ItemForIdModule";
             this.ItemForIdModule.Size = new System.Drawing.Size(959, 24);
-            this.ItemForIdModule.Text = "Id Module";
+            this.ItemForIdModule.Text = "Module";
             this.ItemForIdModule.TextSize = new System.Drawing.Size(97, 13);
             // 
             // ItemForSequence
@@ -378,7 +386,7 @@
             this.ItemForStepsFlowModuleUser});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForStepsFlowModuleUser";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(932, 512);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(935, 516);
             this.layoutControlGroup3.Text = "StepsFlowModuleUser";
             // 
             // ItemForStepsFlowModuleUser
@@ -386,7 +394,7 @@
             this.ItemForStepsFlowModuleUser.Control = this.StepsFlowModuleUserXtraUserControl;
             this.ItemForStepsFlowModuleUser.Location = new System.Drawing.Point(0, 0);
             this.ItemForStepsFlowModuleUser.Name = "ItemForStepsFlowModuleUser";
-            this.ItemForStepsFlowModuleUser.Size = new System.Drawing.Size(932, 512);
+            this.ItemForStepsFlowModuleUser.Size = new System.Drawing.Size(935, 516);
             this.ItemForStepsFlowModuleUser.StartNewLine = true;
             this.ItemForStepsFlowModuleUser.Text = "Steps Flow Module User";
             this.ItemForStepsFlowModuleUser.TextSize = new System.Drawing.Size(0, 0);
@@ -541,6 +549,20 @@
             this.StepsFlowModuleUserPopUpMenu.Manager = this.StepsFlowModuleUserBarManager;
             this.StepsFlowModuleUserPopUpMenu.Name = "StepsFlowModuleUserPopUpMenu";
             // 
+            // ColStepFlowName
+            // 
+            this.ColStepFlowName.FieldName = "Name";
+            this.ColStepFlowName.Name = "ColStepFlowName";
+            this.ColStepFlowName.Visible = true;
+            this.ColStepFlowName.VisibleIndex = 0;
+            // 
+            // ColModuleName
+            // 
+            this.ColModuleName.FieldName = "ModuleName";
+            this.ColModuleName.Name = "ColModuleName";
+            this.ColModuleName.Visible = true;
+            this.ColModuleName.VisibleIndex = 0;
+            // 
             // StepsFlowModuleView
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -631,6 +653,8 @@
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem ItemForStepsFlowModuleUser;
+        private DevExpress.XtraGrid.Columns.GridColumn ColStepFlowName;
+        private DevExpress.XtraGrid.Columns.GridColumn ColModuleName;
 
     }
 }

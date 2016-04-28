@@ -17,6 +17,7 @@ namespace Acnur.App.Repository.Data
         public int IdAttachment { get; set; }
         public int IdComponentByModule { get; set; }
         public int IdInformation { get; set; }
+        public string AttachmentName { get; set; }
         public string Description { get; set; }
         public int IdAttachmentType { get; set; }
         public int IdAttachmentCondition { get; set; }

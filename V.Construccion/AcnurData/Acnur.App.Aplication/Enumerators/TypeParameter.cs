@@ -25,7 +25,7 @@ namespace Acnur.App.Aplication.Enumerators
         /// <summary>
         /// All
         /// </summary>
-        All = 0,
+        Default = 0,
 
         /// <summary>
         /// The audit

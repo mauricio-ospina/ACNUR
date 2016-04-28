@@ -913,7 +913,7 @@
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
             this.labelControl.Size = new System.Drawing.Size(979, 30);
             this.labelControl.TabIndex = 1;
-            this.labelControl.Text = "Users - Element View";
+            this.labelControl.Text = "Users";
             // 
             // ModuleUserBarManager
             // 

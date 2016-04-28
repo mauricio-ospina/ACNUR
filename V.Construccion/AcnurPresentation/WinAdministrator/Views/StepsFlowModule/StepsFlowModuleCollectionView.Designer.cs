@@ -28,7 +28,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.GrcStepsFlowModule = new DevExpress.XtraGrid.GridControl();
             this.stepsFlowModuleCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ColIdStepFlowModule = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,7 +45,7 @@
             this.itemLabel = new DevExpress.XtraLayout.LayoutControlItem();
             this.itemGrid = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrcStepsFlowModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stepsFlowModuleCollectionViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
@@ -56,15 +56,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl
+            // GrcStepsFlowModule
             // 
-            this.gridControl.DataSource = this.stepsFlowModuleCollectionViewBindingSource;
-            this.gridControl.Location = new System.Drawing.Point(40, 34);
-            this.gridControl.MainView = this.gridView;
-            this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(944, 674);
-            this.gridControl.TabIndex = 2;
-            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GrcStepsFlowModule.DataSource = this.stepsFlowModuleCollectionViewBindingSource;
+            this.GrcStepsFlowModule.Location = new System.Drawing.Point(40, 34);
+            this.GrcStepsFlowModule.MainView = this.gridView;
+            this.GrcStepsFlowModule.Name = "GrcStepsFlowModule";
+            this.GrcStepsFlowModule.Size = new System.Drawing.Size(944, 674);
+            this.GrcStepsFlowModule.TabIndex = 2;
+            this.GrcStepsFlowModule.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
             // stepsFlowModuleCollectionViewBindingSource
@@ -81,7 +81,7 @@
             this.ColModuleName,
             this.ColStepsFlowName,
             this.gridColumn7});
-            this.gridView.GridControl = this.gridControl;
+            this.gridView.GridControl = this.GrcStepsFlowModule;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsCustomization.AllowColumnMoving = false;
@@ -163,7 +163,7 @@
             // 
             this.layoutControl.AllowCustomization = false;
             this.layoutControl.Controls.Add(this.labelControl);
-            this.layoutControl.Controls.Add(this.gridControl);
+            this.layoutControl.Controls.Add(this.GrcStepsFlowModule);
             this.layoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl.Location = new System.Drawing.Point(0, 0);
             this.layoutControl.Name = "layoutControl";
@@ -196,7 +196,7 @@
             // 
             // itemGrid
             // 
-            this.itemGrid.Control = this.gridControl;
+            this.itemGrid.Control = this.GrcStepsFlowModule;
             this.itemGrid.Location = new System.Drawing.Point(0, 34);
             this.itemGrid.Name = "itemGrid";
             this.itemGrid.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -251,7 +251,7 @@
             this.Controls.Add(this.windowsUIButtonPanel);
             this.Name = "StepsFlowModuleCollectionView";
             this.Size = new System.Drawing.Size(1024, 768);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrcStepsFlowModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stepsFlowModuleCollectionViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
@@ -266,7 +266,7 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl;
+        private DevExpress.XtraGrid.GridControl GrcStepsFlowModule;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext;
         private System.Windows.Forms.BindingSource stepsFlowModuleCollectionViewBindingSource;

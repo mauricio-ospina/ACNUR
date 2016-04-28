@@ -22,7 +22,7 @@ namespace WinAdministrator.Views.StepsFlowModuleCollectionView
             var fluentAPI = mvvmContext.OfType<WinAdministrator.ViewModels.StepsFlowModuleCollectionViewModel>();
             fluentAPI.WithEvent(this, "Load").EventToCommand(x => x.OnLoaded());
             // We want to show the Entities collection in grid and react on this collection external changes (Reload, server-side Filtering)
-            fluentAPI.SetBinding(gridControl, gControl => gControl.DataSource, x => x.Entities);
+            fluentAPI.SetBinding(GrcStepsFlowModule, gControl => gControl.DataSource, x => x.Entities);
             // We want to show loading-indicator when data is loading asynchronously
             fluentAPI.SetBinding(gridView, gView => gView.LoadingPanelVisible, x => x.IsLoading);
             // We want to proceed the Edit command when row double-clicked
@@ -40,7 +40,7 @@ namespace WinAdministrator.Views.StepsFlowModuleCollectionView
             fluentAPI.BindCommand(((DevExpress.Utils.MVVM.ISupportCommandBinding)windowsUIButtonPanel.Buttons[1]), (x, p) => x.Edit(p), x => x.SelectedEntity);
             fluentAPI.BindCommand(((DevExpress.Utils.MVVM.ISupportCommandBinding)windowsUIButtonPanel.Buttons[2]), (x, p) => x.Delete(p), x => x.SelectedEntity);
             fluentAPI.BindCommand(((DevExpress.Utils.MVVM.ISupportCommandBinding)windowsUIButtonPanel.Buttons[3]), x => x.Refresh());
-            ((DevExpress.XtraBars.Docking2010.WindowsUIButton)windowsUIButtonPanel.Buttons[5]).Click += (s, e) => { gridControl.ShowRibbonPrintPreview(); };
+            ((DevExpress.XtraBars.Docking2010.WindowsUIButton)windowsUIButtonPanel.Buttons[5]).Click += (s, e) => { GrcStepsFlowModule.ShowRibbonPrintPreview(); };
         }
     }
 }

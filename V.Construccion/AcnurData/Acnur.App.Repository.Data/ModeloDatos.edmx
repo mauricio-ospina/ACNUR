@@ -637,6 +637,7 @@
           <Property Name="IdAttachment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdComponentByModule" Type="int" Nullable="false" />
           <Property Name="IdInformation" Type="int" Nullable="false" />
+          <Property Name="AttachmentName" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="4000" Nullable="false" />
           <Property Name="IdAttachmentType" Type="int" Nullable="false" />
           <Property Name="IdAttachmentCondition" Type="int" Nullable="false" />
@@ -2876,7 +2877,6 @@
           <EntitySet Name="Sessions" EntityType="ACNURModel.Sessions" />
           <EntitySet Name="SessionTargetMailProcessed" EntityType="ACNURModel.SessionTargetMailProcessed" />
           <EntitySet Name="SessionTargetMails" EntityType="ACNURModel.SessionTargetMails" />
-          <EntitySet Name="Attachments" EntityType="ACNURModel.Attachments" />
           <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_ActionFrame" Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_ActionFrame">
             <End Role="ParameterDetail" EntitySet="ParameterDetail" />
             <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
@@ -2932,10 +2932,6 @@
           <AssociationSet Name="FK_Audit_User" Association="ACNURModel.FK_Audit_User">
             <End Role="Users" EntitySet="Users" />
             <End Role="Audit" EntitySet="Audit" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Attachments_ComponentsByModule" Association="ACNURModel.FK_Attachments_ComponentsByModule">
-            <End Role="ComponentsByModule" EntitySet="ComponentsByModule" />
-            <End Role="Attachments" EntitySet="Attachments" />
           </AssociationSet>
           <AssociationSet Name="FK_ComponentsByModule_Modules" Association="ACNURModel.FK_ComponentsByModule_Modules">
             <End Role="Modules" EntitySet="Modules" />
@@ -3048,14 +3044,6 @@
           <AssociationSet Name="FK_AnnexC_ParameterDetail_Strategy" Association="ACNURModel.FK_AnnexC_ParameterDetail_Strategy">
             <End Role="ParameterDetail" EntitySet="ParameterDetail" />
             <End Role="AnnexC" EntitySet="AnnexC" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Attachments_ParameterDetail_AttachmentCondition" Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition">
-            <End Role="ParameterDetail" EntitySet="ParameterDetail" />
-            <End Role="Attachments" EntitySet="Attachments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Attachments_ParameterDetail_AttachmentType" Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType">
-            <End Role="ParameterDetail" EntitySet="ParameterDetail" />
-            <End Role="Attachments" EntitySet="Attachments" />
           </AssociationSet>
           <AssociationSet Name="FK_CostApproval_ParameterDetail_Canceled" Association="ACNURModel.FK_CostApproval_ParameterDetail_Canceled">
             <End Role="ParameterDetail" EntitySet="ParameterDetail" />
@@ -3413,6 +3401,19 @@
             <End Role="SessionTargetMails" EntitySet="SessionTargetMails" />
             <End Role="SessionTargetMailProcessed" EntitySet="SessionTargetMailProcessed" />
           </AssociationSet>
+          <EntitySet Name="Attachments" EntityType="ACNURModel.Attachments" />
+          <AssociationSet Name="FK_Attachments_ComponentsByModule" Association="ACNURModel.FK_Attachments_ComponentsByModule">
+            <End Role="ComponentsByModule" EntitySet="ComponentsByModule" />
+            <End Role="Attachments" EntitySet="Attachments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Attachments_ParameterDetail_AttachmentCondition" Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition">
+            <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+            <End Role="Attachments" EntitySet="Attachments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Attachments_ParameterDetail_AttachmentType" Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType">
+            <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+            <End Role="Attachments" EntitySet="Attachments" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="GeneralInformationAction">
           <Key>
@@ -3496,9 +3497,9 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="IdModule" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Attachments" Relationship="ACNURModel.FK_Attachments_ComponentsByModule" FromRole="ComponentsByModule" ToRole="Attachments" />
           <NavigationProperty Name="Modules" Relationship="ACNURModel.FK_ComponentsByModule_Modules" FromRole="ComponentsByModule" ToRole="Modules" />
           <NavigationProperty Name="SessionComponentsByModule" Relationship="ACNURModel.FK_SessionComponentesByModule_ComponentesByModule" FromRole="ComponentsByModule" ToRole="SessionComponentsByModule" />
+          <NavigationProperty Name="Attachments" Relationship="ACNURModel.FK_Attachments_ComponentsByModule" FromRole="ComponentsByModule" ToRole="Attachments" />
         </EntityType>
         <EntityType Name="Modules">
           <Key>
@@ -3608,8 +3609,6 @@
           <NavigationProperty Name="AnnexC15" Relationship="ACNURModel.FK_AnnexC_ParameterDetail_ProjectLocationMunicipality" FromRole="ParameterDetail" ToRole="AnnexC" />
           <NavigationProperty Name="AnnexC16" Relationship="ACNURModel.FK_AnnexC_ParameterDetail_Site" FromRole="ParameterDetail" ToRole="AnnexC" />
           <NavigationProperty Name="AnnexC17" Relationship="ACNURModel.FK_AnnexC_ParameterDetail_Strategy" FromRole="ParameterDetail" ToRole="AnnexC" />
-          <NavigationProperty Name="Attachments" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition" FromRole="ParameterDetail" ToRole="Attachments" />
-          <NavigationProperty Name="Attachments1" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType" FromRole="ParameterDetail" ToRole="Attachments" />
           <NavigationProperty Name="CostApproval" Relationship="ACNURModel.FK_CostApproval_ParameterDetail_Canceled" FromRole="ParameterDetail" ToRole="CostApproval" />
           <NavigationProperty Name="CostApproval1" Relationship="ACNURModel.FK_CostApproval_ParameterDetail_CertifyingOffice" FromRole="ParameterDetail" ToRole="CostApproval" />
           <NavigationProperty Name="CostApproval2" Relationship="ACNURModel.FK_CostApproval_ParameterDetail_Legalization" FromRole="ParameterDetail" ToRole="CostApproval" />
@@ -3680,6 +3679,8 @@
           <NavigationProperty Name="Weekly1" Relationship="ACNURModel.FK_Weekly_ParameterDetail_Municipality" FromRole="ParameterDetail" ToRole="Weekly" />
           <NavigationProperty Name="Weekly2" Relationship="ACNURModel.FK_Weekly_ParameterDetail_WeeklyCharacteristic" FromRole="ParameterDetail" ToRole="Weekly" />
           <NavigationProperty Name="Weekly3" Relationship="ACNURModel.FK_Weekly_ParameterDetail_WeeklySubcharacteristic" FromRole="ParameterDetail" ToRole="Weekly" />
+          <NavigationProperty Name="Attachments" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition" FromRole="ParameterDetail" ToRole="Attachments" />
+          <NavigationProperty Name="Attachments1" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType" FromRole="ParameterDetail" ToRole="Attachments" />
         </EntityType>
         <EntityType Name="StepsFlow">
           <Key>
@@ -4304,21 +4305,6 @@
           <NavigationProperty Name="Sessions" Relationship="ACNURModel.FK_SessionTargetMails_Session" FromRole="SessionTargetMails" ToRole="Sessions" />
           <NavigationProperty Name="SessionTargetMailProcessed" Relationship="ACNURModel.FK_SessionTargetMailProcessed_SessionTargetMail" FromRole="SessionTargetMails" ToRole="SessionTargetMailProcessed" />
         </EntityType>
-        <EntityType Name="Attachments">
-          <Key>
-            <PropertyRef Name="IdAttachment" />
-          </Key>
-          <Property Name="IdAttachment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdComponentByModule" Type="Int32" Nullable="false" />
-          <Property Name="IdInformation" Type="Int32" Nullable="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
-          <Property Name="IdAttachmentType" Type="Int32" Nullable="false" />
-          <Property Name="IdAttachmentCondition" Type="Int32" Nullable="false" />
-          <Property Name="Attachment" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="ComponentsByModule" Relationship="ACNURModel.FK_Attachments_ComponentsByModule" FromRole="Attachments" ToRole="ComponentsByModule" />
-          <NavigationProperty Name="ParameterDetail" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition" FromRole="Attachments" ToRole="ParameterDetail" />
-          <NavigationProperty Name="ParameterDetail1" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType" FromRole="Attachments" ToRole="ParameterDetail" />
-        </EntityType>
         <Association Name="FK_GeneralInformacionAction_ParameterDetail_ActionFrame">
           <End Type="ACNURModel.ParameterDetail" Role="ParameterDetail" Multiplicity="1" />
           <End Type="ACNURModel.GeneralInformationAction" Role="GeneralInformationAction" Multiplicity="*" />
@@ -4484,18 +4470,6 @@
             </Principal>
             <Dependent Role="Audit">
               <PropertyRef Name="IdUser" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Attachments_ComponentsByModule">
-          <End Type="ACNURModel.ComponentsByModule" Role="ComponentsByModule" Multiplicity="1" />
-          <End Type="ACNURModel.Attachments" Role="Attachments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ComponentsByModule">
-              <PropertyRef Name="IdComponentByModule" />
-            </Principal>
-            <Dependent Role="Attachments">
-              <PropertyRef Name="IdComponentByModule" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4832,30 +4806,6 @@
             </Principal>
             <Dependent Role="AnnexC">
               <PropertyRef Name="IdStrategy" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Attachments_ParameterDetail_AttachmentCondition">
-          <End Type="ACNURModel.ParameterDetail" Role="ParameterDetail" Multiplicity="1" />
-          <End Type="ACNURModel.Attachments" Role="Attachments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ParameterDetail">
-              <PropertyRef Name="IdParameterDetail" />
-            </Principal>
-            <Dependent Role="Attachments">
-              <PropertyRef Name="IdAttachmentCondition" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Attachments_ParameterDetail_AttachmentType">
-          <End Type="ACNURModel.ParameterDetail" Role="ParameterDetail" Multiplicity="1" />
-          <End Type="ACNURModel.Attachments" Role="Attachments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ParameterDetail">
-              <PropertyRef Name="IdParameterDetail" />
-            </Principal>
-            <Dependent Role="Attachments">
-              <PropertyRef Name="IdAttachmentType" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5927,6 +5877,58 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Attachments">
+          <Key>
+            <PropertyRef Name="IdAttachment" />
+          </Key>
+          <Property Name="IdAttachment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdComponentByModule" Type="Int32" Nullable="false" />
+          <Property Name="IdInformation" Type="Int32" Nullable="false" />
+          <Property Name="AttachmentName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="IdAttachmentType" Type="Int32" Nullable="false" />
+          <Property Name="IdAttachmentCondition" Type="Int32" Nullable="false" />
+          <Property Name="Attachment" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="ComponentsByModule" Relationship="ACNURModel.FK_Attachments_ComponentsByModule" FromRole="Attachments" ToRole="ComponentsByModule" />
+          <NavigationProperty Name="ParameterDetail" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition" FromRole="Attachments" ToRole="ParameterDetail" />
+          <NavigationProperty Name="ParameterDetail1" Relationship="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType" FromRole="Attachments" ToRole="ParameterDetail" />
+        </EntityType>
+        <Association Name="FK_Attachments_ComponentsByModule">
+          <End Type="ACNURModel.ComponentsByModule" Role="ComponentsByModule" Multiplicity="1" />
+          <End Type="ACNURModel.Attachments" Role="Attachments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ComponentsByModule">
+              <PropertyRef Name="IdComponentByModule" />
+            </Principal>
+            <Dependent Role="Attachments">
+              <PropertyRef Name="IdComponentByModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Attachments_ParameterDetail_AttachmentCondition">
+          <End Type="ACNURModel.ParameterDetail" Role="ParameterDetail" Multiplicity="1" />
+          <End Type="ACNURModel.Attachments" Role="Attachments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParameterDetail">
+              <PropertyRef Name="IdParameterDetail" />
+            </Principal>
+            <Dependent Role="Attachments">
+              <PropertyRef Name="IdAttachmentCondition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Attachments_ParameterDetail_AttachmentType">
+          <End Type="ACNURModel.ParameterDetail" Role="ParameterDetail" Multiplicity="1" />
+          <End Type="ACNURModel.Attachments" Role="Attachments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParameterDetail">
+              <PropertyRef Name="IdParameterDetail" />
+            </Principal>
+            <Dependent Role="Attachments">
+              <PropertyRef Name="IdAttachmentType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -6606,6 +6608,7 @@
                 <ScalarProperty Name="IdAttachmentCondition" ColumnName="IdAttachmentCondition" />
                 <ScalarProperty Name="IdAttachmentType" ColumnName="IdAttachmentType" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
                 <ScalarProperty Name="IdInformation" ColumnName="IdInformation" />
                 <ScalarProperty Name="IdComponentByModule" ColumnName="IdComponentByModule" />
                 <ScalarProperty Name="IdAttachment" ColumnName="IdAttachment" />

@@ -18,6 +18,7 @@
 namespace Acnur.App.Interfaces
 {
     using Acnur.App.Entities;
+    using System.Collections.Generic;
     using System.ServiceModel;
 
     /// <summary>
@@ -26,6 +27,12 @@ namespace Acnur.App.Interfaces
     [ServiceContract]
     public interface IFacadeModules : IFacadeGeneric<Modules>
     {
-
+        /// <summary>
+        /// Gets the modules by user.
+        /// </summary>
+        /// <param name="userName">Name of the user.</param>
+        /// <returns>List of Modules.</returns>
+        [OperationContract]
+        List<Modules> GetModulesByUser(string userName);
     }
 }

@@ -27,8 +27,8 @@ namespace Acnur.App.Entities
         /// </summary>
         public ComponentsByModule()
         {
-            this.Attachments = new HashSet<Attachments>();
             this.SessionComponentsByModule = new HashSet<SessionComponentsByModule>();
+            this.Attachments = new HashSet<Attachments>();
         }
     
     
@@ -58,12 +58,6 @@ namespace Acnur.App.Entities
     
     
     	/// <summary>
-        /// Atributo de agregacion Attachments
-        /// </summary>
-    	[System.Runtime.Serialization.DataMember]
-        public virtual ICollection<Attachments> Attachments { get; set; }
-    
-    	/// <summary>
         /// Atributo de agregacion Modules
         /// </summary>
     	[System.Runtime.Serialization.DataMember]
@@ -74,5 +68,11 @@ namespace Acnur.App.Entities
         /// </summary>
     	[System.Runtime.Serialization.DataMember]
         public virtual ICollection<SessionComponentsByModule> SessionComponentsByModule { get; set; }
+    
+    	/// <summary>
+        /// Atributo de agregacion Attachments
+        /// </summary>
+    	[System.Runtime.Serialization.DataMember]
+        public virtual ICollection<Attachments> Attachments { get; set; }
     }
 }

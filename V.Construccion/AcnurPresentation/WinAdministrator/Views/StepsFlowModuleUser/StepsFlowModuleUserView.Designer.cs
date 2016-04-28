@@ -34,6 +34,7 @@
             this.StepsFlowModuleLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
             this.StepsFlowModuleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StepsFlowModuleLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ColSequence = new DevExpress.XtraGrid.Columns.GridColumn();
             this.UsersLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
             this.UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.UsersLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -42,13 +43,13 @@
             this.ItemForIdStepFlowModuleUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForIdStepFlowModule = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForIdUser = new DevExpress.XtraLayout.LayoutControlItem();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
+            this.ColUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColModule = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColStepFlow = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ColSequence = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdStepFlowModuleUserTextEdit.Properties)).BeginInit();
@@ -107,7 +108,7 @@
             this.StepsFlowModuleLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.StepsFlowModuleLookUpEdit.Properties.DataSource = this.StepsFlowModuleBindingSource;
-            this.StepsFlowModuleLookUpEdit.Properties.DisplayMember = "IdStepFlowModule";
+            this.StepsFlowModuleLookUpEdit.Properties.DisplayMember = "StepsFlow.Name";
             this.StepsFlowModuleLookUpEdit.Properties.ValueMember = "IdStepFlowModule";
             this.StepsFlowModuleLookUpEdit.Properties.View = this.StepsFlowModuleLookUpEditView;
             this.StepsFlowModuleLookUpEdit.Size = new System.Drawing.Size(830, 20);
@@ -128,6 +129,14 @@
             this.StepsFlowModuleLookUpEditView.Name = "StepsFlowModuleLookUpEditView";
             this.StepsFlowModuleLookUpEditView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.StepsFlowModuleLookUpEditView.OptionsView.ShowGroupPanel = false;
+            // 
+            // ColSequence
+            // 
+            this.ColSequence.Caption = "Sequence";
+            this.ColSequence.FieldName = "Sequence";
+            this.ColSequence.Name = "ColSequence";
+            this.ColSequence.Visible = true;
+            this.ColSequence.VisibleIndex = 2;
             // 
             // UsersLookUpEdit
             // 
@@ -150,6 +159,8 @@
             // 
             // UsersLookUpEditView
             // 
+            this.UsersLookUpEditView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ColUserName});
             this.UsersLookUpEditView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.UsersLookUpEditView.Name = "UsersLookUpEditView";
             this.UsersLookUpEditView.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -205,11 +216,6 @@
             this.ItemForIdUser.Size = new System.Drawing.Size(959, 610);
             this.ItemForIdUser.Text = "User";
             this.ItemForIdUser.TextSize = new System.Drawing.Size(122, 13);
-            // 
-            // mvvmContext
-            // 
-            this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(WinAdministrator.ViewModels.StepsFlowModuleUserViewModel);
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -280,6 +286,13 @@
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Steps Flow Module User";
             // 
+            // ColUserName
+            // 
+            this.ColUserName.FieldName = "UserName";
+            this.ColUserName.Name = "ColUserName";
+            this.ColUserName.Visible = true;
+            this.ColUserName.VisibleIndex = 0;
+            // 
             // ColModule
             // 
             this.ColModule.Caption = "Module Name";
@@ -296,13 +309,10 @@
             this.ColStepFlow.Visible = true;
             this.ColStepFlow.VisibleIndex = 1;
             // 
-            // ColSequence
+            // mvvmContext
             // 
-            this.ColSequence.Caption = "Sequence";
-            this.ColSequence.FieldName = "Sequence";
-            this.ColSequence.Name = "ColSequence";
-            this.ColSequence.Visible = true;
-            this.ColSequence.VisibleIndex = 2;
+            this.mvvmContext.ContainerControl = this;
+            this.mvvmContext.ViewModelType = typeof(WinAdministrator.ViewModels.StepsFlowModuleUserViewModel);
             // 
             // StepsFlowModuleUserView
             // 
@@ -360,6 +370,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn ColModule;
         private DevExpress.XtraGrid.Columns.GridColumn ColStepFlow;
         private DevExpress.XtraGrid.Columns.GridColumn ColSequence;
+        private DevExpress.XtraGrid.Columns.GridColumn ColUserName;
 
     }
 }

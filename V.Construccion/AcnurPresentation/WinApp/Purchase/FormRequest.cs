@@ -170,7 +170,7 @@ namespace WinApp
                 item.RequesterPerson = this.TxtRequesterPerson.Text;
                 item.DutyStation = this.TxtDutyStation.Text;
                 item.RequestDate = string.IsNullOrEmpty(this.DtpRequestDate.Text) ? Utilities.CalculaFecha(this.DtpRequestDate.Text) : this.DtpRequestDate.DateTime;
-                item.IdRequestUnit = this.CmbRequesterUnit.SelectedIndex == 0 ? (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.All).First().IdParameterDetail : Convert.ToInt32(((ListItem)(this.CmbRequesterUnit.SelectedItem)).Value);
+                item.IdRequestUnit = this.CmbRequesterUnit.SelectedIndex == 0 ? (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.Default).First().IdParameterDetail : Convert.ToInt32(((ListItem)(this.CmbRequesterUnit.SelectedItem)).Value);
                 item.Responsible = this.TxtResponsible.Text;
                 item.BackgroundRationale = this.MemoBackground.Text;
                 item.DeliveryLocation = this.TxtDeliveryLocation.Text;
@@ -257,6 +257,11 @@ namespace WinApp
                 this.TxtContactPersonGoods.Text = value.ContactPerson;
                 this.DteExpectedDeliveryGoods.Text = value.ExpectedDeliveryDate != DateTime.MinValue ? value.ExpectedDeliveryDate.ToShortDateString() : string.Empty;
                 this.MemoObservationsGoods.Text = value.Observations;
+
+                using (CustomerAttachments customer = new CustomerAttachments())
+                {
+                    
+                }
             }
         }
 
@@ -286,7 +291,7 @@ namespace WinApp
                 item.Context = this.TxtShortDescription.Text;
                 item.NumberDays = (Utilities.EsNumerico(this.SpinNumberDays.Text) && !string.IsNullOrEmpty(this.SpinNumberDays.Text)) ? Convert.ToInt32(this.SpinNumberDays.Text) : 0;
                 item.HoursDay = (Utilities.EsNumerico(this.SpinHoursDays.Text) && !string.IsNullOrEmpty(this.SpinHoursDays.Text)) ? Convert.ToInt32(this.SpinHoursDays.Text) : 0;
-                item.IdServiceType = this.CmbType.SelectedIndex == 0 ? (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.All).First().IdParameterDetail : Convert.ToInt32(((ListItem)(this.CmbType.SelectedItem)).Value);
+                item.IdServiceType = this.CmbType.SelectedIndex == 0 ? (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.Default).First().IdParameterDetail : Convert.ToInt32(((ListItem)(this.CmbType.SelectedItem)).Value);
                 item.Description = this.TxtDescriptionTechnical.Text;
                 item.ServiceLocation = this.TxtWhereServiceRequired.Text;
                 item.Specifications = this.MemoPleaseProvide.Text;
@@ -371,7 +376,7 @@ namespace WinApp
                 item.Origin = this.TxtOrigin.Text;
                 item.Destination = this.TxtDestination.Text;
                 item.NumberRooms = int.Parse(this.SpinNumberRooms.Text);
-                item.IdAccommodationType = this.CmbAccomodationType.SelectedIndex == 0 ? (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.All).First().IdParameterDetail : Convert.ToInt32(((ListItem)(this.CmbAccomodationType.SelectedItem)).Value);
+                item.IdAccommodationType = this.CmbAccomodationType.SelectedIndex == 0 ? (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.Default).First().IdParameterDetail : Convert.ToInt32(((ListItem)(this.CmbAccomodationType.SelectedItem)).Value);
                 item.Breakfast = this.ChkBreakFast.Checked;
                 item.CoffeBreakAM = this.ChkCoffeBreakAM.Checked;
                 item.CoffeBreakPM = this.ChkCoffeBreakPM.Checked;
@@ -686,7 +691,7 @@ namespace WinApp
                 }
 
                 //// Coloca los datos del request
-                this.DataPurchase = @"A continuación se relaciona(n) la(s) siguiente(s) solicitud. <br><br><b>" + req.BackgroundRationale + "</b><br>Delivery Location: " + req.DeliveryLocation + "<br><br>" + req.EstimatedDeliveryDate + "<br><br>";
+                this.DataPurchase = @"A continuación se relaciona(n) la(s) siguiente(s) solicitud(es). Por favor ingrese a la aplicación por medio del icono de ACNUR ubicado en la parte superior derecha de su computador. En caso de no tener acceso, por favor comunicarse con el administrador del sistema.<br><br><b>" + req.BackgroundRationale + "</b><br>Delivery Location: " + req.DeliveryLocation + "<br>Estimated Delivery Date: " + req.EstimatedDeliveryDate.ToLongDateString() + "<br><br>";
 
                 List<Events> ListEvents = new List<Events>();
 
@@ -703,7 +708,7 @@ namespace WinApp
                     this.DataPurchase += @"<b>Events:</b><br><br>";
                     ListEvents.ForEach(delegate(Events item)
                     {
-                        this.DataPurchase += @"Event Name: " + item.EventName + "<br>StartDate: " + item.StartDate + "<br>EndDate" + item.EndDate + "<br><br>";
+                        this.DataPurchase += @"Event Name: " + item.EventName + "<br>Start Date: " + item.StartDate + "<br>End Date" + item.EndDate + "<br><br>";
                     });
                 }
 
@@ -722,7 +727,7 @@ namespace WinApp
                     this.DataPurchase += @"<b>Goods:</b><br><br>";
                     ListGoods.ForEach(delegate(Goods item)
                     {
-                        this.DataPurchase += @"Description: " + item.Description + "<br>PlaceDelivery: " + item.PlaceDelivery + "<br>ContactPerson: " + item.ContactPerson + "<br>ExpectedDeliveryDate:" + item.ExpectedDeliveryDate + "<br><br>";
+                        this.DataPurchase += @"Description: " + item.Description + "<br>Place Delivery: " + item.PlaceDelivery + "<br>Contact Person: " + item.ContactPerson + "<br>Expected Delivery Date: " + item.ExpectedDeliveryDate.ToLongDateString() + "<br><br>";
                     });
                 }
 
@@ -1007,11 +1012,13 @@ namespace WinApp
         /// <summary>
         /// Saves the files.
         /// </summary>
-        /// <param name="ControlFile">The control file goods.</param>
-        /// <param name="Type">The type.</param>
-        private void SaveFiles(ControlFileUpLoad ControlFile, TypePurchase Type)
+        /// <param name="controlFile">The control file goods.</param>
+        /// <param name="type">The type.</param>
+        private void SaveFiles(ControlFileUpLoad controlFile, TypePurchase type)
         {
-            DataTable dt = (DataTable)ControlFile.GrcFilesFileUpload.DataSource;
+            DataTable dt = (DataTable)controlFile.GrcFilesFileUpload.DataSource;
+            int IdTable = type == TypePurchase.Goods ? this.IdGoods : (type == TypePurchase.Events ? this.IdEvents : (type == TypePurchase.Services ? this.IdServices : this.IdRequest));
+            int IdDefecto = (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.Default).First().IdParameterDetail;
 
             using (CustomerAttachments customer = new CustomerAttachments())
             {
@@ -1019,13 +1026,19 @@ namespace WinApp
                 {
                     Attachments File = new Attachments()
                     {
-                        IdInformation = 1,
+                        IdInformation = IdTable,
+                        AttachmentName = item[0].ToString(),
                         Description = string.Empty,
-                        IdAttachmentType = 1,
-                        IdAttachmentCondition = 1,
-                        IdComponentByModule = (int)Type,
+                        IdAttachmentType = IdDefecto,
+                        IdAttachmentCondition = IdDefecto,
+                        IdComponentByModule = (int)type,
                         Attachment = Utilities.Serializar(item.ItemArray[2])
                     };
+
+                    customer.Add(File);
+
+                    item[3] = File.IdAttachment;
+                    controlFile.GrvFilesFileUpload.UpdateCurrentRow();
                 }
             }
         }

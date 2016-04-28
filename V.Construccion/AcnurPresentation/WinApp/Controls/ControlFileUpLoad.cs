@@ -14,7 +14,10 @@
 
 namespace WinApp
 {
+    using Acnur.App.Proxy;
     using DevExpress.XtraEditors.Controls;
+    using DevExpress.XtraGrid;
+    using DevExpress.XtraGrid.Views.Grid;
     using System;
     using System.Data;
 
@@ -40,7 +43,13 @@ namespace WinApp
         /// Gets the grid files.
         /// </summary>
         /// <value>The grid files.</value>
-        public DevExpress.XtraGrid.GridControl GrcFilesFileUpload { get { return GrcFiles; } }
+        public GridControl GrcFilesFileUpload { get { return GrcFiles; } }
+
+        /// <summary>
+        /// Gets the GRV files file upload.
+        /// </summary>
+        /// <value>The GRV files file upload.</value>
+        public GridView GrvFilesFileUpload { get { return GrvFiles; } }
 
         /// <summary>
         /// Gets the current file.
@@ -84,6 +93,7 @@ namespace WinApp
             tbl.Columns.Add("FileName", typeof(string));
             tbl.Columns.Add("FileSize", typeof(int));
             tbl.Columns.Add("FileContent", typeof(object));
+            tbl.Columns.Add("IdAttachment", typeof(int));
             return tbl;
         }
 
@@ -117,6 +127,21 @@ namespace WinApp
                 return null;
             }
 
+            if (null != dataRow["IdAttachment"] && !string.IsNullOrEmpty(dataRow["IdAttachment"].ToString()))
+            {
+                int Id = Convert.ToInt32(dataRow["IdAttachment"]);
+                Acnur.App.Entities.Attachments Item;
+
+                using (CustomerAttachments customer = new CustomerAttachments())
+                {
+                    Item = customer.GetByID(Id);
+                }
+
+                dataRow["FileContent"] = Item.Attachment;
+                dataRow["FileName"] = Item.AttachmentName;
+                GrvFiles.UpdateCurrentRow();
+            }
+
             return new UploadedFile((byte[])dataRow["FileContent"], (string)dataRow["FileName"]);
         }
 
@@ -145,8 +170,19 @@ namespace WinApp
                     case 2:
                         Flat = true;
                         DataRow dataRow = GrvFiles.GetFocusedDataRow();
+
                         if (null != dataRow)
                         {
+                            int Id = (null != dataRow[3] && !string.IsNullOrEmpty(dataRow[3].ToString())) ? Convert.ToInt32(dataRow[3]) : 0;
+
+                            if (Id > 0)
+                            {
+                                using (CustomerAttachments customer = new CustomerAttachments())
+                                {
+                                    customer.Delete(Id);
+                                }
+                            }
+
                             helper.DataSource.Rows.Remove(dataRow);
                             GrvFiles.UpdateCurrentRow();
                         }

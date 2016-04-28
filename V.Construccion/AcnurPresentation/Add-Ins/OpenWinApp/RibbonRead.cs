@@ -36,7 +36,7 @@ namespace OpenWinApp
             if (null != UserAutenticate)
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe";// +string.Empty + "' '" + UserAutenticate.Name + "' '" + UserAutenticate.FirstName + "' '" + UserAutenticate.LastName + "'";
+                startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe";
                 startInfo.Arguments =   UserAutenticate.Alias.Replace(" ", "_") + " " +
                                         UserAutenticate.Application.ToString().Replace(" ", "_") + " " +
                                         UserAutenticate.CompanyName.Replace(" ", "_") + " " +
