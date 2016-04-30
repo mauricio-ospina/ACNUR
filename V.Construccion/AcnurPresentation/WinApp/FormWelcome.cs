@@ -55,9 +55,9 @@ namespace WinApp
             //// se debe retirar en el ambiente de producción
             ////===================================================================
             //// 
-            if (args.Length == 0 || null == args[0])
+            //// if (args.Length == 0 || null == args[0])
             //// 
-            Program.CurrentUser = "MOSPINA";
+            ////    Program.CurrentUser = "MOSPINA";
             ////===================================================================
 
             if (string.IsNullOrEmpty(Program.CurrentUser) || null == Program.CurrentUser)

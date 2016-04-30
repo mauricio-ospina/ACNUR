@@ -674,6 +674,7 @@
           <ScalarProperty Name="IdAttachmentCondition" ColumnName="IdAttachmentCondition" />
           <ScalarProperty Name="IdAttachmentType" ColumnName="IdAttachmentType" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
           <ScalarProperty Name="IdInformation" ColumnName="IdInformation" />
           <ScalarProperty Name="IdComponentByModule" ColumnName="IdComponentByModule" />
           <ScalarProperty Name="IdAttachment" ColumnName="IdAttachment" />

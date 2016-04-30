@@ -632,6 +632,7 @@
     <Property Name="IdAttachment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdComponentByModule" Type="int" Nullable="false" />
     <Property Name="IdInformation" Type="int" Nullable="false" />
+    <Property Name="AttachmentName" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="Description" Type="varchar" MaxLength="4000" Nullable="false" />
     <Property Name="IdAttachmentType" Type="int" Nullable="false" />
     <Property Name="IdAttachmentCondition" Type="int" Nullable="false" />
