@@ -91,7 +91,7 @@ namespace WinApp
         {
             if (CurrentFile != null)
             {
-                object[] values = new object[] { this.CurrentFile.FileName, this.CurrentFile.FileSize, this.CurrentFile.FileContent };
+                object[] values = new object[] { this.CurrentFile.IdAttachmentFile, this.CurrentFile.FileName, this.CurrentFile.Description, this.CurrentFile.FileContent };
                 
                 if (dataSourceRowIndex == -1)
                 {
@@ -116,7 +116,9 @@ namespace WinApp
                 MessageBox.Show(String.Format("Please upload the {0} file", CurrentFile.FileName));
                 return;
             }
+
             OpenFileDialog fd = new OpenFileDialog();
+
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 CurrentFile = new UploadedFile(fd.FileName);

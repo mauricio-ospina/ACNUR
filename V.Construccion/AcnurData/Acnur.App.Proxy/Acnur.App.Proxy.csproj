@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\CustomerComponentsByModule.cs" />
     <Compile Include="Administrator\CustomerModules.cs" />
     <Compile Include="CustomerGenericFacade.cs" />
     <Compile Include="Emergency\CustomerEmergengy.cs" />

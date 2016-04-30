@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\FacadeComponentsByModule.cs" />
     <Compile Include="Administrator\FacadeModules.cs" />
     <Compile Include="Emergency\FacadeEmergency.cs" />
     <Compile Include="FacadeGeneric.cs" />

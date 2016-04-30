@@ -20,7 +20,6 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPre
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.xml
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.csprojResolveAssemblyReference.cache
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.Properties.Resources.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.RibbonCompose.resources
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.RibbonRead.resources

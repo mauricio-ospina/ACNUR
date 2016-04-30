@@ -20,6 +20,11 @@ namespace Acnur.App.Aplication.Enumerators
     public enum TypePurchase
     {
         /// <summary>
+        /// The request
+        /// </summary>
+        Request = 0,
+
+        /// <summary>
         /// The goods
         /// </summary>
         Goods = 1,

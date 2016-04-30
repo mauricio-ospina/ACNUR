@@ -4,7 +4,7 @@
 // Created          : 03-18-2016
 //
 // Last Modified By : Christian ospina
-// Last Modified On : 03-21-2016
+// Last Modified On : 04-30-2016
 // ***********************************************************************
 // <copyright file="ControlFileUpLoad.cs" company="Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR">
 //     Copyright © Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR 2015
@@ -27,18 +27,41 @@ namespace WinApp
     /// <seealso cref="DevExpress.XtraEditors.XtraUserControl" />
     public partial class ControlFileUpLoad : DevExpress.XtraEditors.XtraUserControl
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ControlFileUpLoad" /> class.
+        /// </summary>
+        public ControlFileUpLoad()
+        {
+            InitializeComponent();
+            DataTable table = CreateTable();
+            GrcFiles.DataSource = table;
+            helper = new UploadHelper(table);
+            helper.CurrentFileChanged += helper_CurrentFileChanged;
+            RIButtonFiles.ButtonClick += RIButtonFiles_ButtonClick;
+        }
+
+        /// <summary>
+        /// Gets or sets the identifier attachment file.
+        /// </summary>
+        /// <value>The identifier attachment file.</value>
+        public int IdAttachmentFile { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="ControlFileUpLoad" /> is flat.
+        /// </summary>
+        /// <value><c>true</c> if flat; otherwise, <c>false</c>.</value>
         public bool Flat { get; set; }
 
         /// <summary>
-        /// The table
+        /// Sets the source files.
         /// </summary>
-        DataTable tbl;
+        /// <value>The source files.</value>
+        public DataTable SourceFiles { set { helper.DataSource = value; } }
 
         /// <summary>
         /// The helper
         /// </summary>
         UploadHelper helper;
-
         /// <summary>
         /// Gets the grid files.
         /// </summary>
@@ -61,28 +84,19 @@ namespace WinApp
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ControlFileUpLoad"/> class.
-        /// </summary>
-        public ControlFileUpLoad()
-        {
-            InitializeComponent();
-            DataTable table = CreateTable();
-            GrcFiles.DataSource = table;
-            helper = new UploadHelper(table);
-            helper.CurrentFileChanged += helper_CurrentFileChanged;
-            RIButtonFiles.ButtonClick += RIButtonFiles_ButtonClick;
-        }
-
-        /// <summary>
         /// Handles the CurrentFileChanged event of the helper control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         void helper_CurrentFileChanged(object sender, EventArgs e)
         {
             UpdateHyperLink();
         }
 
+        /// <summary>
+        /// The table
+        /// </summary>
+        DataTable tbl;
         /// <summary>
         /// Creates the table.
         /// </summary>
@@ -90,10 +104,11 @@ namespace WinApp
         public DataTable CreateTable()
         {
             tbl = new DataTable();
-            tbl.Columns.Add("FileName", typeof(string));
-            tbl.Columns.Add("FileSize", typeof(int));
-            tbl.Columns.Add("FileContent", typeof(object));
             tbl.Columns.Add("IdAttachment", typeof(int));
+            tbl.Columns.Add("AttachmentName", typeof(string));
+            tbl.Columns.Add("Description", typeof(string));
+            tbl.Columns.Add("Attachment", typeof(object));
+
             return tbl;
         }
 
@@ -127,7 +142,7 @@ namespace WinApp
                 return null;
             }
 
-            if (null != dataRow["IdAttachment"] && !string.IsNullOrEmpty(dataRow["IdAttachment"].ToString()))
+            if (null != dataRow["IdAttachment"] && !string.IsNullOrEmpty(dataRow["IdAttachment"].ToString()) && Convert.ToInt32(dataRow["IdAttachment"]) > 0)
             {
                 int Id = Convert.ToInt32(dataRow["IdAttachment"]);
                 Acnur.App.Entities.Attachments Item;
@@ -137,19 +152,19 @@ namespace WinApp
                     Item = customer.GetByID(Id);
                 }
 
-                dataRow["FileContent"] = Item.Attachment;
-                dataRow["FileName"] = Item.AttachmentName;
+                dataRow["Attachment"] = Item.Attachment;
+                dataRow["AttachmentName"] = Item.AttachmentName;
                 GrvFiles.UpdateCurrentRow();
             }
 
-            return new UploadedFile((byte[])dataRow["FileContent"], (string)dataRow["FileName"]);
+            return new UploadedFile((byte[])dataRow["Attachment"], (string)dataRow["AttachmentName"]);
         }
 
         /// <summary>
         /// Handles the ButtonClick event of the RIButtonFiles control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="DevExpress.XtraEditors.Controls.ButtonPressedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="DevExpress.XtraEditors.Controls.ButtonPressedEventArgs" /> instance containing the event data.</param>
         void RIButtonFiles_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
             if (!Flat)
@@ -161,7 +176,6 @@ namespace WinApp
                         UploadedFile file = GetFocusedFile();
                         if (file != null)
                             file.OpenFile();
-
                         break;
                     case 1:
                         helper.PostNewFile(GrvFiles.GetFocusedDataSourceRowIndex());
@@ -173,7 +187,7 @@ namespace WinApp
 
                         if (null != dataRow)
                         {
-                            int Id = (null != dataRow[3] && !string.IsNullOrEmpty(dataRow[3].ToString())) ? Convert.ToInt32(dataRow[3]) : 0;
+                            int Id = (null != dataRow[0] && !string.IsNullOrEmpty(dataRow[0].ToString())) ? Convert.ToInt32(dataRow[0]) : 0;
 
                             if (Id > 0)
                             {
@@ -184,7 +198,7 @@ namespace WinApp
                             }
 
                             helper.DataSource.Rows.Remove(dataRow);
-                            GrvFiles.UpdateCurrentRow();
+                            this.GrvFiles.UpdateCurrentRow();
                         }
                         break;
                 }
@@ -197,7 +211,7 @@ namespace WinApp
         /// Handles the Click event of the btOpenFile control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btOpenFile_Click(object sender, EventArgs e)
         {
             helper.ChooseFile();
@@ -207,10 +221,18 @@ namespace WinApp
         /// Handles the Click event of the btUploadFile control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btUploadFile_Click(object sender, EventArgs e)
         {
+            if (null != CurrentFile)
+            {
+                CurrentFile.IdAttachmentFile = this.IdAttachmentFile;
+                CurrentFile.Description = this.TxtDescription.Text;
+            }
+
             helper.UploadFile();
+            this.TxtDescription.Text = string.Empty;
+            this.GrcFilesFileUpload.DataSource = helper.DataSource;
         }
     }
 }

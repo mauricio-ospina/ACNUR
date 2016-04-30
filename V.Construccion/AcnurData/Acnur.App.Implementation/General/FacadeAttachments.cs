@@ -4,7 +4,7 @@
 // Created          : 04-16-2016
 //
 // Last Modified By : Mauricio Ospina
-// Last Modified On : 04-23-2016
+// Last Modified On : 04-30-2016
 // ***********************************************************************
 // <copyright file="FacadeAttachments.cs" company="Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR">
 //     Copyright © Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR 2015
@@ -28,14 +28,24 @@ namespace Acnur.App.Implementation
         /// <summary>
         /// Gets the attachments by identifier module.
         /// </summary>
-        /// <param name="idModule">The identifier module.</param>
-        /// <param name="idRegister">The identifier register.</param>
+        /// <param name="idComponentByModule">The identifier module.</param>
+        /// <param name="idInformation">The identifier register.</param>
         /// <returns>List Attachments.</returns>
-        public List<Attachments> GetAttachmentsByIdModule(int idModule, int idRegister)
+        public List<Attachments> GetAttachmentsByIdModule(int idComponentByModule, int idInformation)
         {
-            List<Attachments> ResultList = new List<Attachments>();
-            RepositoryData.Search<Attachments>(adj => adj.IdComponentByModule == idModule && adj.IdInformation == idRegister, false, null);
+            List<Attachments> ResultList = RepositoryData.Search<Attachments>(adj => adj.IdComponentByModule == idComponentByModule && adj.IdInformation == idInformation, false, null);
             return ResultList;
+        }
+
+        /// <summary>
+        /// Removes the files current.
+        /// </summary>
+        /// <param name="idComponentByModule">The identifier component by module.</param>
+        /// <param name="idInformation">The identifier information.</param>
+        public void RemoveFilesCurrent(int idComponentByModule, int idInformation)
+        {
+            List<Attachments> ResultList = RepositoryData.Search<Attachments>(adj => adj.IdComponentByModule == idComponentByModule && adj.IdInformation == idInformation, false, null);
+            ResultList.ForEach(adj => this.Delete(adj.IdAttachment));
         }
     }
 }

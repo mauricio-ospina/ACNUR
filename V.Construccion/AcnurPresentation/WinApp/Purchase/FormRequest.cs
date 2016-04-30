@@ -4,7 +4,7 @@
 // Created          : 02-17-2016
 //
 // Last Modified By : Mauricio Ospina
-// Last Modified On : 03-07-2016
+// Last Modified On : 04-30-2016
 // ***********************************************************************
 // <copyright file="FormRequest.cs" company="Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR">
 //     Este producto fue desarrollado para Alto Comisionado de las Naciones Unidas para los Refugiados - ACNUR. Todos los derechos reservados.
@@ -26,6 +26,7 @@ namespace WinApp
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.IO;
     using System.Linq;
     using System.Web.UI.WebControls;
     using System.Windows.Forms;
@@ -33,6 +34,7 @@ namespace WinApp
     /// <summary>
     /// Class FormRequest.
     /// </summary>
+    /// <seealso cref="DevExpress.XtraEditors.XtraForm" />
     public partial class FormRequest : DevExpress.XtraEditors.XtraForm
     {
         #region Constructs
@@ -258,10 +260,7 @@ namespace WinApp
                 this.DteExpectedDeliveryGoods.Text = value.ExpectedDeliveryDate != DateTime.MinValue ? value.ExpectedDeliveryDate.ToShortDateString() : string.Empty;
                 this.MemoObservationsGoods.Text = value.Observations;
 
-                using (CustomerAttachments customer = new CustomerAttachments())
-                {
-                    
-                }
+                this.LoadFiles(ControlFileGoods, TypePurchase.Goods);
             }
         }
 
@@ -327,6 +326,8 @@ namespace WinApp
                 this.TxtContactPersonServices.Text = value.ContactPerson;
                 this.DteExpectedDeliveryDate.Text = value.AlternativeDeliveryDate == DateTime.MinValue ? string.Empty : value.AlternativeDeliveryDate.ToShortDateString();
                 this.MemoObservationsServices.Text = value.Observations;
+
+                this.LoadFiles(ControlFileServices, TypePurchase.Services);
             }
         }
 
@@ -422,6 +423,8 @@ namespace WinApp
                 this.ChkCoffeBreakPM.Checked = value.CoffeBreakPM;
                 this.ChkDinner.Checked = value.Dinner;
                 this.ChkLunch.Checked = value.Lunch;
+
+                this.LoadFiles(ControlFileEvents, TypePurchase.Events);
             }
         }
 
@@ -882,6 +885,8 @@ namespace WinApp
         private void BtnGoods_Click(object sender, EventArgs e)
         {
             this.HandlerTabs(this.TabGoods);
+            this.ControlFileGoods.GrcFilesFileUpload.DataSource = null;
+            this.ControlFileGoods.SourceFiles = this.ControlFileEvents.CreateTable();
             this.ObjGoods = new Goods();
             this.DialogResult = DialogResult.None;
         }
@@ -894,6 +899,8 @@ namespace WinApp
         private void BtnServices_Click(object sender, EventArgs e)
         {
             this.HandlerTabs(this.TabServices);
+            this.ControlFileServices.GrcFilesFileUpload.DataSource = null;
+            this.ControlFileServices.SourceFiles = this.ControlFileServices.CreateTable();
             this.ObjServices = new Services();
             this.DialogResult = DialogResult.None;
         }
@@ -906,6 +913,8 @@ namespace WinApp
         private void BtnEvents_Click(object sender, EventArgs e)
         {
             this.HandlerTabs(this.TabEvents);
+            this.ControlFileEvents.GrcFilesFileUpload.DataSource = null;
+            this.ControlFileEvents.SourceFiles = this.ControlFileEvents.CreateTable();
             this.ObjEvents = new Events();
             this.DialogResult = DialogResult.None;
         }
@@ -1019,28 +1028,78 @@ namespace WinApp
             DataTable dt = (DataTable)controlFile.GrcFilesFileUpload.DataSource;
             int IdTable = type == TypePurchase.Goods ? this.IdGoods : (type == TypePurchase.Events ? this.IdEvents : (type == TypePurchase.Services ? this.IdServices : this.IdRequest));
             int IdDefecto = (new CustomerParameterDetail()).GetParameterDetailsByParameter(TypeParameter.Default).First().IdParameterDetail;
+            int IdCompByModule = (new CustomerComponentsByModule()).GetIdComponentsByModuleByComponentNameAndModuleName(type.ToString(), TypeMenu.Purchase.ToString());
 
             using (CustomerAttachments customer = new CustomerAttachments())
             {
                 foreach (DataRow item in dt.Rows)
                 {
-                    Attachments File = new Attachments()
+                    Attachments File = new Attachments();
+                    File.IdInformation = IdTable;
+                    File.AttachmentName = item[1].ToString();
+                    File.Description = item[2].ToString();
+                    File.IdAttachmentType = IdDefecto;
+                    File.IdAttachmentCondition = IdDefecto;
+                    File.IdComponentByModule = IdCompByModule;
+                    File.Attachment = (byte[])item.ItemArray[3];
+
+                    //// Si es un archivo nuevo, los adiciona
+                    if (Convert.ToInt32(item[0]) == 0)
                     {
-                        IdInformation = IdTable,
-                        AttachmentName = item[0].ToString(),
-                        Description = string.Empty,
-                        IdAttachmentType = IdDefecto,
-                        IdAttachmentCondition = IdDefecto,
-                        IdComponentByModule = (int)type,
-                        Attachment = Utilities.Serializar(item.ItemArray[2])
-                    };
-
-                    customer.Add(File);
-
-                    item[3] = File.IdAttachment;
-                    controlFile.GrvFilesFileUpload.UpdateCurrentRow();
+                        customer.Add(File);
+                        item[0] = File.IdAttachment;
+                        controlFile.GrvFilesFileUpload.UpdateCurrentRow();
+                    }
                 }
             }
+
+            controlFile.GrcFilesFileUpload.DataSource = null;
+        }
+
+        /// <summary>
+        /// Loads the files.
+        /// </summary>
+        /// <param name="controlFile">The control file.</param>
+        /// <param name="type">The type.</param>
+        private void LoadFiles(ControlFileUpLoad controlFile, TypePurchase type)
+        {
+            //// Limpia las fuentes de datos para colocar los archivos del componente
+            controlFile.GrcFilesFileUpload.DataSource = controlFile.SourceFiles = this.ControlFileEvents.CreateTable();
+
+            int IdTable = type == TypePurchase.Goods ? this.IdGoods : (type == TypePurchase.Events ? this.IdEvents : (type == TypePurchase.Services ? this.IdServices : this.IdRequest));
+
+            if (IdTable > 0)
+            {
+                int IdCompByModule = (new CustomerComponentsByModule()).GetIdComponentsByModuleByComponentNameAndModuleName(type.ToString(), TypeMenu.Purchase.ToString());
+                List<Attachments> ListResult = new List<Attachments>();
+
+                using (CustomerAttachments customer = new CustomerAttachments())
+                {
+                    ListResult = customer.GetAttachmentsByIdModule(IdCompByModule, IdTable);
+                }
+
+                if (ListResult.Count() > 0)
+                {
+                    controlFile.GrcFilesFileUpload.DataSource = controlFile.SourceFiles = this.LoadSourceFiles(ListResult, (DataTable)controlFile.GrcFilesFileUpload.DataSource);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Loads the source files.
+        /// </summary>
+        /// <param name="ListResult">The list result.</param>
+        /// <param name="dataTable">The data table.</param>
+        /// <returns>DataTable.</returns>
+        private DataTable LoadSourceFiles(List<Attachments> ListResult, DataTable dataTable)
+        {
+            ListResult.ForEach(delegate(Attachments file)
+            {
+                object[] values = new object[] { file.IdAttachment, file.AttachmentName, file.Description, file.Attachment };
+                dataTable.Rows.Add(values);
+            });
+
+            return dataTable;
         }
 
         #endregion
@@ -1092,6 +1151,7 @@ namespace WinApp
                                 good = client.GetByID(Id);
                                 client.Delete(Id);
                             }
+                            this.RemoveFiles(TypePurchase.Goods, this.IdGoods);
                             this.RefreshGridRemove(this.LoadGoods(good));
                             break;
                     }
@@ -1115,6 +1175,7 @@ namespace WinApp
                                 service = client.GetByID(Id);
                                 client.Delete(Id);
                             }
+                            this.RemoveFiles(TypePurchase.Services, this.IdServices);
                             this.RefreshGridRemove(this.LoadServices(service));
                             break;
                     }
@@ -1138,6 +1199,7 @@ namespace WinApp
                                 events = client.GetByID(Id);
                                 client.Delete(Id);
                             }
+                            this.RemoveFiles(TypePurchase.Events, this.IdEvents);
                             this.RefreshGridRemove(this.LoadEvents(events));
                             break;
                     }
@@ -1145,6 +1207,21 @@ namespace WinApp
             }
 
             DialogResult = DialogResult.None;
+        }
+
+        /// <summary>
+        /// Removes the files.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <param name="idInformation">The identifier information.</param>
+        private void RemoveFiles(TypePurchase type, int idInformation)
+        {
+            int IdCompByModule = (new CustomerComponentsByModule()).GetIdComponentsByModuleByComponentNameAndModuleName(type.ToString(), TypeMenu.Purchase.ToString());
+
+            using (CustomerAttachments customer = new CustomerAttachments())
+            {
+                customer.RemoveFilesCurrent(IdCompByModule, idInformation);
+            }
         }
 
         #endregion

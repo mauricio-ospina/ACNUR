@@ -26,7 +26,7 @@ namespace WinApp
         /// <summary>
         /// The temporary directory
         /// </summary>
-        private string tempDirectory = "C:\\tmp\\";
+        public static string tempDirectory = "C:\\tmp\\";
 
         /// <summary>
         /// The _ file name
@@ -65,6 +65,18 @@ namespace WinApp
         {
             get { return FileContent.Length; }
         }
+
+        /// <summary>
+        /// Gets or sets the identifier attachment file.
+        /// </summary>
+        /// <value>The identifier attachment file.</value>
+        public int IdAttachmentFile { get; set; }
+
+        /// <summary>
+        /// Gets or sets the description.
+        /// </summary>
+        /// <value>The description.</value>
+        public string Description { get; set; }
 
         /// <summary>
         /// The _ file

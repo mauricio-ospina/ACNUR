@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.FileWatcher = new System.IO.FileSystemWatcher();
             this.PnlChooseFile = new DevExpress.XtraEditors.PanelControl();
+            this.LblDescription = new DevExpress.XtraEditors.LabelControl();
+            this.TxtDescription = new DevExpress.XtraEditors.TextEdit();
             this.BtnOpenFile = new DevExpress.XtraEditors.SimpleButton();
             this.BtnUploadFile = new DevExpress.XtraEditors.SimpleButton();
             this.HplFileTemp = new DevExpress.XtraEditors.HyperLinkEdit();
@@ -41,16 +43,14 @@
             this.ColFileName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RIButtonFiles = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.ColSize = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TxtDescription = new DevExpress.XtraEditors.TextEdit();
-            this.LblDescription = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.FileWatcher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PnlChooseFile)).BeginInit();
             this.PnlChooseFile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HplFileTemp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrcFiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrvFiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIButtonFiles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDescription.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // FileWatcher
@@ -70,6 +70,21 @@
             this.PnlChooseFile.Name = "PnlChooseFile";
             this.PnlChooseFile.Size = new System.Drawing.Size(897, 55);
             this.PnlChooseFile.TabIndex = 2;
+            // 
+            // LblDescription
+            // 
+            this.LblDescription.Location = new System.Drawing.Point(252, 12);
+            this.LblDescription.Name = "LblDescription";
+            this.LblDescription.Size = new System.Drawing.Size(60, 13);
+            this.LblDescription.TabIndex = 4;
+            this.LblDescription.Text = "Description: ";
+            // 
+            // TxtDescription
+            // 
+            this.TxtDescription.Location = new System.Drawing.Point(313, 9);
+            this.TxtDescription.Name = "TxtDescription";
+            this.TxtDescription.Size = new System.Drawing.Size(574, 20);
+            this.TxtDescription.TabIndex = 3;
             // 
             // BtnOpenFile
             // 
@@ -126,29 +141,29 @@
             // 
             this.ColFileName.Caption = "File Name";
             this.ColFileName.ColumnEdit = this.RIButtonFiles;
-            this.ColFileName.FieldName = "FileName";
+            this.ColFileName.FieldName = "AttachmentName";
             this.ColFileName.Name = "ColFileName";
             this.ColFileName.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.ColFileName.OptionsColumn.ReadOnly = true;
             this.ColFileName.Visible = true;
             this.ColFileName.VisibleIndex = 0;
-            this.ColFileName.Width = 585;
+            this.ColFileName.Width = 571;
             // 
             // RIButtonFiles
             // 
             this.RIButtonFiles.AutoHeight = false;
             this.RIButtonFiles.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Open", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Upload new file..", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Open", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Upload new file..", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.RIButtonFiles.Name = "RIButtonFiles";
             this.RIButtonFiles.ReadOnly = true;
             this.RIButtonFiles.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.RIButtonFiles_ButtonClick);
             // 
             // ColSize
             // 
-            this.ColSize.Caption = "Size";
-            this.ColSize.FieldName = "FileSize";
+            this.ColSize.Caption = "Description";
+            this.ColSize.FieldName = "Description";
             this.ColSize.Name = "ColSize";
             this.ColSize.OptionsColumn.AllowEdit = false;
             this.ColSize.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
@@ -156,22 +171,7 @@
             this.ColSize.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.ColSize.Visible = true;
             this.ColSize.VisibleIndex = 1;
-            this.ColSize.Width = 127;
-            // 
-            // TxtDescription
-            // 
-            this.TxtDescription.Location = new System.Drawing.Point(313, 9);
-            this.TxtDescription.Name = "TxtDescription";
-            this.TxtDescription.Size = new System.Drawing.Size(574, 20);
-            this.TxtDescription.TabIndex = 3;
-            // 
-            // LblDescription
-            // 
-            this.LblDescription.Location = new System.Drawing.Point(252, 12);
-            this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(60, 13);
-            this.LblDescription.TabIndex = 4;
-            this.LblDescription.Text = "Description: ";
+            this.ColSize.Width = 400;
             // 
             // ControlFileUpLoad
             // 
@@ -185,11 +185,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.PnlChooseFile)).EndInit();
             this.PnlChooseFile.ResumeLayout(false);
             this.PnlChooseFile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HplFileTemp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrcFiles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrvFiles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIButtonFiles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDescription.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

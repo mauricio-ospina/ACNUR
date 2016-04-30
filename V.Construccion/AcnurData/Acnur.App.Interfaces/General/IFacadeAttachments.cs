@@ -32,5 +32,13 @@ namespace Acnur.App.Interfaces
         /// <returns>List Attachments.</returns>
         [OperationContract]
         List<Attachments> GetAttachmentsByIdModule(int IdModule, int IdRegister);
+
+        /// <summary>
+        /// Removes the files current.
+        /// </summary>
+        /// <param name="idComponentByModule">The identifier component by module.</param>
+        /// <param name="idInformation">The identifier information.</param>
+        [OperationContract]
+        void RemoveFilesCurrent(int idComponentByModule, int idInformation);
     }
 }

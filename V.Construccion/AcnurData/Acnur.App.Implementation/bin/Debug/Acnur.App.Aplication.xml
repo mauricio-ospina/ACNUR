@@ -300,6 +300,11 @@
             Enum TypePurchase
             </summary>
         </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypePurchase.Request">
+            <summary>
+            The request
+            </summary>
+        </member>
         <member name="F:Acnur.App.Aplication.Enumerators.TypePurchase.Goods">
             <summary>
             The goods

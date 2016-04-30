@@ -35,5 +35,15 @@ namespace Acnur.App.Proxy
         {
             return this.Channel.GetAttachmentsByIdModule(idModule, idRegister);
         }
+
+        /// <summary>
+        /// Removes the files current.
+        /// </summary>
+        /// <param name="idComponentByModule">The identifier component by module.</param>
+        /// <param name="idInformation">The identifier information.</param>
+        public void RemoveFilesCurrent(int idComponentByModule, int idInformation)
+        {
+            this.Channel.RemoveFilesCurrent(idComponentByModule, idInformation);
+        }
     }
 }
