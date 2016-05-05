@@ -23,6 +23,7 @@ namespace WinApp
     using System.Diagnostics;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
     using System.Runtime.InteropServices;
     using WinApp.Properties;
     using Outlook = Microsoft.Office.Interop.Outlook;
@@ -42,6 +43,7 @@ namespace WinApp
             get { return this.MemoDataPurchase.Text; }
             set { this.MemoDataPurchase.Text = value; }
         }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FormWelcome"/> class.
         /// </summary>
@@ -55,14 +57,22 @@ namespace WinApp
             //// se debe retirar en el ambiente de producción
             ////===================================================================
             //// 
-            //// if (args.Length == 0 || null == args[0])
-            //// 
-            ////    Program.CurrentUser = "MOSPINA";
+            ////if (args.Length == 0 || null == args[0])
+            ////{
+            ////    Program.CurrentUser = "chospina";
+            ////    Program.CurrentUserName = "Christian Mauricio Ospina Gomez";
+            ////    Program.CurrentId = "00000000DCA740C8C042101AB4B908002B2FE18201000000000000002F6F3D45786368616E67654C6162732F6F753D45786368616E67652041646D696E6973747261746976652047726F7570202846594449424F484632335350444C54292F636E3D526563697069656E74732F636E3D64306230643564663232366634383337613166343565386464313066393936322D4368697269737469616E00";
+            ////}
             ////===================================================================
 
             if (string.IsNullOrEmpty(Program.CurrentUser) || null == Program.CurrentUser)
                 if (args.Length > 0)
+                {
                     Program.CurrentUser = args[0];
+                    Program.CurrentUserName = args[1].ToString().Replace('_', ' ') + " " + args[2].ToString().Replace('_', ' ');
+                    Program.CurrentId = args[3];
+                    Program.CurrentRequest = args[4];
+                }
 
             this.LoadMenu(args);
         }
@@ -116,22 +126,26 @@ namespace WinApp
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RiPictureMenu_Click(object sender, EventArgs e)
         {
-            //// Selecciono el administrador
-            if (CrvMenu.FocusedRowHandle == 0)
-            {
-                //// Abre la aplicación del adminsitrador
-                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinAdministrator.exe";
-                System.Diagnostics.Process.Start(startInfo).WaitForExit();
-            }
+            string Menu = CrvMenu.GetRowCellValue(CrvMenu.FocusedRowHandle, ColName).ToString();
+            TypeMenu MenuType = (TypeMenu)Enum.Parse(typeof(TypeMenu), Menu);
 
-            //// Selecciono el purchase
-            if (CrvMenu.FocusedRowHandle == 1)
+            switch (MenuType)
             {
-                //// Instanciamos el form request
-                FormRequest request = new FormRequest();
-                request.ShowDialog();
-                this.DataPurchase = request.LoadBodyPurchase();
+                case TypeMenu.Administration:
+                    //// Abre la aplicación del administrador
+                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                    startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinAdministrator.exe";
+                    System.Diagnostics.Process.Start(startInfo).WaitForExit();
+                    break;
+
+                case TypeMenu.Purchase:
+                    //// Instanciamos el form request
+                    FormRequest request = new FormRequest();
+                    request.ShowDialog();
+                    this.DataPurchase = request.LoadBodyPurchase();
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -145,55 +159,40 @@ namespace WinApp
             if (this.ValidateInformationForSend())
             {
                 try
-                {   
-                    //// A continuación se muestra codificada - pueden ser reemplazados con los datos db
-                    //// List<string> lstAllRecipients = new List<string>();
-                    //// lstAllRecipients.Add("ambrosio.mauro@gmail.com");
-                    //// lstAllRecipients.Add("chospina@defensoria.gov.co");
-
+                {
                     Outlook.Application outlookApp = null;
 
                     if (Process.GetProcessesByName("OUTLOOK").Count() > 0)
                     {
-                        // If so, use the GetActiveObject method to obtain the process and cast it to an Application object.
+                        //// Si encuentra que la aplicación de outlook ya esta abierta
                         outlookApp = Marshal.GetActiveObject("Outlook.Application") as Outlook.Application;
                     }
-                    else { outlookApp = new Outlook.Application(); }
+                    else
+                    {
+                        // If not, create a new instance of Outlook and log on to the default profile. 
+                        outlookApp = new Outlook.Application();
+                        Outlook.NameSpace nameSpace = outlookApp.GetNamespace("MAPI");
+                        nameSpace.Logon("", "", Missing.Value, Missing.Value);
+                        nameSpace = null; 
+                    }
 
+                    //// Crea el item
                     Outlook._MailItem oMailItem = (Outlook._MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
-                    Outlook.Inspector oInspector = oMailItem.GetInspector;
 
-                    //// Recipient
-                    //// Outlook.Recipients oRecips = (Outlook.Recipients)oMailItem.Recipients;
-                    //// foreach (String recipient in lstAllRecipients)
-                    //// {
-                    ////    Outlook.Recipient oRecip = (Outlook.Recipient)oRecips.Add(recipient);
-                    ////    oRecip.Resolve();
-                    //// }
+                    //// Valida si viene de algún correo
+                    if (Program.CurrentId != "StrIds_null")
+                    {
+                        oMailItem = outlookApp.GetNamespace("MAPI").GetItemFromID(Program.CurrentId) as Outlook.MailItem;
+                    }
+                    
+                    //// Adiciona lo que se quiere enviar Id´s
+                    oMailItem.BillingInformation = "BILLING INFORMATION - 5,6,7 (goods)";
 
-                    //// Add CC
-                    //// Outlook.Recipient oCCRecip = oRecips.Add("mauricio_ospina_6@hotmail.com");
-                    //// oCCRecip.Type = (int)Outlook.OlMailRecipientType.olCC;
-                    //// oCCRecip.Resolve();
-
-                    //// Add Subject
-
-                    //// oMailItem.ConversationID ---- VALIDAR SI ESTA VARIABLE GUARDA EL ID DE LA CONVERSACION EN EL HISTORIAL DE CORREOS 
-                    oMailItem.Categories = "CATEGORIES - estos son los ID´s que se pueden enviar por aca";
-                    oMailItem.BillingInformation = "BILLING INFORMATION - estos son los ID´s que se pueden enviar por aca";
+                    //// Adiciona el Subject
                     oMailItem.Subject = "Test Mail";
-
-                    //// Utilizado para las pruebas locales
-                    //// string estiloCorreo = File.ReadAllText("C:\\Users\\MAURO-DEFENSORIA\\Documents\\Chospina\\Acnur\\trunk\\V.Construccion\\AcnurPresentation\\WinApp\\Templates\\Correo.html");
 
                     //// En el instalador debe ir la carpeta TEMPLATES y finalemente la plantilla de HTML.
                     string estiloCorreo = File.ReadAllText("C:\\Program Files (x86)\\ACNURWinApp\\Correo.html");
-
-                    //// Para que se ejecute el javascript toca que sea desde un browser. El inconveniente es que 
-                    //// es una violación de seguridad ejecutar un .exe desde un browser. Desde IExplore funciona
-                    //// desde chrome no. Debe ser configuración en la seguridad del navegador. Se recomienda buscar
-                    //// una solución diferente.
-                    //// string strBody = "<a href='javascript:runProgram()'>Run program</a>";
 
                     //// Reemplace el titulo y el contenido en la plantilla
                     estiloCorreo = estiloCorreo.Replace("{TITULO}", "PURCHASE");
@@ -202,8 +201,12 @@ namespace WinApp
                     //// Coloca el string en el cuerpo del correo
                     oMailItem.HTMLBody = estiloCorreo;
 
-                    //// Display mailbox
+                    //// Muestra mailbox
                     oMailItem.Display(true);
+
+                    //// Cierra la aplicación
+                    this.Close();
+                    Program.CloseApplication();
                 }
                 catch (Exception objEx)
                 {

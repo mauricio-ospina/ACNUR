@@ -16,6 +16,7 @@ namespace WinApp
     using DevExpress.LookAndFeel;
     using System;
     using System.Diagnostics;
+    using System.Linq;
     using System.Windows.Forms;
 
     /// <summary>
@@ -23,10 +24,31 @@ namespace WinApp
     /// </summary>
     static class Program
     {
+        #region Properties User
+
         /// <summary>
         /// The current user
         /// </summary>
         public static string CurrentUser;
+
+        /// <summary>
+        /// Gets or sets the name of the current user.
+        /// </summary>
+        /// <value>The name of the current user.</value>
+        public static string CurrentUserName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current identifier.
+        /// </summary>
+        /// <value>The current identifier.</value>
+        public static string CurrentId { get; set; }
+        /// <summary>
+        /// Gets or sets the current request.
+        /// </summary>
+        /// <value>The current request.</value>
+        public static string CurrentRequest { get; set; }
+
+        #endregion
 
         /// <summary>
         /// The main entry point for the application.
@@ -41,16 +63,16 @@ namespace WinApp
             ////=============================================================================
             //// Utilizado para validar los parámetros que estan saliendo y llegando
             ////=============================================================================
-            //// MessageBox.Show("se han pasado " + args.Length.ToString() + " argumentos");
-            //// string str = string.Empty;
-            //// args.ToList().ForEach(item => str += item + ", ");
-            //// MessageBox.Show("se ha pasado el argumento: " + str);
+            ////MessageBox.Show("se han pasado " + args.Length.ToString() + " argumentos");
+            ////string str = string.Empty;
+            ////args.ToList().ForEach(item => str += item + ", ");
+            ////MessageBox.Show("se ha pasado el argumento: " + str);
             ////==============================================================================
 
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            
+
             if (!IsExecutingApplication())
             {
                 Application.Run(new FormWelcome(args));
@@ -82,6 +104,18 @@ namespace WinApp
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Closes the application.
+        /// </summary>
+        public static void CloseApplication()
+        {
+            //// Proceso actual
+            Process currentProcess = Process.GetCurrentProcess();
+
+            //// Cierrra el proceso
+            currentProcess.Close();
         }
     }
 }

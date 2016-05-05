@@ -1,0 +1,13 @@
+UserAutenticate.Alias = chospina
+UserAutenticate.Application = Microsoft.Office.Interop.Outlook.ApplicationsClass
+UserAutenticate.CompanyName = Defensoria del Pueblo
+UserAutenticate.Department = Sistema de Alertas Tempranas - Sat
+UserAutenticate.FirstName = Christian Mauricio
+
+UserAutenticate.ID = 00000000DCA740C8C042101AB4B908002B2FE18201000000000000002F6F3D45786368616E67654C6162732F6F753D45786368616E67652041646D696E6973747261746976652047726F7570202846594449424F484632335350444C54292F636E3D526563697069656E74732F636E3D64306230643564663232366634383337613166343565386464313066393936322D4368697269737469616E00
+
+UserAutenticate.JobTitle = Asesor
+UserAutenticate.LastName = Ospina Gomez
+UserAutenticate.Name = Christian Ospina
+UserAutenticate.PrimarySmtpAddress = chospina@defensoria.gov.co
+UserAutenticate.StateOrProvince = Nivel Central

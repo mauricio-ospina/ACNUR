@@ -15,6 +15,7 @@
 namespace WinApp
 {
     using Acnur.App.Proxy;
+    using DevExpress.XtraEditors;
     using DevExpress.XtraEditors.Controls;
     using DevExpress.XtraGrid;
     using DevExpress.XtraGrid.Views.Grid;
@@ -172,10 +173,17 @@ namespace WinApp
                 switch (e.Button.Index)
                 {
                     case 0:
-                        Flat = true;
-                        UploadedFile file = GetFocusedFile();
-                        if (file != null)
-                            file.OpenFile();
+                        try
+                        {
+                            Flat = true;
+                            UploadedFile file = GetFocusedFile();
+                            if (file != null)
+                                file.OpenFile();
+                        }
+                        catch (Exception ex)
+                        {
+                            XtraMessageBox.Show(ex.Message.Replace(@"C:\tmp\", string.Empty));
+                        }
                         break;
                     case 1:
                         helper.PostNewFile(GrvFiles.GetFocusedDataSourceRowIndex());

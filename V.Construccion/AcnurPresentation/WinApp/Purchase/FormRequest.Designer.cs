@@ -60,7 +60,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.TxtRequesterPerson = new DevExpress.XtraEditors.TextEdit();
-            this.DteEstimateDeliveryDate = new DevExpress.XtraEditors.DateEdit();
+            this.DteEstimateDeliveryDateRequest = new DevExpress.XtraEditors.DateEdit();
             this.TxtDeliveryLocation = new DevExpress.XtraEditors.TextEdit();
             this.MemoBackground = new DevExpress.XtraEditors.MemoEdit();
             this.TxtResponsible = new DevExpress.XtraEditors.TextEdit();
@@ -116,6 +116,7 @@
             this.SpinNumberRooms = new DevExpress.XtraEditors.SpinEdit();
             this.TabPrincipal = new DevExpress.XtraBars.Navigation.TabPane();
             this.TabRequest = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.LblDataPurchase = new DevExpress.XtraEditors.LabelControl();
             this.GrcPurchase = new DevExpress.XtraGrid.GridControl();
             this.GrvPurchase = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ColId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -242,10 +243,9 @@
             this.ValidationProviderEditEvents = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.ValidationProviderEditServices = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.ValidationProviderEditGoods = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.LblDataPurchase = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.TxtRequesterPerson.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDateRequest.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDateRequest.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtDeliveryLocation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemoBackground.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtResponsible.Properties)).BeginInit();
@@ -376,7 +376,8 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtRequesterPerson, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtRequesterPerson.Location = new System.Drawing.Point(116, 33);
             this.TxtRequesterPerson.Name = "TxtRequesterPerson";
-            this.TxtRequesterPerson.Properties.MaxLength = 50;
+            this.TxtRequesterPerson.Properties.MaxLength = 150;
+            this.TxtRequesterPerson.Properties.ReadOnly = true;
             this.TxtRequesterPerson.Size = new System.Drawing.Size(255, 20);
             this.TxtRequesterPerson.TabIndex = 0;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -384,27 +385,27 @@
             conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
             this.ValidationProviderEditPurchase.SetValidationRule(this.TxtRequesterPerson, conditionValidationRule1);
             // 
-            // DteEstimateDeliveryDate
+            // DteEstimateDeliveryDateRequest
             // 
-            this.DteEstimateDeliveryDate.EditValue = null;
-            this.ValidationProviderEditServices.SetIconAlignment(this.DteEstimateDeliveryDate, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ValidationProviderEditPurchase.SetIconAlignment(this.DteEstimateDeliveryDate, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ValidationProviderEditEvents.SetIconAlignment(this.DteEstimateDeliveryDate, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ValidationProviderEditGoods.SetIconAlignment(this.DteEstimateDeliveryDate, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.DteEstimateDeliveryDate.Location = new System.Drawing.Point(531, 195);
-            this.DteEstimateDeliveryDate.Name = "DteEstimateDeliveryDate";
-            this.DteEstimateDeliveryDate.Properties.Appearance.Options.UseTextOptions = true;
-            this.DteEstimateDeliveryDate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.DteEstimateDeliveryDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DteEstimateDeliveryDateRequest.EditValue = null;
+            this.ValidationProviderEditServices.SetIconAlignment(this.DteEstimateDeliveryDateRequest, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.ValidationProviderEditPurchase.SetIconAlignment(this.DteEstimateDeliveryDateRequest, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.ValidationProviderEditEvents.SetIconAlignment(this.DteEstimateDeliveryDateRequest, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.ValidationProviderEditGoods.SetIconAlignment(this.DteEstimateDeliveryDateRequest, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.DteEstimateDeliveryDateRequest.Location = new System.Drawing.Point(531, 195);
+            this.DteEstimateDeliveryDateRequest.Name = "DteEstimateDeliveryDateRequest";
+            this.DteEstimateDeliveryDateRequest.Properties.Appearance.Options.UseTextOptions = true;
+            this.DteEstimateDeliveryDateRequest.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DteEstimateDeliveryDateRequest.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DteEstimateDeliveryDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DteEstimateDeliveryDateRequest.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DteEstimateDeliveryDate.Size = new System.Drawing.Size(100, 20);
-            this.DteEstimateDeliveryDate.TabIndex = 7;
+            this.DteEstimateDeliveryDateRequest.Size = new System.Drawing.Size(100, 20);
+            this.DteEstimateDeliveryDateRequest.TabIndex = 7;
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule2.ErrorText = "This value is requered";
             conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.ValidationProviderEditPurchase.SetValidationRule(this.DteEstimateDeliveryDate, conditionValidationRule2);
+            this.ValidationProviderEditPurchase.SetValidationRule(this.DteEstimateDeliveryDateRequest, conditionValidationRule2);
             // 
             // TxtDeliveryLocation
             // 
@@ -414,7 +415,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtDeliveryLocation, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtDeliveryLocation.Location = new System.Drawing.Point(117, 195);
             this.TxtDeliveryLocation.Name = "TxtDeliveryLocation";
-            this.TxtDeliveryLocation.Properties.MaxLength = 50;
+            this.TxtDeliveryLocation.Properties.MaxLength = 100;
             this.TxtDeliveryLocation.Size = new System.Drawing.Size(255, 20);
             this.TxtDeliveryLocation.TabIndex = 6;
             conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -430,7 +431,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.MemoBackground, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.MemoBackground.Location = new System.Drawing.Point(17, 132);
             this.MemoBackground.Name = "MemoBackground";
-            this.MemoBackground.Properties.MaxLength = 500;
+            this.MemoBackground.Properties.MaxLength = 4000;
             this.MemoBackground.Size = new System.Drawing.Size(889, 57);
             this.MemoBackground.TabIndex = 5;
             conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -446,7 +447,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtResponsible, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtResponsible.Location = new System.Drawing.Point(604, 72);
             this.TxtResponsible.Name = "TxtResponsible";
-            this.TxtResponsible.Properties.MaxLength = 50;
+            this.TxtResponsible.Properties.MaxLength = 150;
             this.TxtResponsible.Size = new System.Drawing.Size(245, 20);
             this.TxtResponsible.TabIndex = 4;
             conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -462,7 +463,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtDutyStation, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtDutyStation.Location = new System.Drawing.Point(478, 33);
             this.TxtDutyStation.Name = "TxtDutyStation";
-            this.TxtDutyStation.Properties.MaxLength = 32;
+            this.TxtDutyStation.Properties.MaxLength = 75;
             this.TxtDutyStation.Size = new System.Drawing.Size(211, 20);
             this.TxtDutyStation.TabIndex = 1;
             conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -478,8 +479,10 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.CmbRequesterUnit, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.CmbRequesterUnit.Location = new System.Drawing.Point(116, 72);
             this.CmbRequesterUnit.Name = "CmbRequesterUnit";
+            this.CmbRequesterUnit.Properties.AutoComplete = false;
             this.CmbRequesterUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbRequesterUnit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CmbRequesterUnit.Size = new System.Drawing.Size(255, 20);
             this.CmbRequesterUnit.TabIndex = 3;
             conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotContains;
@@ -538,6 +541,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtContactPersonGoods, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtContactPersonGoods.Location = new System.Drawing.Point(22, 85);
             this.TxtContactPersonGoods.Name = "TxtContactPersonGoods";
+            this.TxtContactPersonGoods.Properties.MaxLength = 250;
             this.TxtContactPersonGoods.Size = new System.Drawing.Size(717, 20);
             this.TxtContactPersonGoods.TabIndex = 29;
             conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -553,6 +557,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtPlaceDelivery, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtPlaceDelivery.Location = new System.Drawing.Point(22, 44);
             this.TxtPlaceDelivery.Name = "TxtPlaceDelivery";
+            this.TxtPlaceDelivery.Properties.MaxLength = 250;
             this.TxtPlaceDelivery.Size = new System.Drawing.Size(859, 20);
             this.TxtPlaceDelivery.TabIndex = 28;
             conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -568,6 +573,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtOther, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtOther.Location = new System.Drawing.Point(735, 44);
             this.TxtOther.Name = "TxtOther";
+            this.TxtOther.Properties.MaxLength = 150;
             this.TxtOther.Size = new System.Drawing.Size(146, 20);
             this.TxtOther.TabIndex = 27;
             // 
@@ -579,6 +585,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtPower, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtPower.Location = new System.Drawing.Point(564, 44);
             this.TxtPower.Name = "TxtPower";
+            this.TxtPower.Properties.MaxLength = 150;
             this.TxtPower.Size = new System.Drawing.Size(146, 20);
             this.TxtPower.TabIndex = 26;
             // 
@@ -590,6 +597,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtCapacity, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtCapacity.Location = new System.Drawing.Point(364, 44);
             this.TxtCapacity.Name = "TxtCapacity";
+            this.TxtCapacity.Properties.MaxLength = 150;
             this.TxtCapacity.Size = new System.Drawing.Size(175, 20);
             this.TxtCapacity.TabIndex = 25;
             // 
@@ -601,6 +609,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtColor, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtColor.Location = new System.Drawing.Point(193, 42);
             this.TxtColor.Name = "TxtColor";
+            this.TxtColor.Properties.MaxLength = 150;
             this.TxtColor.Size = new System.Drawing.Size(146, 20);
             this.TxtColor.TabIndex = 24;
             // 
@@ -612,6 +621,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtDimensions, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtDimensions.Location = new System.Drawing.Point(22, 44);
             this.TxtDimensions.Name = "TxtDimensions";
+            this.TxtDimensions.Properties.MaxLength = 150;
             this.TxtDimensions.Size = new System.Drawing.Size(146, 20);
             this.TxtDimensions.TabIndex = 23;
             // 
@@ -623,6 +633,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtReference, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtReference.Location = new System.Drawing.Point(817, 44);
             this.TxtReference.Name = "TxtReference";
+            this.TxtReference.Properties.MaxLength = 150;
             this.TxtReference.Size = new System.Drawing.Size(102, 20);
             this.TxtReference.TabIndex = 22;
             // 
@@ -634,6 +645,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtModel, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtModel.Location = new System.Drawing.Point(682, 44);
             this.TxtModel.Name = "TxtModel";
+            this.TxtModel.Properties.MaxLength = 150;
             this.TxtModel.Size = new System.Drawing.Size(102, 20);
             this.TxtModel.TabIndex = 21;
             // 
@@ -645,6 +657,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtManufactureBrand, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtManufactureBrand.Location = new System.Drawing.Point(547, 44);
             this.TxtManufactureBrand.Name = "TxtManufactureBrand";
+            this.TxtManufactureBrand.Properties.MaxLength = 250;
             this.TxtManufactureBrand.Size = new System.Drawing.Size(102, 20);
             this.TxtManufactureBrand.TabIndex = 20;
             // 
@@ -656,6 +669,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtDescription, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtDescription.Location = new System.Drawing.Point(299, 44);
             this.TxtDescription.Name = "TxtDescription";
+            this.TxtDescription.Properties.MaxLength = 250;
             this.TxtDescription.Size = new System.Drawing.Size(216, 20);
             this.TxtDescription.TabIndex = 19;
             conditionValidationRule12.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -673,6 +687,7 @@
             this.CmbUnitMeasure.Name = "CmbUnitMeasure";
             this.CmbUnitMeasure.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbUnitMeasure.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CmbUnitMeasure.Size = new System.Drawing.Size(163, 20);
             this.CmbUnitMeasure.TabIndex = 18;
             conditionValidationRule13.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotContains;
@@ -714,6 +729,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.MemoObservationsGoods, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.MemoObservationsGoods.Location = new System.Drawing.Point(22, 305);
             this.MemoObservationsGoods.Name = "MemoObservationsGoods";
+            this.MemoObservationsGoods.Properties.MaxLength = 400;
             this.MemoObservationsGoods.Size = new System.Drawing.Size(897, 62);
             this.MemoObservationsGoods.TabIndex = 31;
             // 
@@ -725,6 +741,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtShortDescription, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtShortDescription.Location = new System.Drawing.Point(25, 38);
             this.TxtShortDescription.Name = "TxtShortDescription";
+            this.TxtShortDescription.Properties.MaxLength = 500;
             this.TxtShortDescription.Size = new System.Drawing.Size(843, 20);
             this.TxtShortDescription.TabIndex = 39;
             conditionValidationRule15.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -792,6 +809,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtDescriptionTechnical, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtDescriptionTechnical.Location = new System.Drawing.Point(551, 55);
             this.TxtDescriptionTechnical.Name = "TxtDescriptionTechnical";
+            this.TxtDescriptionTechnical.Properties.MaxLength = 250;
             this.TxtDescriptionTechnical.Size = new System.Drawing.Size(317, 20);
             this.TxtDescriptionTechnical.TabIndex = 43;
             // 
@@ -805,6 +823,7 @@
             this.CmbType.Name = "CmbType";
             this.CmbType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CmbType.Size = new System.Drawing.Size(130, 20);
             this.CmbType.TabIndex = 42;
             this.CmbType.SelectedIndexChanged += new System.EventHandler(this.CmbType_SelectedIndexChanged);
@@ -817,6 +836,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtWhereServiceRequired, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtWhereServiceRequired.Location = new System.Drawing.Point(177, 84);
             this.TxtWhereServiceRequired.Name = "TxtWhereServiceRequired";
+            this.TxtWhereServiceRequired.Properties.MaxLength = 250;
             this.TxtWhereServiceRequired.Size = new System.Drawing.Size(691, 20);
             this.TxtWhereServiceRequired.TabIndex = 44;
             // 
@@ -828,6 +848,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.MemoPleaseProvide, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.MemoPleaseProvide.Location = new System.Drawing.Point(25, 129);
             this.MemoPleaseProvide.Name = "MemoPleaseProvide";
+            this.MemoPleaseProvide.Properties.MaxLength = 4000;
             this.MemoPleaseProvide.Size = new System.Drawing.Size(843, 31);
             this.MemoPleaseProvide.TabIndex = 45;
             // 
@@ -875,6 +896,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.MemoWhatAreProducts, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.MemoWhatAreProducts.Location = new System.Drawing.Point(25, 38);
             this.MemoWhatAreProducts.Name = "MemoWhatAreProducts";
+            this.MemoWhatAreProducts.Properties.MaxLength = 4000;
             this.MemoWhatAreProducts.Size = new System.Drawing.Size(542, 34);
             this.MemoWhatAreProducts.TabIndex = 46;
             this.MemoWhatAreProducts.EditValueChanged += new System.EventHandler(this.MemoWhatAreProducts_EditValueChanged);
@@ -909,6 +931,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtContactPersonServices, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtContactPersonServices.Location = new System.Drawing.Point(401, 44);
             this.TxtContactPersonServices.Name = "TxtContactPersonServices";
+            this.TxtContactPersonServices.Properties.MaxLength = 250;
             this.TxtContactPersonServices.Size = new System.Drawing.Size(349, 20);
             this.TxtContactPersonServices.TabIndex = 50;
             conditionValidationRule19.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -924,6 +947,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtDeliveryLocationService, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtDeliveryLocationService.Location = new System.Drawing.Point(25, 44);
             this.TxtDeliveryLocationService.Name = "TxtDeliveryLocationService";
+            this.TxtDeliveryLocationService.Properties.MaxLength = 250;
             this.TxtDeliveryLocationService.Size = new System.Drawing.Size(351, 20);
             this.TxtDeliveryLocationService.TabIndex = 49;
             conditionValidationRule20.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -939,6 +963,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.MemoObservationsServices, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.MemoObservationsServices.Location = new System.Drawing.Point(22, 447);
             this.MemoObservationsServices.Name = "MemoObservationsServices";
+            this.MemoObservationsServices.Properties.MaxLength = 500;
             this.MemoObservationsServices.Size = new System.Drawing.Size(897, 30);
             this.MemoObservationsServices.TabIndex = 52;
             // 
@@ -976,6 +1001,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtNameEvent, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtNameEvent.Location = new System.Drawing.Point(129, 27);
             this.TxtNameEvent.Name = "TxtNameEvent";
+            this.TxtNameEvent.Properties.MaxLength = 250;
             this.TxtNameEvent.Size = new System.Drawing.Size(490, 20);
             this.TxtNameEvent.TabIndex = 62;
             conditionValidationRule22.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -1075,6 +1101,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtDestination, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtDestination.Location = new System.Drawing.Point(12, 152);
             this.TxtDestination.Name = "TxtDestination";
+            this.TxtDestination.Properties.MaxLength = 50;
             this.TxtDestination.Size = new System.Drawing.Size(355, 20);
             this.TxtDestination.TabIndex = 83;
             // 
@@ -1086,6 +1113,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtOrigin, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtOrigin.Location = new System.Drawing.Point(12, 104);
             this.TxtOrigin.Name = "TxtOrigin";
+            this.TxtOrigin.Properties.MaxLength = 50;
             this.TxtOrigin.Size = new System.Drawing.Size(355, 20);
             this.TxtOrigin.TabIndex = 82;
             // 
@@ -1178,6 +1206,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.MemoOtherResource, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.MemoOtherResource.Location = new System.Drawing.Point(13, 230);
             this.MemoOtherResource.Name = "MemoOtherResource";
+            this.MemoOtherResource.Properties.MaxLength = 1024;
             this.MemoOtherResource.Size = new System.Drawing.Size(473, 65);
             this.MemoOtherResource.TabIndex = 80;
             // 
@@ -1189,6 +1218,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtLanguage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtLanguage.Location = new System.Drawing.Point(183, 175);
             this.TxtLanguage.Name = "TxtLanguage";
+            this.TxtLanguage.Properties.MaxLength = 50;
             this.TxtLanguage.Size = new System.Drawing.Size(303, 20);
             this.TxtLanguage.TabIndex = 79;
             // 
@@ -1200,6 +1230,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtSpecificationMicrophoneAmplification, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtSpecificationMicrophoneAmplification.Location = new System.Drawing.Point(183, 137);
             this.TxtSpecificationMicrophoneAmplification.Name = "TxtSpecificationMicrophoneAmplification";
+            this.TxtSpecificationMicrophoneAmplification.Properties.MaxLength = 250;
             this.TxtSpecificationMicrophoneAmplification.Size = new System.Drawing.Size(303, 20);
             this.TxtSpecificationMicrophoneAmplification.TabIndex = 77;
             // 
@@ -1211,6 +1242,7 @@
             this.ValidationProviderEditServices.SetIconAlignment(this.TxtSpecificationRentedComputers, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.TxtSpecificationRentedComputers.Location = new System.Drawing.Point(353, 87);
             this.TxtSpecificationRentedComputers.Name = "TxtSpecificationRentedComputers";
+            this.TxtSpecificationRentedComputers.Properties.MaxLength = 250;
             this.TxtSpecificationRentedComputers.Size = new System.Drawing.Size(133, 20);
             this.TxtSpecificationRentedComputers.TabIndex = 75;
             // 
@@ -1224,6 +1256,7 @@
             this.CmbAccomodationType.Name = "CmbAccomodationType";
             this.CmbAccomodationType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbAccomodationType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CmbAccomodationType.Size = new System.Drawing.Size(236, 20);
             this.CmbAccomodationType.TabIndex = 85;
             // 
@@ -1263,7 +1296,7 @@
             this.TabEvents});
             this.TabPrincipal.RegularSize = new System.Drawing.Size(985, 758);
             this.TabPrincipal.SelectedPage = this.TabRequest;
-            this.TabPrincipal.SelectedPageIndex = 0;
+            this.TabPrincipal.SelectedPageIndex = 3;
             this.TabPrincipal.Size = new System.Drawing.Size(985, 758);
             this.TabPrincipal.TabIndex = 0;
             // 
@@ -1280,6 +1313,14 @@
             this.TabRequest.Controls.Add(this.BtnOkRequest);
             this.TabRequest.Name = "TabRequest";
             this.TabRequest.Size = new System.Drawing.Size(967, 713);
+            // 
+            // LblDataPurchase
+            // 
+            this.LblDataPurchase.Location = new System.Drawing.Point(14, 542);
+            this.LblDataPurchase.Name = "LblDataPurchase";
+            this.LblDataPurchase.Size = new System.Drawing.Size(0, 13);
+            this.LblDataPurchase.TabIndex = 17;
+            this.LblDataPurchase.Visible = false;
             // 
             // GrcPurchase
             // 
@@ -1431,7 +1472,7 @@
             this.GroupRequest.Controls.Add(this.ChkEdit);
             this.GroupRequest.Controls.Add(this.LblBackground);
             this.GroupRequest.Controls.Add(this.LblRequestDate);
-            this.GroupRequest.Controls.Add(this.DteEstimateDeliveryDate);
+            this.GroupRequest.Controls.Add(this.DteEstimateDeliveryDateRequest);
             this.GroupRequest.Controls.Add(this.LblIdRequest);
             this.GroupRequest.Controls.Add(this.LblResponsible);
             this.GroupRequest.Location = new System.Drawing.Point(14, 13);
@@ -2481,14 +2522,6 @@
             // 
             this.ValidationProviderEditGoods.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Manual;
             // 
-            // LblDataPurchase
-            // 
-            this.LblDataPurchase.Location = new System.Drawing.Point(14, 542);
-            this.LblDataPurchase.Name = "LblDataPurchase";
-            this.LblDataPurchase.Size = new System.Drawing.Size(0, 13);
-            this.LblDataPurchase.TabIndex = 17;
-            this.LblDataPurchase.Visible = false;
-            // 
             // FormRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2502,8 +2535,8 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.TxtRequesterPerson.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDateRequest.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DteEstimateDeliveryDateRequest.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtDeliveryLocation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemoBackground.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtResponsible.Properties)).EndInit();
@@ -2657,7 +2690,7 @@
         private DevExpress.XtraEditors.LabelControl LblRequestDate;
         private DevExpress.XtraEditors.LabelControl LblIdRequest;
         private DevExpress.XtraEditors.LabelControl LblResponsible;
-        private DevExpress.XtraEditors.DateEdit DteEstimateDeliveryDate;
+        private DevExpress.XtraEditors.DateEdit DteEstimateDeliveryDateRequest;
         private DevExpress.XtraEditors.LabelControl LblBackground;
         private DevExpress.XtraEditors.TextEdit TxtDeliveryLocation;
         private DevExpress.XtraEditors.LabelControl LblDeliveryLocation;

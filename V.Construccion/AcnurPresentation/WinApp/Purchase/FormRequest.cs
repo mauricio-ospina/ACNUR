@@ -57,6 +57,7 @@ namespace WinApp
             this.ControlFileEvents = new ControlFileUpLoad();
             this.PnlFileUpLoadEvents.Controls.Add(this.ControlFileEvents);
 
+            this.TxtRequesterPerson.Text = Program.CurrentUserName;
             this.RIEditDelete.ButtonClick += RIEditDelete_ButtonClick;
         }
 
@@ -93,6 +94,8 @@ namespace WinApp
             set
             {
                 this.LblIdRequest.Text = value.ToString();
+                if (value > 0)
+                    this.BtnRemoveRequest.Visible = true;
             }
         }
 
@@ -176,7 +179,7 @@ namespace WinApp
                 item.Responsible = this.TxtResponsible.Text;
                 item.BackgroundRationale = this.MemoBackground.Text;
                 item.DeliveryLocation = this.TxtDeliveryLocation.Text;
-                item.EstimatedDeliveryDate = string.IsNullOrEmpty(this.DteEstimateDeliveryDate.Text) ? Utilities.CalculaFecha(this.DteEstimateDeliveryDate.Text) : this.DteEstimateDeliveryDate.DateTime;
+                item.EstimatedDeliveryDate = string.IsNullOrEmpty(this.DteEstimateDeliveryDateRequest.Text) ? Utilities.CalculaFecha(this.DteEstimateDeliveryDateRequest.Text) : this.DteEstimateDeliveryDateRequest.DateTime;
 
                 return item;
             }
@@ -191,7 +194,7 @@ namespace WinApp
                 this.TxtResponsible.Text = value.Responsible;
                 this.MemoBackground.Text = value.BackgroundRationale;
                 this.TxtDeliveryLocation.Text = value.DeliveryLocation;
-                this.DteEstimateDeliveryDate.Text = value.EstimatedDeliveryDate == DateTime.MinValue ? string.Empty : value.EstimatedDeliveryDate.ToShortDateString();
+                this.DteEstimateDeliveryDateRequest.Text = value.EstimatedDeliveryDate == DateTime.MinValue ? string.Empty : value.EstimatedDeliveryDate.ToShortDateString();
             }
         }
 
@@ -239,6 +242,7 @@ namespace WinApp
 
             set
             {
+                this.IdGoods = value.IdGoods;
                 this.SpinQuantity.Text = value.Quantity.ToString();
 
                 if (value.IdUnitMeasure.HasValue)
@@ -307,6 +311,7 @@ namespace WinApp
 
             set
             {
+                this.IdServices = value.IdService;
                 this.TxtShortDescription.Text = value.Context;
                 this.SpinNumberDays.Text = value.NumberDays.ToString();
                 this.SpinHoursDays.Text = value.HoursDay.ToString();
@@ -389,6 +394,7 @@ namespace WinApp
 
             set
             {
+                this.IdEvents = value.IdEvent;
                 this.TxtNameEvent.Text = value.EventName;
                 this.DteStarDate.Text = value.StartDate == DateTime.MinValue ? string.Empty : value.StartDate.ToShortDateString();
                 this.DteEndDate.Text = value.EndDate == DateTime.MinValue ? string.Empty : value.EndDate.ToShortDateString();
@@ -694,7 +700,7 @@ namespace WinApp
                 }
 
                 //// Coloca los datos del request
-                this.DataPurchase = @"A continuación se relaciona(n) la(s) siguiente(s) solicitud(es). Por favor ingrese a la aplicación por medio del icono de ACNUR ubicado en la parte superior derecha de su computador. En caso de no tener acceso, por favor comunicarse con el administrador del sistema.<br><br><b>" + req.BackgroundRationale + "</b><br>Delivery Location: " + req.DeliveryLocation + "<br>Estimated Delivery Date: " + req.EstimatedDeliveryDate.ToLongDateString() + "<br><br>";
+                this.DataPurchase = @"A continuación se relaciona(n) la(s) siguiente(s) solicitud(es). Por favor ingrese a la aplicación por medio del icono de ACNUR ubicado en la parte superior derecha de su computador. En caso de no tener acceso, por favor comunicarse con el administrador del sistema.<br><br><b>Request:</b><br><br>" + req.BackgroundRationale + "<br><b>Delivery Location:</b> " + req.DeliveryLocation + "<br><b>Estimated Delivery Date:</b> " + req.EstimatedDeliveryDate.ToLongDateString() + "<br><br>";
 
                 List<Events> ListEvents = new List<Events>();
 
@@ -711,7 +717,7 @@ namespace WinApp
                     this.DataPurchase += @"<b>Events:</b><br><br>";
                     ListEvents.ForEach(delegate(Events item)
                     {
-                        this.DataPurchase += @"Event Name: " + item.EventName + "<br>Start Date: " + item.StartDate + "<br>End Date" + item.EndDate + "<br><br>";
+                        this.DataPurchase += @"Event Name: " + item.EventName + "<br><b>Start Date: </b>" + item.StartDate + "<br><b>End Date: </b>" + item.EndDate + "<br><br>";
                     });
                 }
 
@@ -730,7 +736,7 @@ namespace WinApp
                     this.DataPurchase += @"<b>Goods:</b><br><br>";
                     ListGoods.ForEach(delegate(Goods item)
                     {
-                        this.DataPurchase += @"Description: " + item.Description + "<br>Place Delivery: " + item.PlaceDelivery + "<br>Contact Person: " + item.ContactPerson + "<br>Expected Delivery Date: " + item.ExpectedDeliveryDate.ToLongDateString() + "<br><br>";
+                        this.DataPurchase += @"<b>Description: </b>" + item.Description + "<br><b>Place Delivery: </b>" + item.PlaceDelivery + "<br><b>Contact Person: </b>" + item.ContactPerson + "<br><b>Expected Delivery Date: </b>" + item.ExpectedDeliveryDate.ToLongDateString() + "<br><br>";
                     });
                 }
 
@@ -749,7 +755,7 @@ namespace WinApp
                     this.DataPurchase += @"<b>Services:</b><br><br>";
                     ListServices.ForEach(delegate(Services item)
                     {
-                        this.DataPurchase += @"Description: " + item.Description + "<br>Context: " + item.Context + "<br><br>";
+                        this.DataPurchase += @"<b>Description: </b>" + item.Description + "<br><b>Context: </b>" + item.Context + "<br><br>";
                     });
                 }
             }
@@ -768,32 +774,39 @@ namespace WinApp
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void BtnRemoveRequest_Click(object sender, EventArgs e)
         {
-            DialogResult = XtraMessageBox.Show("Really you want to delete the record ?. All goods, services and related events are deleted ? ", "Confirmation", MessageBoxButtons.YesNo);
-            int Id = this.IdRequest;
-
-            if (DialogResult == System.Windows.Forms.DialogResult.Yes)
+            if (this.IdRequest > 0)
             {
-                using (CustomerEvents client = new CustomerEvents())
-                {
-                    client.Search(item => item.IdRequest == Id, false, null).ToList().ForEach(item => client.Delete(item.IdEvent));
-                }
+                DialogResult = XtraMessageBox.Show("Really you want to delete the record ?. All goods, services and related events are deleted ? ", "Confirmation", MessageBoxButtons.YesNo);
+                int Id = this.IdRequest;
 
-                using (CustomerGoods client = new CustomerGoods())
+                if (DialogResult == System.Windows.Forms.DialogResult.Yes)
                 {
-                    client.Search(item => item.IdRequest == Id, false, null).ToList().ForEach(item => client.Delete(item.IdGoods));
-                }
+                    using (CustomerEvents client = new CustomerEvents())
+                    {
+                        client.Search(item => item.IdRequest == Id, false, null).ToList().ForEach(item => client.Delete(item.IdEvent));
+                    }
 
-                using (CustomerServices client = new CustomerServices())
+                    using (CustomerGoods client = new CustomerGoods())
+                    {
+                        client.Search(item => item.IdRequest == Id, false, null).ToList().ForEach(item => client.Delete(item.IdGoods));
+                    }
+
+                    using (CustomerServices client = new CustomerServices())
+                    {
+                        client.Search(item => item.IdRequest == Id, false, null).ToList().ForEach(item => client.Delete(item.IdService));
+                    }
+
+                    using (CustomerRequest client = new CustomerRequest())
+                    {
+                        client.Delete(Id);
+                    }
+
+                    DialogResult = DialogResult.OK;
+                }
+                else
                 {
-                    client.Search(item => item.IdRequest == Id, false, null).ToList().ForEach(item => client.Delete(item.IdService));
+                    DialogResult = DialogResult.None;
                 }
-
-                using (CustomerRequest client = new CustomerRequest())
-                {
-                    client.Delete(Id);
-                }
-
-                DialogResult = DialogResult.OK;
             }
             else
             {
@@ -808,20 +821,31 @@ namespace WinApp
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void BtnRemoveGoods_Click(object sender, EventArgs e)
         {
-            DialogResult = XtraMessageBox.Show(" Really you want to delete the record ? ", "Confirmation", MessageBoxButtons.YesNo);
-
-            if (DialogResult == System.Windows.Forms.DialogResult.Yes)
+            if (this.IdGoods > 0)
             {
-                Goods good;
+                DialogResult = XtraMessageBox.Show(" Really you want to delete the record ? ", "Confirmation", MessageBoxButtons.YesNo);
 
-                using (CustomerGoods client = new CustomerGoods())
+                if (DialogResult == System.Windows.Forms.DialogResult.Yes)
                 {
-                    good = client.GetByID(this.IdGoods);
-                    client.Delete(this.IdGoods);
-                }
+                    Goods good;
 
-                this.RefreshGridRemove(this.LoadGoods(good));
-                this.HandlerTabs(this.TabRequest);
+                    using (CustomerGoods client = new CustomerGoods())
+                    {
+                        good = client.GetByID(this.IdGoods);
+                        client.Delete(this.IdGoods);
+                    }
+
+                    this.RefreshGridRemove(this.LoadGoods(good));
+                    this.HandlerTabs(this.TabRequest);
+                }
+                else
+                {
+                    DialogResult = DialogResult.None;
+                }
+            }
+            else
+            {
+                DialogResult = DialogResult.None;
             }
         }
 
@@ -832,20 +856,31 @@ namespace WinApp
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void BtnRemoveServices_Click(object sender, EventArgs e)
         {
-            DialogResult = XtraMessageBox.Show(" Really you want to delete the record ? ", "Confirmation", MessageBoxButtons.YesNo);
-
-            if (DialogResult == System.Windows.Forms.DialogResult.Yes)
+            if (this.IdServices > 0)
             {
-                Services service;
+                DialogResult = XtraMessageBox.Show(" Really you want to delete the record ? ", "Confirmation", MessageBoxButtons.YesNo);
 
-                using (CustomerServices client = new CustomerServices())
+                if (DialogResult == System.Windows.Forms.DialogResult.Yes)
                 {
-                    service = client.GetByID(this.IdServices);
-                    client.Delete(this.IdServices);
-                }
+                    Services service;
 
-                this.RefreshGridRemove(this.LoadServices(service));
-                this.HandlerTabs(this.TabRequest);
+                    using (CustomerServices client = new CustomerServices())
+                    {
+                        service = client.GetByID(this.IdServices);
+                        client.Delete(this.IdServices);
+                    }
+
+                    this.RefreshGridRemove(this.LoadServices(service));
+                    this.HandlerTabs(this.TabRequest);
+                }
+                else
+                {
+                    DialogResult = DialogResult.None;
+                }
+            }
+            else
+            {
+                DialogResult = DialogResult.None;
             }
         }
 
@@ -856,20 +891,31 @@ namespace WinApp
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void BtnRemoveEvents_Click(object sender, EventArgs e)
         {
-            DialogResult = XtraMessageBox.Show(" Really you want to delete the record ? ", "Confirmation", MessageBoxButtons.YesNo);
-
-            if (DialogResult == System.Windows.Forms.DialogResult.Yes)
+            if (this.IdEvents > 0)
             {
-                Events events;
+                DialogResult = XtraMessageBox.Show(" Really you want to delete the record ? ", "Confirmation", MessageBoxButtons.YesNo);
 
-                using (CustomerEvents client = new CustomerEvents())
+                if (DialogResult == System.Windows.Forms.DialogResult.Yes)
                 {
-                    events = client.GetByID(this.IdEvents);
-                    client.Delete(this.IdEvents);
-                }
+                    Events events;
 
-                this.RefreshGridRemove(this.LoadEvents(events));
-                this.HandlerTabs(this.TabRequest);
+                    using (CustomerEvents client = new CustomerEvents())
+                    {
+                        events = client.GetByID(this.IdEvents);
+                        client.Delete(this.IdEvents);
+                    }
+
+                    this.RefreshGridRemove(this.LoadEvents(events));
+                    this.HandlerTabs(this.TabRequest);
+                }
+                else
+                {
+                    DialogResult = DialogResult.None;
+                }
+            }
+            else
+            {
+                DialogResult = DialogResult.None;
             }
         }
 
@@ -885,8 +931,7 @@ namespace WinApp
         private void BtnGoods_Click(object sender, EventArgs e)
         {
             this.HandlerTabs(this.TabGoods);
-            this.ControlFileGoods.GrcFilesFileUpload.DataSource = null;
-            this.ControlFileGoods.SourceFiles = this.ControlFileEvents.CreateTable();
+            this.ControlFileGoods.GrcFilesFileUpload.DataSource = this.ControlFileGoods.SourceFiles = this.ControlFileGoods.CreateTable();
             this.ObjGoods = new Goods();
             this.DialogResult = DialogResult.None;
         }
@@ -899,8 +944,7 @@ namespace WinApp
         private void BtnServices_Click(object sender, EventArgs e)
         {
             this.HandlerTabs(this.TabServices);
-            this.ControlFileServices.GrcFilesFileUpload.DataSource = null;
-            this.ControlFileServices.SourceFiles = this.ControlFileServices.CreateTable();
+            this.ControlFileServices.GrcFilesFileUpload.DataSource = this.ControlFileServices.SourceFiles = this.ControlFileServices.CreateTable();
             this.ObjServices = new Services();
             this.DialogResult = DialogResult.None;
         }
@@ -913,8 +957,7 @@ namespace WinApp
         private void BtnEvents_Click(object sender, EventArgs e)
         {
             this.HandlerTabs(this.TabEvents);
-            this.ControlFileEvents.GrcFilesFileUpload.DataSource = null;
-            this.ControlFileEvents.SourceFiles = this.ControlFileEvents.CreateTable();
+            this.ControlFileEvents.GrcFilesFileUpload.DataSource = this.ControlFileEvents.SourceFiles = this.ControlFileEvents.CreateTable();
             this.ObjEvents = new Events();
             this.DialogResult = DialogResult.None;
         }

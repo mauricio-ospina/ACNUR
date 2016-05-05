@@ -10,8 +10,11 @@ namespace OpenWinApp
 {
     public partial class ThisAddIn
     {
+        public static Outlook.Application ApplicationGlobal { get { return Globals.ThisAddIn.Application; } }
+
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
@@ -29,7 +32,7 @@ namespace OpenWinApp
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
+
         #endregion
     }
 }

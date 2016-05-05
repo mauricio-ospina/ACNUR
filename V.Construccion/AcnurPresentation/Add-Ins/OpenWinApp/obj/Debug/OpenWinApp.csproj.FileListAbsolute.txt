@@ -26,4 +26,3 @@ C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPre
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.csproj.GenerateResource.Cache
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.dll
 C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.pdb
-C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurPresentation\Add-Ins\OpenWinApp\obj\Debug\OpenWinApp.csprojResolveAssemblyReference.cache

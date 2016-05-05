@@ -39,7 +39,7 @@ namespace Acnur.App.Implementation
         {
             List<Modules> ResultList = new List<Modules>();
 
-            List<ModuleUser> ListWithUsers = RepositoryData.SearchInclude<ModuleUser>(mod => mod.Users.UserName == userName, mod => mod.Modules, mod => mod.Users);
+            List<ModuleUser> ListWithUsers = RepositoryData.SearchInclude<ModuleUser>(mod => mod.Users.UserName.ToLower() == userName.ToLower(), mod => mod.Modules, mod => mod.Users);
             ResultList = ListWithUsers.Select(mod => mod.Modules).Distinct().ToList();
 
             ResultList = ResultList.Distinct().ToList();

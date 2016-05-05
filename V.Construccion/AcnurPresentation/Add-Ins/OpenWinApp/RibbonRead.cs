@@ -15,6 +15,7 @@
 namespace OpenWinApp
 {
     using Microsoft.Office.Tools.Ribbon;
+    using System;
     using System.Diagnostics;
     using Outlook = Microsoft.Office.Interop.Outlook;
 
@@ -32,22 +33,29 @@ namespace OpenWinApp
         private void BtnOpenApp_Click(object sender, RibbonControlEventArgs e)
         {
             Outlook.ExchangeUser UserAutenticate = this.LoadUserAutheticate();
+            Outlook.MailItem mailItem = Globals.ThisAddIn.Application.ActiveInspector().CurrentItem as Outlook.MailItem;
+
+            //// Utilizado para recuperar cual es el correo que se esta editando
+            string EntryId = null == mailItem.EntryID ? "ID_null" : mailItem.EntryID;
+
+            //// Utilizado para retornar los datos que se estan editando
+            string StrIds = null == mailItem.BillingInformation ? "StrIds_null" : mailItem.BillingInformation;
 
             if (null != UserAutenticate)
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = @"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe";
-                startInfo.Arguments =   UserAutenticate.Alias.Replace(" ", "_") + " " +
-                                        UserAutenticate.Application.ToString().Replace(" ", "_") + " " +
-                                        UserAutenticate.CompanyName.Replace(" ", "_") + " " +
-                                        UserAutenticate.Department.Replace(" ", "_") + " " +
-                                        UserAutenticate.FirstName.Replace(" ", "_") + " " +
-                                        UserAutenticate.ID.Replace(" ", "_") + " " +
-                                        UserAutenticate.JobTitle.Replace(" ", "_") + " " +
-                                        UserAutenticate.LastName.Replace(" ", "_") + " " +
-                                        UserAutenticate.Name.Replace(" ", "_") + " " +
-                                        UserAutenticate.PrimarySmtpAddress.Replace(" ", "_") + " " +
-                                        UserAutenticate.StateOrProvince.Replace(" ", "_") + " ";
+                startInfo.Arguments = UserAutenticate.Alias.Replace(" ", "_") + " " +
+                                      UserAutenticate.FirstName.Replace(" ", "_") + " " +
+                                      UserAutenticate.LastName.Replace(" ", "_") + " " +
+                                      EntryId.Replace(" ", "_") + " " +
+                                      StrIds.Replace(" ", "_") + " " +
+                                      UserAutenticate.PrimarySmtpAddress.Replace(" ", "_") + " " +
+                                      UserAutenticate.Name.Replace(" ", "_") + " " +
+                                      UserAutenticate.ID.Replace(" ", "_") + " " +
+                                      UserAutenticate.CompanyName.Replace(" ", "_") + " " +
+                                      UserAutenticate.Department.Replace(" ", "_") + " " +
+                                      UserAutenticate.JobTitle.Replace(" ", "_");
 
                 Process.Start(startInfo).WaitForExit();
             }

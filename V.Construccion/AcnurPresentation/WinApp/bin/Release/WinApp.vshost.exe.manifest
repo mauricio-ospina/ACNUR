@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="WinApp.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="WinApp.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="WinApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -149,7 +149,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MKvGG2JP5ruo3bt3SQmcQ2xmHhuS2Ti2Q5t/yGd5V0E=</dsig:DigestValue>
+        <dsig:DigestValue>rAlrE/WEwG/70lsx02Id6FhujX6+xDT7Sdprpu1oq3Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -161,43 +161,43 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aYgw6qBaaDCNHyGp41bWDRiX0II22j7hFMrVU6q/uEc=</dsig:DigestValue>
+        <dsig:DigestValue>2INC6LvtJeKoMpbvavMwsw3TvHcZqdGedEzYFzBT/hM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Implementation.dll" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Implementation.dll" size="12800">
       <assemblyIdentity name="Acnur.App.Implementation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Vg52NRt3FAuRvUUIqy3mL5xOzX8MpBuENOmFLxeSNaU=</dsig:DigestValue>
+        <dsig:DigestValue>WyU1t87W/lTBqNOtARLejLY6HrvLqT8xDJQKU+lLTps=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Interfaces.dll" size="6656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Interfaces.dll" size="7168">
       <assemblyIdentity name="Acnur.App.Interfaces" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Pn0QPNJCdUVEOVpzGb+139FoEvTmIyVKDaDSR/KTfj8=</dsig:DigestValue>
+        <dsig:DigestValue>GS9hPdSK93IoyhlEWZnlaCT6rPBy6BAllLkuPJeNC3o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Proxy.dll" size="8346">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Proxy.dll" size="9370">
       <assemblyIdentity name="Acnur.App.Proxy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1RDQ74fn5ypcbS1NGzWgyx+qYHKpqUspAhVQfXLOxPw=</dsig:DigestValue>
+        <dsig:DigestValue>7s+c6uKbwZdvQqppFPdfd4ugabt26KfnCWuBW3J0LzY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -209,19 +209,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LPsDOMrFMN5zkeZJ0Acq35GpRTwQxbe1Go4F2dhwMPY=</dsig:DigestValue>
+        <dsig:DigestValue>kurvTHh6ygQTMXkoLzwpxXjG8u4kJK7x/SuBBcBrRGc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.Data.dll" size="535040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.Data.dll" size="535552">
       <assemblyIdentity name="Acnur.App.Repository.Data" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rdmRqlci9JJQnHkrMzTlx3ZmO7qKmHsndh1xYJ/bFqo=</dsig:DigestValue>
+        <dsig:DigestValue>OOzWLOOtmaPy+tPd8ZzEB4kwWKSkO/UOuavVwQZ41Wk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1030,14 +1030,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WinApp.exe" size="446464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WinApp.exe" size="454656">
       <assemblyIdentity name="WinApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JHFDaxFrY9elNpgWfRA4xFg4UBlj8gYTVqCiTiR5MCM=</dsig:DigestValue>
+        <dsig:DigestValue>BqHqIuXpHqbYryw5R+IIDmVa+Jv/+AOgUplmSwvtoJY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
